@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Carta · Bora Bora Açaí</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ocean:#0f3a47; --sea:#2f8aa3; --acai:#5a2d82; --coral:#ef8d80; --coral-deep:#e26a5c;
+  --ink:#1d2b30; --deep-teal:#1c4a54; --sand-deep:#efe3cf;
+}
+@page{ size:A4; margin:0; }
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Poppins',system-ui,sans-serif;color:var(--ink);line-height:1.4;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;
+  padding:13mm 12mm 10mm;
+  /* fondo de agua real extraído de la imagen de la carta */
+  background:
+    linear-gradient(rgba(255,255,255,.12),rgba(255,255,255,.12)),
+    url('assets/agua-swatch.png') center/cover no-repeat;
+}
+h1,h2,h3{font-family:'Bagel Fat One',cursive;font-weight:400;line-height:1.05}
+
+/* cabecera */
+.head{text-align:center;margin-bottom:16px}
+.head img{width:48px;height:48px;object-fit:contain;margin-bottom:4px}
+.head .kicker{font-family:'Pacifico',cursive;color:var(--coral-deep);font-size:15px;margin:-2px 0 1px}
+.head h1{font-size:36px;color:var(--ocean);letter-spacing:.5px;text-shadow:0 2px 12px rgba(255,255,255,.55)}
+.head .sub{font-size:10px;color:var(--sea);letter-spacing:4px;text-transform:uppercase;margin-top:4px;font-weight:700}
+
+/* rejilla por secciones */
+.page{column-count:2;column-gap:16px;break-after:page}
+.page:last-of-type{break-after:auto}
+.card{
+  break-inside:avoid;width:100%;display:inline-block;margin-bottom:18px;
+  background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.9);border-radius:20px;
+  padding:18px 20px 16px;box-shadow:0 16px 32px -18px rgba(15,58,71,.5);
+}
+.card-h{display:flex;align-items:center;gap:9px;margin-bottom:13px}
+.card-h .bar{width:28px;height:6px;border-radius:4px;background:var(--coral);flex:none}
+.card-h h2{font-size:22px;color:var(--coral-deep)}
+.card-h .pi{margin-left:auto;font-family:'Bagel Fat One',cursive;color:var(--acai);font-size:14px;white-space:nowrap}
+
+/* tallas */
+.sizes{display:flex;gap:7px;margin-bottom:14px}
+.size{flex:1;text-align:center;background:#e4f4f9;border-radius:12px;padding:8px 2px}
+.size b{display:block;font-family:'Bagel Fat One',cursive;color:var(--acai);font-size:17px;line-height:1.1}
+.size span{display:block;font-size:8px;color:var(--sea);font-weight:600;letter-spacing:.2px}
+.size .pr{font-family:'Bagel Fat One',cursive;color:var(--coral-deep);font-size:13px;margin-top:2px}
+
+/* items */
+.item{margin-bottom:11px}
+.item:last-child{margin-bottom:0}
+.item .row{display:flex;align-items:baseline;justify-content:space-between;gap:6px}
+.item .nm{font-family:'Bagel Fat One',cursive;color:var(--ocean);font-size:15px}
+.item .nm .fav{font-family:'Poppins',sans-serif;color:var(--coral-deep);font-size:9px;font-weight:700;margin-left:6px;text-transform:uppercase;letter-spacing:.4px;vertical-align:middle}
+.item .leader{flex:1;border-bottom:1.5px dotted rgba(15,58,71,.3);transform:translateY(-3px)}
+.item .pr{font-family:'Bagel Fat One',cursive;color:var(--coral-deep);font-size:14px;white-space:nowrap}
+.item .desc{font-size:11px;color:#566a6f;margin-top:2px;line-height:1.45}
+
+/* bebidas */
+.simple{column-count:2;column-gap:18px}
+.simple .l{display:flex;align-items:baseline;justify-content:space-between;gap:6px;
+  break-inside:avoid;padding:4px 0;border-bottom:1px dotted rgba(15,58,71,.25);font-size:12.5px}
+.simple .l .nm{color:var(--ocean);font-weight:600}
+.simple .l .pr{font-family:'Bagel Fat One',cursive;color:var(--coral-deep);white-space:nowrap}
+
+.note{font-size:10px;color:var(--sea);font-style:italic;margin-top:8px}
+
+/* café destacado */
+.card.coffee{background:linear-gradient(120deg,rgba(40,22,14,.95),rgba(74,44,26,.95) 55%,rgba(90,45,130,.95));
+  border:0;color:#fff}
+.card.coffee .it{font-size:8px;letter-spacing:1px;text-transform:uppercase;color:#ffd9a8;font-weight:700;margin-bottom:4px}
+.card.coffee h3{font-size:17px;margin-bottom:3px;color:#fff}
+.card.coffee p{font-size:9.7px;color:rgba(255,255,255,.9);line-height:1.4}
+
+.foot{text-align:center;margin-top:10px;padding:9px 0 0;font-size:9.5px;color:var(--ocean);
+  background:rgba(255,255,255,.55);border-radius:12px;padding:8px}
+.foot b{color:var(--coral-deep)}
+</style>
+</head>
+<body>
+
+<div class="head">
+  <img src="assets/logo-dark.png" alt="">
+  <div class="kicker">live the slow life</div>
+  <h1>Bora Bora Açaí</h1>
+  <div class="sub">· Carta ·</div>
+</div>
+
+<div class="page">
+
+  <!-- AÇAÍ BOWLS -->
+  <div class="card">
+    <div class="card-h"><span class="bar"></span><h2>Açaí Bowls</h2></div>
+    <div class="sizes">
+      <div class="size"><b>S</b><span>TAMAÑO</span><span class="pr">7,90€</span></div>
+      <div class="size"><b>M</b><span>TAMAÑO</span><span class="pr">9,90€</span></div>
+      <div class="size"><b>L</b><span>TAMAÑO</span><span class="pr">11,90€</span></div>
+      <div class="size"><b>XL</b><span>TAMAÑO</span><span class="pr">14,90€</span></div>
+    </div>
+    <div class="item"><div class="row"><span class="nm">Big Boss</span></div><div class="desc">Açaí premium, plátano, fresas, arándanos, granola tostada, crema de cacahuete 100% y paçoca.</div></div>
+    <div class="item"><div class="row"><span class="nm">Bora Bora <span class="fav">el favorito</span></span></div><div class="desc">Açaí premium, plátano, fresas, granola tostada, crema de pistacho, paçoca y gotas de choco.</div></div>
+    <div class="item"><div class="row"><span class="nm">Gymbro</span></div><div class="desc">Açaí premium, plátano, yogurt, granola tostada, leche en polvo y crema de anacardos 100%.</div></div>
+    <div class="item"><div class="row"><span class="nm">Nuteboom</span></div><div class="desc">Açaí premium, mango, fresas, granola tostada, nutella y galleta maría.</div></div>
+    <div class="item"><div class="row"><span class="nm">Tropicana</span></div><div class="desc">Açaí premium, mango, piña, yogurt, granola tostada, crema de conguitos blancos y coco laminado.</div></div>
+  </div>
+
+  <!-- CREA TU BOWL -->
+  <div class="card">
+    <div class="card-h"><span class="bar"></span><h2>Crea tu Bowl</h2></div>
+    <div class="sizes">
+      <div class="size"><b>S</b><span>1 TOPPING</span><span class="pr">6,90€</span></div>
+      <div class="size"><b>M</b><span>2 TOPPINGS</span><span class="pr">8,90€</span></div>
+      <div class="size"><b>L</b><span>3 TOPPINGS</span><span class="pr">11,90€</span></div>
+      <div class="size"><b>XL</b><span>4 TOPPINGS</span><span class="pr">14,90€</span></div>
+    </div>
+    <div class="item"><div class="desc"><b style="color:var(--acai)">Base:</b> açaí o yogurt. &nbsp;<b style="color:var(--acai)">Toppings:</b> mango, fresas, arándanos, piña, plátano, coco chips, crunchy energy, granola, galleta maría, paçoca, choco chips, leche en polvo, crema de cacahuete, crema conguitos blancos, nutella, crema de pistacho, crema de anacardos, leche condensada.</div></div>
+    <div class="note">Topping extra: 0,90€</div>
+  </div>
+
+  <!-- TOSTAS -->
+  <div class="card">
+    <div class="card-h"><span class="bar"></span><h2>Tostas</h2><span class="pi">__TOSTA_PRICE__ c/u</span></div>
+    <div class="item"><div class="row"><span class="nm">Pavissima</span></div><div class="desc">Pan de hogaza, humus, pavo, aguacate, tomate, mozzarella, mix de brotes y aceite de oliva.</div></div>
+    <div class="item"><div class="row"><span class="nm">Atuna Matata</span></div><div class="desc">Pan de hogaza, aguacate, atún, tomate, mix de brotes, pimentón y aceite de oliva.</div></div>
+    <div class="item"><div class="row"><span class="nm">La Vida es Vegan</span></div><div class="desc">Pan de hogaza, queso crema, aguacate, tomatito natural, mix de brotes y aceite de oliva.</div></div>
+    <div class="item"><div class="row"><span class="nm">Energetic</span></div><div class="desc">Pan de hogaza, plátano, granola tostada, crema de cacahuete 100% y gotitas de choco.</div></div>
+    <div class="item"><div class="row"><span class="nm">Salmon Passion</span></div><div class="desc">Pan de hogaza, humus, aguacate, dados de salmón, mix de brotes y aceite de oliva.</div></div>
+  </div>
+
+  <!-- PANCAKES -->
+  <div class="card">
+    <div class="card-h"><span class="bar"></span><h2>Pancakes</h2><span class="pi">8,90€ c/u</span></div>
+    <div class="item"><div class="row"><span class="nm">Nutellisima</span></div><div class="desc">Banana, fresas, nutella y paçoca.</div></div>
+    <div class="item"><div class="row"><span class="nm">Boom Boom</span></div><div class="desc">Banana, arándanos, crema de conguitos blancos y chocolate chips.</div></div>
+  </div>
+
+  </div>
+
+  <div class="page">
+
+  <!-- BRUNCH -->
+  <div class="card">
+    <div class="card-h"><span class="bar"></span><h2>Brunch</h2><span class="pi">19,90€</span></div>
+    <div class="item"><div class="row"><span class="nm">Brunch Bora Bora <span class="fav">para compartir</span></span></div><div class="desc">Tosta · Pancakes · Café · Infusión · Smoothie del día · Açaí talla S.</div></div>
+    <div class="note">El matcha incluye un suplemento de 1€.</div>
+  </div>
+
+  <!-- SMOOTHIES -->
+  <div class="card">
+    <div class="card-h"><span class="bar"></span><h2>Smoothies</h2><span class="pi">5,50€ c/u</span></div>
+    <div class="item"><div class="row"><span class="nm">Revita</span></div><div class="desc">Zanahoria, piña y jengibre.</div></div>
+    <div class="item"><div class="row"><span class="nm">Açaí Boost</span></div><div class="desc">Açaí, plátano y crema de cacahuete.</div></div>
+    <div class="item"><div class="row"><span class="nm">Cocoloco</span></div><div class="desc">Puré de coco, piña y canela.</div></div>
+    <div class="item"><div class="row"><span class="nm">Mambo Mango</span></div><div class="desc">Mango, piña y fresas.</div></div>
+    <div class="item"><div class="row"><span class="nm">Pink Lady</span></div><div class="desc">Plátano, fresas y arándanos.</div></div>
+    <div class="note">100% natural y sin hielo.</div>
+  </div>
+
+  <!-- MATCHA -->
+  <div class="card">
+    <div class="card-h"><span class="bar"></span><h2>Matcha</h2><span class="pi">4,90€ c/u</span></div>
+    <div class="item"><div class="row"><span class="nm">Golden Matcha</span></div><div class="desc">Matcha con maracuyá dorado.</div></div>
+    <div class="item"><div class="row"><span class="nm">Coco Matcha</span></div><div class="desc">Matcha con puré de coco.</div></div>
+    <div class="item"><div class="row"><span class="nm">Rose Matcha</span></div><div class="desc">Matcha con fresa natural.</div></div>
+    <div class="item"><div class="row"><span class="nm">Maracuyá Matcha</span></div><div class="desc">Matcha con maracuyá.</div></div>
+    <div class="note">100% puré de frutas sin azúcar.</div>
+  </div>
+
+  <!-- CAFÉ -->
+  <div class="card coffee">
+    <div class="it">importado de Nápoles · molido al momento</div>
+    <h3>El café de la casa ☕</h3>
+    <p>Nuestro café viene directo de Nápoles y lo molemos al momento: un espresso auténtico, intenso y con mucho cuerpo.</p>
+  </div>
+
+  <!-- BEBIDAS -->
+  <div class="card">
+    <div class="card-h"><span class="bar"></span><h2>Bebidas</h2></div>
+    <div class="simple">
+      <div class="l"><span class="nm">Espresso</span><span class="pr">1,80€</span></div>
+      <div class="l"><span class="nm">Cortado</span><span class="pr">2,00€</span></div>
+      <div class="l"><span class="nm">Americano</span><span class="pr">2,00€</span></div>
+      <div class="l"><span class="nm">Café con leche</span><span class="pr">2,20€</span></div>
+      <div class="l"><span class="nm">Latte</span><span class="pr">3,00€</span></div>
+      <div class="l"><span class="nm">Capuccino</span><span class="pr">3,00€</span></div>
+      <div class="l"><span class="nm">Té verde</span><span class="pr">2,00€</span></div>
+      <div class="l"><span class="nm">Té rojo</span><span class="pr">2,00€</span></div>
+      <div class="l"><span class="nm">Té negro</span><span class="pr">2,00€</span></div>
+      <div class="l"><span class="nm">Manzanilla</span><span class="pr">2,00€</span></div>
+      <div class="l"><span class="nm">Collagen matcha</span><span class="pr">4,50€</span></div>
+      <div class="l"><span class="nm">Collagen matcha vainilla</span><span class="pr">5,00€</span></div>
+      <div class="l"><span class="nm">Creamy toffee coffee</span><span class="pr">3,90€</span></div>
+      <div class="l"><span class="nm">Ice latte</span><span class="pr">3,90€</span></div>
+      <div class="l"><span class="nm">Agua mineral</span><span class="pr">1,50€</span></div>
+    </div>
+    <div class="note">Suplemento de leche de avena: 0,30€.</div>
+  </div>
+
+</div>
+
+<div class="foot">
+  <b>Bora Bora Açaí</b> · Carrer d'Isabel la Catòlica, 26 · L'Eixample · 46004 València · 672 92 15 65 · @boraboracaies
+</div>
+
+</body>
+</html>

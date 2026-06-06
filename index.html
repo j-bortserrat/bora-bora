@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bora Bora Açaí · slow life and açaí · València</title>
-<meta name="description" content="Bora Bora Açaí — açaí bowls premium, tostas, pancakes, smoothies y matcha en pleno Eixample de València. Slow life and açaí.">
+<title>Bora Bora Açaí · live the slow life · València</title>
+<meta name="description" content="Bora Bora Açaí — açaí bowls premium, tostas, pancakes, smoothies y matcha en pleno Eixample de València. Live the slow life.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -95,6 +95,7 @@ nav.scrolled .burger span{background:var(--ocean)}
 /* ---------- HERO ---------- */
 .hero{height:100vh;height:100svh;min-height:600px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
 .hero-bg{position:absolute;inset:-10% 0;background:url('assets/hero.jpg') center/cover no-repeat;will-change:transform;z-index:0}
+video.hero-bg{width:100%;height:120%;object-fit:cover;object-position:center}
 .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,58,71,.45) 0%,rgba(15,58,71,.15) 45%,rgba(15,58,71,.55) 100%);z-index:1}
 .hero-content{position:relative;z-index:2;color:#fff;padding:0 24px;max-width:880px}
 .hero-content .kicker{font-family:'Pacifico',cursive;font-size:clamp(1.3rem,3.5vw,2rem);color:var(--water);text-shadow:0 2px 18px rgba(10,42,52,.6);margin-bottom:6px}
@@ -187,6 +188,65 @@ nav.scrolled .burger span{background:var(--ocean)}
 .topcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px 24px;max-width:760px;margin:0 auto}
 .topcols span{padding:7px 4px;border-bottom:1px dashed var(--sand-deep);color:#54646a;font-size:.92rem}
 
+/* ---------- CARRUSEL CARTA ---------- */
+.carousel{
+  margin:0 -24px;padding:46px 0 40px;
+  overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none;cursor:grab;
+}
+.carousel::-webkit-scrollbar{height:0;display:none}
+.carousel.dragging{cursor:grabbing}
+.carousel.dragging .m-card{pointer-events:none}
+.carousel.static{cursor:default;overflow:visible}
+.carousel.static .carousel-track{width:100%;justify-content:center;flex-wrap:wrap;gap:22px;align-items:stretch}
+.carousel.static .m-card{flex:0 1 300px;display:flex;flex-direction:column;transform:none;transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s}
+.carousel.static .m-card .m-body{flex:1}
+.carousel.static .m-card:hover{transform:scale(1.06) !important;box-shadow:0 32px 60px -20px rgba(90,45,130,.45);z-index:3}
+.carousel-track{display:flex;gap:22px;padding:0 24px;width:max-content;align-items:center}
+.m-card{
+  flex:0 0 clamp(200px,26vw,360px);background:#fff;border-radius:22px;overflow:hidden;
+  box-shadow:var(--shadow);border:1px solid var(--sand-deep);
+  transform-origin:center center;will-change:transform;
+  transition:box-shadow .3s;
+}
+.m-card.is-center{box-shadow:0 34px 64px -22px rgba(90,45,130,.5);z-index:2}
+.m-photo{
+  position:relative;aspect-ratio:4/3;overflow:hidden;
+  background:linear-gradient(135deg,var(--water-soft),var(--sand-deep));
+  display:flex;align-items:center;justify-content:center;
+}
+.m-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.m-photo-ph{font-size:2.2rem;opacity:.55;user-select:none}
+.m-body{padding:20px 22px 24px}
+.m-body h3{font-family:'Bagel Fat One',cursive;color:var(--coral-deep);font-size:1.35rem;margin-bottom:8px}
+.m-body p{color:#54646a;font-size:.92rem;line-height:1.5}
+.m-body .tag{display:inline-block;margin-top:12px;background:var(--water-soft);color:var(--sea);font-size:.7rem;font-weight:700;padding:5px 12px;border-radius:20px;letter-spacing:.4px;text-transform:uppercase}
+@media(max-width:480px){
+  .carousel{margin:0 -16px;padding:38px 0 32px}
+  .carousel-track{padding:0 16px;gap:14px}
+}
+
+/* ---------- CAFÉ DESTACADO (Nápoles) ---------- */
+.coffee-feature{
+  display:flex;align-items:center;gap:24px;flex-wrap:wrap;
+  background:linear-gradient(120deg,#2c1810 0%,#4a2c1a 45%,var(--acai) 120%);
+  color:#fff;border-radius:24px;padding:30px 32px 28px;margin-bottom:36px;
+  box-shadow:var(--shadow);position:relative;overflow:hidden;
+}
+.coffee-feature::before{content:"";position:absolute;top:0;left:0;width:100%;height:6px;
+  background:linear-gradient(90deg,#008C45 0 33.3%,#fff 33.3% 66.6%,#CD212A 66.6%)}
+.coffee-feature .cf-ic{font-size:3.2rem;flex:none;line-height:1}
+.coffee-feature .cf-txt{flex:1;min-width:240px}
+.cf-tag{display:inline-block;background:rgba(255,255,255,.16);color:#fff;font-size:.72rem;font-weight:700;
+  letter-spacing:.6px;text-transform:uppercase;padding:5px 13px;border-radius:20px;margin:0 8px 11px 0}
+.coffee-feature h3{font-family:'Bagel Fat One',cursive;font-size:1.65rem;margin-bottom:7px;color:#fff}
+.coffee-feature p{color:rgba(255,255,255,.86);font-size:.98rem;max-width:560px}
+@media(max-width:480px){
+  .coffee-feature{padding:24px 22px 22px;gap:16px}
+  .coffee-feature .cf-ic{font-size:2.6rem}
+  .coffee-feature h3{font-size:1.4rem}
+}
+
 /* ---------- GALERIA ---------- */
 .gallery{background:var(--ocean);padding:110px 0 100px}
 .gallery h2{color:#fff;text-align:center;font-size:clamp(2.2rem,6vw,3.6rem)}
@@ -199,6 +259,30 @@ nav.scrolled .burger span{background:var(--ocean)}
 .grid-masonry figure::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(90,45,130,.55));opacity:0;transition:.4s}
 .grid-masonry figure:hover img{transform:scale(1.08)}
 .grid-masonry figure:hover::after{opacity:1}
+
+/* ---------- RESEÑAS ---------- */
+.reviews{background:linear-gradient(180deg,var(--cream),var(--water-soft));padding:110px 0 100px}
+.reviews .head{text-align:center;margin-bottom:46px}
+.reviews .head h2{font-size:clamp(2.2rem,6vw,3.6rem);color:var(--ocean)}
+.reviews .head p{color:var(--sea);max-width:560px;margin:14px auto 0}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.review-card{
+  background:#fff;border-radius:22px;padding:28px 26px;box-shadow:var(--shadow);
+  border:1px solid var(--sand-deep);display:flex;flex-direction:column;gap:14px;transition:.3s;
+}
+.review-card:hover{transform:translateY(-8px);box-shadow:0 26px 50px -20px rgba(90,45,130,.4)}
+.review-card .stars{color:#ffb400;font-size:1.15rem;letter-spacing:3px}
+.review-card p{color:#54646a;font-style:italic;flex:1;font-size:.98rem}
+.review-author{display:flex;align-items:center;gap:12px}
+.review-author .av{width:44px;height:44px;flex:none;border-radius:50%;background:var(--acai);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-family:'Bagel Fat One',cursive;font-size:1.2rem}
+.review-author .av-img{width:44px;height:44px;flex:none;border-radius:50%;object-fit:cover}
+.review-author b{display:block;color:var(--ocean);font-size:.95rem}
+.review-author span{font-size:.76rem;color:var(--sea);font-weight:500}
+.reviews-cta{text-align:center;margin-top:40px}
+@media(max-width:860px){
+  .reviews-grid{grid-template-columns:1fr;max-width:460px;margin:0 auto}
+}
 
 /* ---------- CONTACTO ---------- */
 .contact{background:var(--cream);padding:110px 0 60px}
@@ -243,6 +327,127 @@ footer{background:var(--ocean-deep);color:#fff;padding:60px 0 28px;text-align:ce
 .reveal{opacity:0;transform:translateY(40px);transition:.9s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
 .reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}.reveal.d3{transition-delay:.3s}.reveal.d4{transition-delay:.4s}
+
+/* ---------- MODAL PEDIR A CASA (Glovo / Uber Eats) ---------- */
+.order-modal{
+  position:fixed;inset:0;z-index:2000;display:flex;align-items:center;justify-content:center;padding:24px;
+  background:rgba(15,58,71,.55);backdrop-filter:blur(6px);
+  opacity:0;visibility:hidden;transition:.3s;
+}
+.order-modal.show{opacity:1;visibility:visible}
+.order-box{
+  background:var(--cream);border-radius:26px;padding:40px 32px 32px;max-width:420px;width:100%;
+  text-align:center;box-shadow:var(--shadow);position:relative;
+  transform:translateY(18px) scale(.96);transition:.35s cubic-bezier(.2,.7,.2,1);
+}
+.order-modal.show .order-box{transform:none}
+.order-close{
+  position:absolute;top:14px;right:18px;background:none;border:0;font-size:1.9rem;line-height:1;
+  color:var(--sea);cursor:pointer;transition:.25s;
+}
+.order-close:hover{color:var(--coral-deep);transform:rotate(90deg)}
+.order-box .sec-tag{font-size:1.15rem;margin-bottom:2px}
+.order-box h3{font-family:'Bagel Fat One',cursive;color:var(--acai);font-size:1.7rem;margin-bottom:8px}
+.order-box p{color:#54646a;font-size:.96rem;margin-bottom:26px}
+.order-opts{display:flex;flex-direction:column;gap:12px}
+.order-opt{
+  display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;
+  font-weight:700;padding:16px 20px;border-radius:16px;font-size:1.1rem;transition:.25s;
+}
+.order-opt:hover{transform:translateY(-3px)}
+.order-opt.glovo{background:#ffc244;color:#1d2b30;box-shadow:0 12px 26px -12px rgba(255,194,68,.95)}
+.order-opt.uber{background:#06141a;color:#fff;box-shadow:0 12px 26px -12px rgba(6,20,26,.7)}
+.order-opt.uber em{color:#06c167;font-style:normal}
+
+/* ---------- BARRA DE COOKIES ---------- */
+.cookie-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:1800;
+  display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:center;
+  background:rgba(10,42,52,.97);backdrop-filter:blur(8px);color:#fff;
+  padding:16px 24px;box-shadow:0 -10px 30px -12px rgba(0,0,0,.5);
+  transform:translateY(110%);transition:transform .45s cubic-bezier(.2,.7,.2,1);
+}
+.cookie-bar.show{transform:none}
+.cookie-bar p{font-size:.9rem;max-width:620px;color:rgba(255,255,255,.85);line-height:1.5}
+.cookie-bar a{color:var(--water);text-decoration:underline}
+.cookie-btns{display:flex;gap:10px;flex-wrap:wrap}
+.cookie-btns button{
+  border:0;border-radius:30px;padding:11px 24px;font-weight:600;cursor:pointer;
+  font-family:'Poppins',sans-serif;font-size:.9rem;transition:.25s;
+}
+.ck-accept{background:var(--coral);color:#fff;box-shadow:0 8px 20px -8px var(--coral-deep)}
+.ck-accept:hover{background:var(--coral-deep);transform:translateY(-2px)}
+.ck-reject{background:rgba(255,255,255,.12);color:#fff}
+.ck-reject:hover{background:rgba(255,255,255,.22)}
+.map-block{
+  position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:14px;text-align:center;padding:24px;
+  background:linear-gradient(135deg,var(--water-soft),var(--sand-deep));color:var(--sea);
+}
+.map-block.hide{display:none}
+.map-block p{font-size:.95rem;max-width:280px}
+
+/* ---------- POP-UP BIENVENIDA (Club Bora Bora) ---------- */
+.welcome-box{max-width:440px;overflow:hidden}
+.welcome-box::before{content:"";position:absolute;top:0;left:0;width:100%;height:6px;background:linear-gradient(90deg,var(--coral),var(--acai),var(--sea))}
+.stamp-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;max-width:280px;margin:8px auto 22px}
+.stamp{
+  aspect-ratio:1;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.15rem;
+  background:var(--water-soft);border:2px dashed var(--sand-deep);position:relative;
+}
+.stamp .n{position:absolute;bottom:-2px;right:-2px;font-size:.55rem;font-weight:700;color:var(--sea);background:#fff;border-radius:50%;width:15px;height:15px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px -2px rgba(0,0,0,.3)}
+.stamp.free{background:var(--coral);border:2px solid var(--coral);color:#fff;box-shadow:0 10px 20px -8px var(--coral-deep);transform:scale(1.08)}
+.welcome-skip{
+  display:block;margin:16px auto 0;background:none;border:0;color:var(--sea);font-weight:600;cursor:pointer;
+  font-family:'Poppins',sans-serif;font-size:.85rem;text-decoration:underline;transition:.2s;
+}
+.welcome-skip:hover{color:var(--coral-deep)}
+
+/* ---------- STATUS FAB (abierto/cerrado) ---------- */
+.status-fab{
+  position:fixed;left:20px;bottom:20px;z-index:1500;
+  display:flex;align-items:center;gap:11px;
+  background:rgba(251,247,239,.92);backdrop-filter:blur(10px);
+  border-radius:40px;padding:10px 20px 10px 15px;
+  box-shadow:0 16px 38px -14px rgba(15,58,71,.55);
+  border:1px solid var(--sand-deep);
+  text-decoration:none;color:var(--ocean);
+  transform:translateY(14px);opacity:0;transition:.45s cubic-bezier(.2,.7,.2,1);
+}
+.status-fab.ready{transform:none;opacity:1}
+.status-fab:hover{transform:translateY(-3px);box-shadow:0 22px 46px -16px rgba(15,58,71,.6)}
+.status-fab .dot{width:12px;height:12px;border-radius:50%;flex:none;position:relative}
+.status-fab .dot::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid currentColor;opacity:.5;animation:fabPulse 2.2s infinite}
+@keyframes fabPulse{0%{transform:scale(.7);opacity:.6}70%{transform:scale(1.7);opacity:0}100%{opacity:0}}
+.status-fab.open .dot{background:#2bb673;color:#2bb673}
+.status-fab.closed .dot{background:var(--coral-deep);color:var(--coral-deep)}
+.status-fab.soon .dot{background:#f0b429;color:#f0b429}
+.status-fab .txt{display:flex;flex-direction:column;line-height:1.15}
+.status-fab .txt b{font-family:'Poppins',sans-serif;font-size:.92rem;font-weight:700}
+.status-fab.open .txt b{color:#1f8f57}
+.status-fab.closed .txt b{color:var(--coral-deep)}
+.status-fab.soon .txt b{color:#c98309}
+.status-fab .txt small{font-size:.72rem;color:var(--sea);font-weight:500}
+@media(max-width:480px){
+  .status-fab{left:14px;bottom:14px;padding:8px 16px 8px 12px;gap:9px}
+  .status-fab .txt b{font-size:.84rem}
+  .status-fab .txt small{font-size:.66rem}
+}
+
+/* ---------- CLUB FAB (hazte amigo) ---------- */
+.club-fab{
+  position:fixed;right:20px;bottom:20px;z-index:1500;
+  display:flex;align-items:center;gap:8px;
+  background:var(--acai);color:#fff;border:0;border-radius:40px;
+  padding:11px 20px 11px 16px;font-family:'Poppins',sans-serif;font-weight:700;font-size:.92rem;
+  cursor:pointer;box-shadow:0 16px 38px -14px rgba(90,45,130,.7);transition:.3s;
+}
+.club-fab:hover{background:var(--acai-soft);transform:translateY(-3px);box-shadow:0 22px 46px -16px rgba(90,45,130,.75)}
+.club-fab .gift{font-size:1.15rem;animation:clubBob 2.6s ease-in-out infinite}
+@keyframes clubBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+@media(max-width:480px){
+  .club-fab{right:14px;bottom:14px;padding:9px 16px 9px 13px;font-size:.84rem}
+}
 
 /* ---------- RESPONSIVE ---------- */
 @media(max-width:900px){
@@ -326,35 +531,96 @@ footer{background:var(--ocean-deep);color:#fff;padding:60px 0 28px;text-align:ce
 </head>
 <body>
 
+<!-- STATUS FLOTANTE ABIERTO / CERRADO -->
+<a href="#contacto" class="status-fab" id="statusFab" aria-label="Horario">
+  <span class="dot"></span>
+  <span class="txt"><b class="st-title"></b><small class="st-sub"></small></span>
+</a>
+
+<!-- BOTÓN FLOTANTE CLUB BORA BORA -->
+<button type="button" class="club-fab" id="clubFab" aria-label="Hazte amigo de Bora Bora Açaí">
+  <span class="gift">🎁</span><span data-en="Club">Club</span>
+</button>
+
+<!-- POP-UP BIENVENIDA · CLUB BORA BORA -->
+<div class="order-modal welcome-modal" id="welcomeModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="order-box welcome-box">
+    <button class="order-close" id="welcomeClose" aria-label="Cerrar">&times;</button>
+    <span class="sec-tag" data-en="Bora Bora Club">Club Bora Bora</span>
+    <h3 data-en="Become a friend of Bora Bora Açaí">Hazte amig@ de Bora Bora Açaí</h3>
+    <p data-en="Sign up and every <strong>10 orders</strong> you get a <strong>free medium açaí bowl</strong> 🥥">Apúntate y cada <strong>10 pedidos</strong> te llevas un <strong>açaí bowl mediano gratis</strong> 🥥</p>
+    <div class="stamp-grid">
+      <span class="stamp">🥥<span class="n">1</span></span>
+      <span class="stamp">🥥<span class="n">2</span></span>
+      <span class="stamp">🥥<span class="n">3</span></span>
+      <span class="stamp">🥥<span class="n">4</span></span>
+      <span class="stamp">🥥<span class="n">5</span></span>
+      <span class="stamp">🥥<span class="n">6</span></span>
+      <span class="stamp">🥥<span class="n">7</span></span>
+      <span class="stamp">🥥<span class="n">8</span></span>
+      <span class="stamp">🥥<span class="n">9</span></span>
+      <span class="stamp free">🎁</span>
+    </div>
+    <!-- 🔗 Cuando tengas la URL del programa, ponla en el href de abajo (y añade target="_blank" rel="noopener") -->
+    <a href="#" class="btn btn-primary" id="welcomeCta" style="width:100%;justify-content:center" data-en="Join the club">Únete al club</a>
+    <button class="welcome-skip" id="welcomeSkip" data-en="Maybe later">Quizá más tarde</button>
+  </div>
+</div>
+
+<!-- MODAL PEDIR A CASA -->
+<div class="order-modal" id="orderModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="order-box">
+    <button class="order-close" id="orderClose" aria-label="Cerrar">&times;</button>
+    <span class="sec-tag" data-en="take it home">para llevar</span>
+    <h3 data-en="Order your açaí">Pide tu açaí</h3>
+    <p data-en="Choose your favourite app and we'll bring Bora Bora to your door.">Elige tu app favorita y te llevamos Bora Bora a casa.</p>
+    <div class="order-opts">
+      <a href="https://glovoapp.com/" target="_blank" rel="noopener" class="order-opt glovo">Glovo</a>
+      <a href="https://www.ubereats.com/es/store/bora-bora-acai/HkhvPa9tUQmyrx6ODB7xzg?diningMode=DELIVERY" target="_blank" rel="noopener" class="order-opt uber">Uber <em>Eats</em></a>
+    </div>
+  </div>
+</div>
+
+<!-- BARRA DE COOKIES -->
+<div class="cookie-bar" id="cookieBar" role="dialog" aria-label="Cookies">
+  <p data-en="We use our own cookies and Google Maps cookies to show the map. You can accept or reject them.">Usamos cookies propias y de Google Maps para mostrar el mapa. Puedes aceptarlas o rechazarlas.</p>
+  <div class="cookie-btns">
+    <button type="button" class="ck-reject" id="ckReject" data-en="Reject">Rechazar</button>
+    <button type="button" class="ck-accept" id="ckAccept" data-en="Accept">Aceptar</button>
+  </div>
+</div>
+
 <!-- NAV -->
 <nav id="nav">
   <a href="#inicio" class="brand">
     <img class="logo logo-light" src="assets/logo-light.png" alt="Bora Bora Açaí" width="44" height="44">
     <img class="logo logo-dark" src="assets/logo-dark.png" alt="Bora Bora Açaí" width="44" height="44">
-    <span class="brand-txt"><b>Bora Bora Açaí</b><span>slow life and açaí</span></span>
+    <span class="brand-txt"><b>Bora Bora Açaí</b><span>live the slow life</span></span>
   </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#inicio" data-en="Home">Inicio</a></li>
     <li><a href="#sobre" data-en="About">Nosotros</a></li>
     <li><a href="#carta" data-en="Menu">Carta</a></li>
     <li><a href="#galeria" data-en="Gallery">Galería</a></li>
+    <li><a href="#resenas" data-en="Reviews">Reseñas</a></li>
     <li><a href="#contacto" data-en="Contact">Contacto</a></li>
     <li><button class="lang-btn" id="langBtn">EN</button></li>
-    <li><a href="tel:672921565" class="nav-cta" data-en="Call">Llamar</a></li>
   </ul>
   <button class="burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></button>
 </nav>
 
 <!-- HERO -->
 <header class="hero" id="inicio">
-  <div class="hero-bg" id="heroBg"></div>
+  <video class="hero-bg" id="heroBg" autoplay muted loop playsinline preload="auto" poster="assets/hero.jpg">
+    <source src="assets/hero.mp4" type="video/mp4">
+  </video>
   <div class="hero-content">
-    <p class="kicker">slow life and açaí</p>
+    <p class="kicker">live the slow life</p>
     <h1>Bora Bora Açaí</h1>
     <p class="lead" data-en="Açaí bowls, toasts, pancakes, matchas and much more in the heart of Valencia.">Açaí bowls, tostas, pancakes, matchas y mucho más en pleno corazón de Valencia.</p>
     <div class="hero-btns">
       <a href="#carta" class="btn btn-primary" data-en="See the menu">Ver la carta</a>
-      <a href="https://www.google.com/maps/search/?api=1&query=Carrer+d'Isabel+la+Cat%C3%B2lica+26+Val%C3%A8ncia" target="_blank" rel="noopener" class="btn btn-ghost" data-en="Get directions">Cómo llegar</a>
+      <button type="button" class="btn btn-ghost js-order" data-en="Take it home">Tomar en casa</button>
     </div>
   </div>
   <div class="wave-divider">
@@ -368,7 +634,7 @@ footer{background:var(--ocean-deep);color:#fff;padding:60px 0 28px;text-align:ce
     <div class="reveal">
       <span class="sec-tag" data-en="our essence">nuestra esencia</span>
       <h2 data-en="A little piece of<br>the beach in El Eixample">Un trocito de playa<br>en el Eixample</h2>
-      <p data-en="At <strong>Bora Bora Açaí</strong> we believe in a life without rush: the first morning swim, the sand between your toes, breakfast taken slowly by the sea. That's <em>slow life and açaí</em>.">En <strong>Bora Bora Açaí</strong> creemos en la vida sin prisas: la del primer baño de la mañana, la de la arena entre los dedos, la de desayunar con calma frente al mar. Eso es <em>slow life and açaí</em>.</p>
+      <p data-en="At <strong>Bora Bora Açaí</strong> we believe in a life without rush: the first morning swim, the sand between your toes, breakfast taken slowly by the sea. That's <em>live the slow life</em>.">En <strong>Bora Bora Açaí</strong> creemos en la vida sin prisas: la del primer baño de la mañana, la de la arena entre los dedos, la de desayunar con calma frente al mar. Eso es <em>live the slow life</em>.</p>
       <p data-en="We serve <strong>açaí</strong>, breakfasts, afternoon snacks, pancakes, 100% natural smoothies and fruit matchas. All fresh.">Servimos <strong>açaí</strong>, desayunos, meriendas, pancakes, smoothies 100% naturales y matchas de frutas. Todo fresco.</p>
       <div class="stats">
         <div class="stat"><div class="num" data-target="5">0</div><div class="lbl" data-en="Signature bowls">Bowls de autor</div></div>
@@ -396,7 +662,6 @@ footer{background:var(--ocean-deep);color:#fff;padding:60px 0 28px;text-align:ce
 <section class="menu" id="carta">
   <div class="wrap">
     <div class="head reveal">
-      <span class="sec-tag" data-en="à la carte">a la carta</span>
       <h2 data-en="Our Menu">Nuestra Carta</h2>
       <p data-en="Fresh products, premium ingredients and lots of surf love in every bowl.">Productos frescos, ingredientes premium y mucho amor surfero en cada cuenco.</p>
     </div>
@@ -413,29 +678,33 @@ footer{background:var(--ocean-deep);color:#fff;padding:60px 0 28px;text-align:ce
     </div>
 
     <!-- BOWLS -->
+    <!-- 📸 Para añadir foto a un producto: sustituye <div class="m-photo">...</div>
+         por  <div class="m-photo"><img src="assets/TU-FOTO.jpg" alt="Nombre"></div>  -->
     <div class="panel active" id="bowls">
       <div class="sizebar">
-        <div class="size-pill"><b>S</b><span data-en="size">tamaño</span><span class="pr">7,90€</span></div>
-        <div class="size-pill"><b>M</b><span data-en="size">tamaño</span><span class="pr">9,90€</span></div>
-        <div class="size-pill"><b>L</b><span data-en="size">tamaño</span><span class="pr">11,90€</span></div>
-        <div class="size-pill"><b>XL</b><span data-en="size">tamaño</span><span class="pr">14,90€</span></div>
+        <div class="size-pill"><b>S</b><span data-en="size">tamaño</span></div>
+        <div class="size-pill"><b>M</b><span data-en="size">tamaño</span></div>
+        <div class="size-pill"><b>L</b><span data-en="size">tamaño</span></div>
+        <div class="size-pill"><b>XL</b><span data-en="size">tamaño</span></div>
       </div>
-      <div class="cards">
-        <div class="card reveal"><h3>Big Boss</h3><p data-en="Premium açaí, banana, strawberries, blueberries, toasted granola, 100% peanut butter and paçoca.">Açaí premium, plátano, fresas, arándanos, granola tostada, crema de cacahuete 100% y paçoca.</p></div>
-        <div class="card reveal d1"><h3>Bora Bora</h3><p data-en="Premium açaí, banana, strawberries, toasted granola, pistachio cream, paçoca and choco drops.">Açaí premium, plátano, fresas, granola tostada, crema de pistacho, paçoca y gotas de choco.</p><span class="tag" data-en="the favourite">el favorito</span></div>
-        <div class="card reveal d2"><h3>Gymbro</h3><p data-en="Premium açaí, banana, yogurt, toasted granola, milk powder and 100% cashew butter.">Açaí premium, plátano, yogurt, granola tostada, leche en polvo y crema de anacardos 100%.</p></div>
-        <div class="card reveal d3"><h3>Nuteboom</h3><p data-en="Premium açaí, mango, strawberries, toasted granola, Nutella and Maria biscuit.">Açaí premium, mango, fresas, granola tostada, nutella y galleta maría.</p></div>
-        <div class="card reveal d4"><h3>Tropicana</h3><p data-en="Premium açaí, mango, pineapple, yogurt, toasted granola, white choco-peanut cream and coconut flakes.">Açaí premium, mango, piña, yogurt, granola tostada, crema de conguitos blancos y coco laminado.</p></div>
+      <div class="carousel" data-carousel>
+        <div class="carousel-track">
+          <article class="m-card"><div class="m-photo"><span class="m-photo-ph">🍓</span></div><div class="m-body"><h3>Big Boss</h3><p data-en="Premium açaí, banana, strawberries, blueberries, toasted granola, 100% peanut butter and paçoca.">Açaí premium, plátano, fresas, arándanos, granola tostada, crema de cacahuete 100% y paçoca.</p></div></article>
+          <article class="m-card"><div class="m-photo"><span class="m-photo-ph">🥥</span></div><div class="m-body"><h3>Bora Bora</h3><p data-en="Premium açaí, banana, strawberries, toasted granola, pistachio cream, paçoca and choco drops.">Açaí premium, plátano, fresas, granola tostada, crema de pistacho, paçoca y gotas de choco.</p><span class="tag" data-en="the favourite">el favorito</span></div></article>
+          <article class="m-card"><div class="m-photo"><span class="m-photo-ph">💪</span></div><div class="m-body"><h3>Gymbro</h3><p data-en="Premium açaí, banana, yogurt, toasted granola, milk powder and 100% cashew butter.">Açaí premium, plátano, yogurt, granola tostada, leche en polvo y crema de anacardos 100%.</p></div></article>
+          <article class="m-card"><div class="m-photo"><span class="m-photo-ph">🥭</span></div><div class="m-body"><h3>Nuteboom</h3><p data-en="Premium açaí, mango, strawberries, toasted granola, Nutella and Maria biscuit.">Açaí premium, mango, fresas, granola tostada, nutella y galleta maría.</p></div></article>
+          <article class="m-card"><div class="m-photo"><span class="m-photo-ph">🍍</span></div><div class="m-body"><h3>Tropicana</h3><p data-en="Premium açaí, mango, pineapple, yogurt, toasted granola, white choco-peanut cream and coconut flakes.">Açaí premium, mango, piña, yogurt, granola tostada, crema de conguitos blancos y coco laminado.</p></div></article>
+        </div>
       </div>
     </div>
 
     <!-- BUILD YOUR BOWL -->
     <div class="panel" id="build">
       <div class="sizebar">
-        <div class="size-pill"><b>S</b><span data-en="1 topping">1 topping</span><span class="pr">6,90€</span></div>
-        <div class="size-pill"><b>M</b><span data-en="2 toppings">2 toppings</span><span class="pr">8,90€</span></div>
-        <div class="size-pill"><b>L</b><span data-en="3 toppings">3 toppings</span><span class="pr">11,90€</span></div>
-        <div class="size-pill"><b>XL</b><span data-en="4 toppings">4 toppings</span><span class="pr">14,90€</span></div>
+        <div class="size-pill"><b>S</b><span data-en="1 topping">1 topping</span></div>
+        <div class="size-pill"><b>M</b><span data-en="2 toppings">2 toppings</span></div>
+        <div class="size-pill"><b>L</b><span data-en="3 toppings">3 toppings</span></div>
+        <div class="size-pill"><b>XL</b><span data-en="4 toppings">4 toppings</span></div>
       </div>
       <div class="builder reveal">
         <h3 data-en="Build Your Bowl">Crea tu Bowl</h3>
@@ -448,27 +717,29 @@ footer{background:var(--ocean-deep);color:#fff;padding:60px 0 28px;text-align:ce
           <span data-en="Banana">Plátano</span><span data-en="Choco chips">Choco chips</span><span data-en="Cashew butter">Crema de anacardos</span>
           <span data-en="Coconut chips">Coco chips</span><span data-en="Milk powder">Leche en polvo</span><span data-en="Condensed milk">Leche condensada</span>
         </div>
-        <p class="note" data-en="Extra topping: 0,90€">Topping extra: 0,90€</p>
       </div>
     </div>
 
     <!-- TOSTAS -->
     <div class="panel" id="tostas">
-      <div class="cards">
-        <div class="card reveal"><h3>Pavissima</h3><p data-en="Sourdough bread, hummus, turkey, avocado, tomato, mozzarella, sprout mix and olive oil.">Pan de hogaza, humus, pavo, aguacate, tomate, mozzarella, mix de brotes y aceite de oliva.</p></div>
-        <div class="card reveal d1"><h3>Atuna Matata</h3><p data-en="Sourdough bread, avocado, tuna, tomato, sprout mix, paprika and olive oil.">Pan de hogaza, aguacate, atún, tomate, mix de brotes, pimentón y aceite de oliva.</p></div>
-        <div class="card reveal d2"><h3>La Vida es Vegan</h3><p data-en="Sourdough bread, cream cheese, avocado, fresh cherry tomato, sprout mix and olive oil.">Pan de hogaza, queso crema, aguacate, tomatito natural, mix de brotes y aceite de oliva.</p><span class="tag" data-en="veggie">veggie</span></div>
-        <div class="card reveal d3"><h3>Energetic</h3><p data-en="Sourdough bread, banana, toasted granola, 100% peanut butter and choco drops.">Pan de hogaza, plátano, granola tostada, crema de cacahuete 100% y gotitas de choco.</p></div>
-        <div class="card reveal d4"><h3>Salmon Passion</h3><p data-en="Sourdough bread, hummus, avocado, salmon cubes, sprout mix and olive oil.">Pan de hogaza, humus, aguacate, dados de salmón, mix de brotes y aceite de oliva.</p></div>
+      <div class="carousel" data-carousel>
+        <div class="carousel-track">
+          <article class="m-card"><div class="m-photo"><span class="m-photo-ph">🥪</span></div><div class="m-body"><h3>Pavissima</h3><p data-en="Sourdough bread, hummus, turkey, avocado, tomato, mozzarella, sprout mix and olive oil.">Pan de hogaza, humus, pavo, aguacate, tomate, mozzarella, mix de brotes y aceite de oliva.</p></div></article>
+          <article class="m-card"><div class="m-photo"><span class="m-photo-ph">🐟</span></div><div class="m-body"><h3>Atuna Matata</h3><p data-en="Sourdough bread, avocado, tuna, tomato, sprout mix, paprika and olive oil.">Pan de hogaza, aguacate, atún, tomate, mix de brotes, pimentón y aceite de oliva.</p></div></article>
+          <article class="m-card"><div class="m-photo"><span class="m-photo-ph">🥑</span></div><div class="m-body"><h3>La Vida es Vegan</h3><p data-en="Sourdough bread, cream cheese, avocado, fresh cherry tomato, sprout mix and olive oil.">Pan de hogaza, queso crema, aguacate, tomatito natural, mix de brotes y aceite de oliva.</p><span class="tag" data-en="veggie">veggie</span></div></article>
+          <article class="m-card"><div class="m-photo"><span class="m-photo-ph">🍌</span></div><div class="m-body"><h3>Energetic</h3><p data-en="Sourdough bread, banana, toasted granola, 100% peanut butter and choco drops.">Pan de hogaza, plátano, granola tostada, crema de cacahuete 100% y gotitas de choco.</p></div></article>
+          <article class="m-card"><div class="m-photo"><span class="m-photo-ph">🐠</span></div><div class="m-body"><h3>Salmon Passion</h3><p data-en="Sourdough bread, hummus, avocado, salmon cubes, sprout mix and olive oil.">Pan de hogaza, humus, aguacate, dados de salmón, mix de brotes y aceite de oliva.</p></div></article>
+        </div>
       </div>
     </div>
 
     <!-- PANCAKES -->
     <div class="panel" id="pancakes">
-      <div class="sizebar"><div class="size-pill"><b>8,90€</b><span data-en="per plate">cada plato</span></div></div>
-      <div class="cards">
-        <div class="card reveal"><h3>Nutellisima</h3><p data-en="Banana, strawberries, Nutella and paçoca.">Banana, fresas, nutella y paçoca.</p></div>
-        <div class="card reveal d1"><h3>Boom Boom</h3><p data-en="Banana, blueberries, white choco-peanut cream and chocolate chips.">Banana, arándanos, crema de conguitos blancos y chocolate chips.</p></div>
+      <div class="carousel" data-carousel>
+        <div class="carousel-track">
+          <article class="m-card"><div class="m-photo"><span class="m-photo-ph">🥞</span></div><div class="m-body"><h3>Nutellisima</h3><p data-en="Banana, strawberries, Nutella and paçoca.">Banana, fresas, nutella y paçoca.</p></div></article>
+          <article class="m-card"><div class="m-photo"><span class="m-photo-ph">🫐</span></div><div class="m-body"><h3>Boom Boom</h3><p data-en="Banana, blueberries, white choco-peanut cream and chocolate chips.">Banana, arándanos, crema de conguitos blancos y chocolate chips.</p></div></article>
+        </div>
       </div>
     </div>
 
@@ -478,58 +749,66 @@ footer{background:var(--ocean-deep);color:#fff;padding:60px 0 28px;text-align:ce
         <div class="card reveal" style="text-align:center">
           <h3>Brunch Bora Bora</h3>
           <p data-en="Toast · Pancakes<br>Coffee · Tea<br>Smoothie of the day<br>Size S açaí">Tosta · Pancakes<br>Café · Infusión<br>Smoothie del día<br>Açaí talla S</p>
-          <div style="font-family:'Bagel Fat One',cursive;color:var(--coral);font-size:2rem;margin-top:14px">19,90€</div>
           <span class="tag" data-en="to share">para compartir</span>
         </div>
       </div>
-      <p class="note" data-en="Matcha includes a 1€ supplement.">El matcha incluye un suplemento de 1€.</p>
     </div>
 
     <!-- SMOOTHIES -->
     <div class="panel" id="smoothies">
-      <div class="sizebar"><div class="size-pill"><b>5,50€</b><span data-en="each">cada uno</span></div></div>
-      <div class="cards">
-        <div class="card reveal"><h3>Revita</h3><p data-en="Carrot, pineapple and ginger.">Zanahoria, piña y jengibre.</p></div>
-        <div class="card reveal d1"><h3>Açaí Boost</h3><p data-en="Açaí, banana and peanut butter.">Açaí, plátano y crema de cacahuete.</p></div>
-        <div class="card reveal d2"><h3>Cocoloco</h3><p data-en="Coconut purée, pineapple and cinnamon.">Puré de coco, piña y canela.</p></div>
-        <div class="card reveal d3"><h3>Mambo Mango</h3><p data-en="Mango, pineapple and strawberries.">Mango, piña y fresas.</p></div>
-        <div class="card reveal d4"><h3>Pink Lady</h3><p data-en="Banana, strawberries and blueberries.">Plátano, fresas y arándanos.</p></div>
+      <div class="carousel" data-carousel>
+        <div class="carousel-track">
+          <article class="m-card"><div class="m-photo"><span class="m-photo-ph">🥕</span></div><div class="m-body"><h3>Revita</h3><p data-en="Carrot, pineapple and ginger.">Zanahoria, piña y jengibre.</p></div></article>
+          <article class="m-card"><div class="m-photo"><span class="m-photo-ph">🍌</span></div><div class="m-body"><h3>Açaí Boost</h3><p data-en="Açaí, banana and peanut butter.">Açaí, plátano y crema de cacahuete.</p></div></article>
+          <article class="m-card"><div class="m-photo"><span class="m-photo-ph">🥥</span></div><div class="m-body"><h3>Cocoloco</h3><p data-en="Coconut purée, pineapple and cinnamon.">Puré de coco, piña y canela.</p></div></article>
+          <article class="m-card"><div class="m-photo"><span class="m-photo-ph">🥭</span></div><div class="m-body"><h3>Mambo Mango</h3><p data-en="Mango, pineapple and strawberries.">Mango, piña y fresas.</p></div></article>
+          <article class="m-card"><div class="m-photo"><span class="m-photo-ph">🍓</span></div><div class="m-body"><h3>Pink Lady</h3><p data-en="Banana, strawberries and blueberries.">Plátano, fresas y arándanos.</p></div></article>
+        </div>
       </div>
       <p class="note" data-en="100% natural and ice-free.">100% natural y sin hielo.</p>
     </div>
 
     <!-- MATCHA -->
     <div class="panel" id="matcha">
-      <div class="sizebar"><div class="size-pill"><b>4,90€</b><span data-en="each">cada uno</span></div></div>
-      <div class="cards">
-        <div class="card reveal"><h3>Golden Matcha</h3><p data-en="Matcha with golden passion fruit.">Matcha con maracuyá dorado.</p></div>
-        <div class="card reveal d1"><h3>Coco Matcha</h3><p data-en="Matcha with coconut purée.">Matcha con puré de coco.</p></div>
-        <div class="card reveal d2"><h3>Rose Matcha</h3><p data-en="Matcha with fresh strawberry.">Matcha con fresa natural.</p></div>
-        <div class="card reveal d3"><h3>Maracuyá Matcha</h3><p data-en="Matcha with passion fruit.">Matcha con maracuyá.</p></div>
+      <div class="carousel" data-carousel>
+        <div class="carousel-track">
+          <article class="m-card"><div class="m-photo"><span class="m-photo-ph">🍵</span></div><div class="m-body"><h3>Golden Matcha</h3><p data-en="Matcha with golden passion fruit.">Matcha con maracuyá dorado.</p></div></article>
+          <article class="m-card"><div class="m-photo"><span class="m-photo-ph">🥥</span></div><div class="m-body"><h3>Coco Matcha</h3><p data-en="Matcha with coconut purée.">Matcha con puré de coco.</p></div></article>
+          <article class="m-card"><div class="m-photo"><span class="m-photo-ph">🌹</span></div><div class="m-body"><h3>Rose Matcha</h3><p data-en="Matcha with fresh strawberry.">Matcha con fresa natural.</p></div></article>
+          <article class="m-card"><div class="m-photo"><span class="m-photo-ph">🟡</span></div><div class="m-body"><h3>Maracuyá Matcha</h3><p data-en="Matcha with passion fruit.">Matcha con maracuyá.</p></div></article>
+        </div>
       </div>
       <p class="note" data-en="100% fruit purée, no added sugar.">100% puré de frutas sin azúcar.</p>
     </div>
 
     <!-- BEBIDAS -->
     <div class="panel" id="bebidas">
-      <div class="pricelist reveal">
-        <div class="price-row"><span class="nm" data-en="Espresso">Espresso</span><span class="dots"></span><span class="pr">1,80€</span></div>
-        <div class="price-row"><span class="nm" data-en="Cortado">Cortado</span><span class="dots"></span><span class="pr">2,00€</span></div>
-        <div class="price-row"><span class="nm" data-en="Americano">Americano</span><span class="dots"></span><span class="pr">2,00€</span></div>
-        <div class="price-row"><span class="nm" data-en="White coffee">Café con leche</span><span class="dots"></span><span class="pr">2,20€</span></div>
-        <div class="price-row"><span class="nm" data-en="Latte">Latte</span><span class="dots"></span><span class="pr">3,00€</span></div>
-        <div class="price-row"><span class="nm" data-en="Cappuccino">Capuccino</span><span class="dots"></span><span class="pr">3,00€</span></div>
-        <div class="price-row"><span class="nm" data-en="Green tea">Té verde</span><span class="dots"></span><span class="pr">2,00€</span></div>
-        <div class="price-row"><span class="nm" data-en="Red tea">Té rojo</span><span class="dots"></span><span class="pr">2,00€</span></div>
-        <div class="price-row"><span class="nm" data-en="Black tea">Té negro</span><span class="dots"></span><span class="pr">2,00€</span></div>
-        <div class="price-row"><span class="nm" data-en="Camomile">Manzanilla</span><span class="dots"></span><span class="pr">2,00€</span></div>
-        <div class="price-row"><span class="nm" data-en="Collagen matcha">Collagen matcha</span><span class="dots"></span><span class="pr">4,50€</span></div>
-        <div class="price-row"><span class="nm" data-en="Collagen matcha vanilla">Collagen matcha vainilla</span><span class="dots"></span><span class="pr">5,00€</span></div>
-        <div class="price-row"><span class="nm" data-en="Creamy toffee coffee">Creamy toffee coffee</span><span class="dots"></span><span class="pr">3,90€</span></div>
-        <div class="price-row"><span class="nm" data-en="Ice latte">Ice latte</span><span class="dots"></span><span class="pr">3,90€</span></div>
-        <div class="price-row"><span class="nm" data-en="Mineral water">Agua mineral</span><span class="dots"></span><span class="pr">1,50€</span></div>
+      <div class="coffee-feature reveal">
+        <span class="cf-ic">☕</span>
+        <div class="cf-txt">
+          <span class="cf-tag" data-en="imported from Naples 🇮🇹">importado de Nápoles 🇮🇹</span>
+          <span class="cf-tag" data-en="freshly ground">molido al momento</span>
+          <h3 data-en="The house coffee">El café de la casa</h3>
+          <p data-en="Our coffee comes straight from Naples and we grind it fresh to order: an authentic, intense and full-bodied espresso — the one everyone falls in love with.">Nuestro café viene directo de Nápoles y lo molemos al momento: un espresso auténtico, intenso y con mucho cuerpo. El que enamora a todo el mundo.</p>
+        </div>
       </div>
-      <p class="note" data-en="Oat milk supplement: 0,30€.">Suplemento de leche de avena: 0,30€.</p>
+      <div class="pricelist reveal">
+        <div class="price-row"><span class="nm" data-en="Espresso">Espresso</span></div>
+        <div class="price-row"><span class="nm" data-en="Cortado">Cortado</span></div>
+        <div class="price-row"><span class="nm" data-en="Americano">Americano</span></div>
+        <div class="price-row"><span class="nm" data-en="White coffee">Café con leche</span></div>
+        <div class="price-row"><span class="nm" data-en="Latte">Latte</span></div>
+        <div class="price-row"><span class="nm" data-en="Cappuccino">Capuccino</span></div>
+        <div class="price-row"><span class="nm" data-en="Green tea">Té verde</span></div>
+        <div class="price-row"><span class="nm" data-en="Red tea">Té rojo</span></div>
+        <div class="price-row"><span class="nm" data-en="Black tea">Té negro</span></div>
+        <div class="price-row"><span class="nm" data-en="Camomile">Manzanilla</span></div>
+        <div class="price-row"><span class="nm" data-en="Collagen matcha">Collagen matcha</span></div>
+        <div class="price-row"><span class="nm" data-en="Collagen matcha vanilla">Collagen matcha vainilla</span></div>
+        <div class="price-row"><span class="nm" data-en="Creamy toffee coffee">Creamy toffee coffee</span></div>
+        <div class="price-row"><span class="nm" data-en="Ice latte">Ice latte</span></div>
+        <div class="price-row"><span class="nm" data-en="Mineral water">Agua mineral</span></div>
+      </div>
     </div>
 
   </div>
@@ -560,6 +839,37 @@ footer{background:var(--ocean-deep);color:#fff;padding:60px 0 28px;text-align:ce
   </div>
 </section>
 
+<!-- RESEÑAS -->
+<section class="reviews" id="resenas">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="sec-tag" data-en="reviews">reseñas</span>
+      <h2 data-en="What you say about us">Lo que dicen de nosotros</h2>
+      <p data-en="Our latest 5-star reviews. Thanks for the love! 🤍">Nuestras últimas reseñas de 5 estrellas. ¡Gracias por tanto cariño! 🤍</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="stars">★★★★★</div>
+        <p data-en="“The açaí is so good! You can tell it has little sugar and that they really care about the quality of the toppings. Plus the attention was amazing and the service super friendly. A 10/10!!!”">«Super bueno el açaí! Se nota que no lleva mucho azúcar y que cuidan mucho la calidad de los toppings. Además, la atención increíble y el servicio super agradable. Un 10/10!!!»</p>
+        <div class="review-author"><span class="av">S</span><div><b>Silvia Tévar</b><span data-en="Local Guide · 20 hours ago">Local Guide · hace 20 horas</span></div></div>
+      </div>
+      <div class="review-card reveal d1">
+        <div class="stars">★★★★★</div>
+        <p data-en="“We tried the bowls, the smoothies, the matcha with coffee and the toasts, and we loved them! Seriously delicious! The service was incredibly kind and welcoming. Excellent value for money! ♥️✌🏼”">«Probamos los bowls, los batidos, el matcha con café y las tostadas, ¡y nos encantaron! ¡En serio, estaban buenísimos! El servicio fue increíblemente amable y acogedor. ¡Excelente relación calidad-precio! ♥️✌🏼»</p>
+        <div class="review-author"><span class="av">E</span><div><b>esther geng</b><span data-en="2 days ago · Google">hace 2 días · Google</span></div></div>
+      </div>
+      <div class="review-card reveal d2">
+        <div class="stars">★★★★★</div>
+        <p data-en="“A small and great place, with an amazing atmosphere and friendly service. They have very good healthy options (açaí bowls and sourdough toasts with healthy ingredients). I definitely recommend it and would come back.”">«Un lugar pequeño y genial, con un ambiente increíble y un servicio amable. Tienen muy buenas opciones de comida saludable (tazones de açaí y tostadas de masa madre con ingredientes saludables). Lo recomiendo sin duda y volvería.»</p>
+        <div class="review-author"><span class="av">J</span><div><b>Justyna W</b><span data-en="4 days ago · Google">hace 4 días · Google</span></div></div>
+      </div>
+    </div>
+    <div class="reviews-cta reveal">
+      <a href="https://www.google.com/maps/search/?api=1&query=Bora+Bora+Aça%C3%AD+Carrer+d'Isabel+la+Cat%C3%B2lica+26+Val%C3%A8ncia" target="_blank" rel="noopener" class="btn btn-primary" data-en="See all reviews on Google">Ver todas en Google</a>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACTO -->
 <section class="contact" id="contacto">
   <div class="wrap">
@@ -571,7 +881,7 @@ footer{background:var(--ocean-deep);color:#fff;padding:60px 0 28px;text-align:ce
       <div class="info-card reveal">
         <div class="info-item">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div><h4 data-en="Where we are">Dónde estamos</h4><a href="https://www.google.com/maps/search/?api=1&query=Carrer+d'Isabel+la+Cat%C3%B2lica+26+Val%C3%A8ncia" target="_blank" rel="noopener">Carrer d'Isabel la Catòlica, 26<br>L'Eixample, 46004 València</a></div>
+          <div><h4 data-en="Where we are">Dónde estamos</h4><a href="https://www.google.com/maps/search/?api=1&query=Bora+Bora+Aça%C3%AD+Carrer+d'Isabel+la+Cat%C3%B2lica+26+Val%C3%A8ncia" target="_blank" rel="noopener">Carrer d'Isabel la Catòlica, 26<br>L'Eixample, 46004 València</a></div>
         </div>
         <div class="info-item">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg></div>
@@ -597,13 +907,17 @@ footer{background:var(--ocean-deep);color:#fff;padding:60px 0 28px;text-align:ce
           </div>
         </div>
         <div class="contact-cta">
-          <a href="tel:672921565" class="btn btn-primary" data-en="Book / Order">Reservar / Pedir</a>
+          <button type="button" class="btn btn-primary js-order" data-en="Take it home">Tomar en casa</button>
           <a href="https://www.instagram.com/boraboracaies/" target="_blank" rel="noopener" class="btn btn-acai" data-en="Follow us">Síguenos</a>
         </div>
       </div>
       <div class="map-wrap reveal d1">
         <iframe title="Mapa Bora Bora Açaí" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=Carrer%20d'Isabel%20la%20Cat%C3%B2lica%2026%2046004%20Val%C3%A8ncia&output=embed"></iframe>
+          data-src="https://www.google.com/maps?q=Bora%20Bora%20Aça%C3%AD%2C%20Carrer%20d'Isabel%20la%20Cat%C3%B2lica%2026%2C%2046004%20Val%C3%A8ncia&output=embed"></iframe>
+        <div class="map-block" id="mapBlock">
+          <p data-en="Enable Google Maps cookies to see the map here.">Activa las cookies de Google Maps para ver el mapa aquí.</p>
+          <button type="button" class="btn btn-acai" id="mapEnable" data-en="Load map">Cargar mapa</button>
+        </div>
       </div>
     </div>
   </div>
@@ -615,12 +929,12 @@ footer{background:var(--ocean-deep);color:#fff;padding:60px 0 28px;text-align:ce
     <div class="footer-logo">
       <img class="logo" src="assets/logo-light.png" alt="Bora Bora Açaí" width="62" height="62">
       <b>Bora Bora Açaí</b>
-      <span>slow life and açaí</span>
+      <span>live the slow life</span>
     </div>
     <div class="footer-social">
       <a href="https://www.instagram.com/boraboracaies/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
       <a href="tel:672921565" aria-label="Teléfono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg></a>
-      <a href="https://www.google.com/maps/search/?api=1&query=Carrer+d'Isabel+la+Cat%C3%B2lica+26+Val%C3%A8ncia" target="_blank" rel="noopener" aria-label="Ubicación"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Bora+Bora+Aça%C3%AD+Carrer+d'Isabel+la+Cat%C3%B2lica+26+Val%C3%A8ncia" target="_blank" rel="noopener" aria-label="Ubicación"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></a>
     </div>
     <p>Carrer d'Isabel la Catòlica, 26 · L'Eixample · 46004 València · 672 92 15 65</p>
     <div class="footer-bottom">
@@ -659,6 +973,7 @@ tabs.forEach(tab => tab.addEventListener('click', () => {
   const panel = document.getElementById(tab.dataset.tab);
   panel.classList.add('active');
   panel.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  if (typeof carRecalcs !== 'undefined') carRecalcs.forEach(f => f());
 }));
 
 // highlight today's hours
@@ -677,8 +992,235 @@ function applyLang(l){
   document.documentElement.lang = l;
   langBtn.textContent = (l === 'en') ? 'ES' : 'EN';
   lang = l;
+  renderStatus(l);
 }
 langBtn.addEventListener('click', () => applyLang(lang === 'es' ? 'en' : 'es'));
+
+// ---------- ESTADO ABIERTO / CERRADO ----------
+// minutos desde medianoche; [apertura, cierre] o null = cerrado
+const schedule = {
+  0:[570,1230], // Domingo  9:30–20:30
+  1:null,       // Lunes    cerrado
+  2:[570,1230], // Martes
+  3:[570,1230], // Miércoles
+  4:[570,1230], // Jueves
+  5:[570,1230], // Viernes
+  6:[570,1230]  // Sábado
+};
+const dayNames = {
+  es:['el domingo','el lunes','el martes','el miércoles','el jueves','el viernes','el sábado'],
+  en:['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+};
+const fmtHM = m => Math.floor(m/60) + ':' + (m%60<10?'0':'') + (m%60);
+const statusFab = document.getElementById('statusFab');
+function renderStatus(l){
+  const now = new Date();
+  const day = now.getDay();
+  const mins = now.getHours()*60 + now.getMinutes();
+  const today = schedule[day];
+  const isOpen = !!today && mins >= today[0] && mins < today[1];
+  let soon = false;          // abre/cierra en menos de 1h → aviso ámbar
+  let title, sub;
+  if (isOpen){
+    soon = (today[1] - mins) <= 60;
+    title = soon ? (l === 'en' ? 'Closing soon' : 'Cierra pronto') : (l === 'en' ? 'Open now' : 'Abierto ahora');
+    sub   = (l === 'en') ? 'Closes at ' + fmtHM(today[1]) : 'Cierra a las ' + fmtHM(today[1]);
+  } else {
+    let d = day, addDays = 0, openMin = null;
+    if (today && mins < today[0]){ openMin = today[0]; }       // abre hoy más tarde
+    else {
+      for (let i = 1; i <= 7; i++){
+        const nd = (day + i) % 7;
+        if (schedule[nd]){ addDays = i; openMin = schedule[nd][0]; d = nd; break; }
+      }
+    }
+    if (addDays === 0) soon = (openMin - mins) <= 60;          // abre hoy en menos de 1h
+    title = soon ? (l === 'en' ? 'Opening soon' : 'Abre pronto') : (l === 'en' ? 'Closed now' : 'Cerrado ahora');
+    if (addDays === 0)       sub = (l === 'en') ? 'Opens today at ' + fmtHM(openMin)     : 'Abre hoy a las ' + fmtHM(openMin);
+    else if (addDays === 1)  sub = (l === 'en') ? 'Opens tomorrow at ' + fmtHM(openMin)  : 'Abre mañana a las ' + fmtHM(openMin);
+    else                     sub = (l === 'en') ? 'Opens ' + dayNames.en[d] + ' at ' + fmtHM(openMin) : 'Abre ' + dayNames.es[d] + ' a las ' + fmtHM(openMin);
+  }
+  statusFab.classList.toggle('open', isOpen && !soon);
+  statusFab.classList.toggle('closed', !isOpen && !soon);
+  statusFab.classList.toggle('soon', soon);
+  statusFab.querySelector('.st-title').textContent = title;
+  statusFab.querySelector('.st-sub').textContent = sub;
+  statusFab.classList.add('ready');
+}
+renderStatus(lang);
+setInterval(() => renderStatus(lang), 60000);
+
+// ---------- MODAL PEDIR A CASA (Glovo / Uber Eats) ----------
+const orderModal = document.getElementById('orderModal');
+const orderClose = document.getElementById('orderClose');
+function openOrder(){ orderModal.classList.add('show'); orderModal.setAttribute('aria-hidden','false'); }
+function closeOrder(){ orderModal.classList.remove('show'); orderModal.setAttribute('aria-hidden','true'); }
+document.querySelectorAll('.js-order').forEach(b => b.addEventListener('click', openOrder));
+orderClose.addEventListener('click', closeOrder);
+orderModal.addEventListener('click', e => { if (e.target === orderModal) closeOrder(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && orderModal.classList.contains('show')) closeOrder(); });
+
+// ---------- POP-UP BIENVENIDA (Club Bora Bora) ----------
+const welcomeModal = document.getElementById('welcomeModal');
+const closeWelcome = () => { welcomeModal.classList.remove('show'); welcomeModal.setAttribute('aria-hidden','true'); };
+document.getElementById('welcomeClose').addEventListener('click', closeWelcome);
+document.getElementById('welcomeSkip').addEventListener('click', closeWelcome);
+welcomeModal.addEventListener('click', e => { if (e.target === welcomeModal) closeWelcome(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && welcomeModal.classList.contains('show')) closeWelcome(); });
+let welcomeShown = false;
+function openWelcomeModal(){ welcomeModal.classList.add('show'); welcomeModal.setAttribute('aria-hidden','false'); }
+function showWelcome(){ if (welcomeShown) return; welcomeShown = true; openWelcomeModal(); }
+// botón flotante para abrir el Club aunque se haya cerrado el pop-up
+document.getElementById('clubFab').addEventListener('click', openWelcomeModal);
+
+// ---------- RESEÑAS DE GOOGLE (automáticas · últimas 3 de 5★) ----------
+// CÓMO ACTIVARLO:
+//  1) En Google Cloud Console crea una API key con "Maps JavaScript API" + "Places API"
+//     activadas y restríngela a tu dominio (boraboraacai.com).
+//  2) Consigue el Place ID en:
+//     https://developers.google.com/maps/documentation/places/web-service/place-id
+//  3) Pega ambos valores aquí abajo. Mientras estén vacíos, se muestran
+//     las reseñas de ejemplo que ya hay en el HTML.
+const GOOGLE_MAPS_KEY = '';   // p.ej. 'AIzaSy...'
+const GOOGLE_PLACE_ID = '';   // p.ej. 'ChIJ....'
+
+function renderGoogleReviews(list){
+  const grid = document.querySelector('.reviews-grid');
+  if (!grid || !list.length) return;
+  grid.innerHTML = list.map((r, i) => `
+      <div class="review-card reveal in${i ? ' d' + i : ''}">
+        <div class="stars">${'★'.repeat(r.rating)}</div>
+        <p>«${(r.text || '').replace(/</g,'&lt;')}»</p>
+        <div class="review-author">
+          ${r.profile_photo_url
+            ? `<img class="av-img" src="${r.profile_photo_url}" alt="" referrerpolicy="no-referrer">`
+            : `<span class="av">${(r.author_name || '?').charAt(0)}</span>`}
+          <div><b>${r.author_name || ''}</b><span>${r.relative_time_description || '5 estrellas en Google'}</span></div>
+        </div>
+      </div>`).join('');
+}
+window.initGoogleReviews = function(){
+  try{
+    const svc = new google.maps.places.PlacesService(document.createElement('div'));
+    svc.getDetails({ placeId: GOOGLE_PLACE_ID, fields: ['reviews'] }, (place, status) => {
+      if (status !== google.maps.places.PlacesServiceStatus.OK || !place || !place.reviews) return;
+      const five = place.reviews.filter(r => r.rating === 5).sort((a, b) => b.time - a.time).slice(0, 3);
+      renderGoogleReviews(five);
+    });
+  }catch(e){ /* se mantienen las reseñas de ejemplo */ }
+};
+let reviewsLoaded = false;
+function loadGoogleReviews(){
+  if (reviewsLoaded || !GOOGLE_MAPS_KEY || !GOOGLE_PLACE_ID) return;
+  reviewsLoaded = true;
+  const s = document.createElement('script');
+  s.src = 'https://maps.googleapis.com/maps/api/js?key=' + GOOGLE_MAPS_KEY +
+          '&libraries=places&language=es&callback=initGoogleReviews&loading=async';
+  s.async = true;
+  document.head.appendChild(s);
+}
+
+// ---------- COOKIES ----------
+const cookieBar = document.getElementById('cookieBar');
+const mapFrame = document.querySelector('.map-wrap iframe');
+const mapBlock = document.getElementById('mapBlock');
+function loadMap(){
+  if (mapFrame && !mapFrame.src && mapFrame.dataset.src) mapFrame.src = mapFrame.dataset.src;
+  if (mapBlock) mapBlock.classList.add('hide');
+}
+function setCookies(v){
+  try { localStorage.setItem('bb-cookies', v); } catch(e){}
+  cookieBar.classList.remove('show');
+  if (v === 'accepted'){ loadMap(); loadGoogleReviews(); }
+  setTimeout(showWelcome, 500);          // el Club aparece tras decidir cookies
+}
+let cookieChoice = null;
+try { cookieChoice = localStorage.getItem('bb-cookies'); } catch(e){}
+document.getElementById('ckAccept').addEventListener('click', () => setCookies('accepted'));
+document.getElementById('ckReject').addEventListener('click', () => setCookies('rejected'));
+document.getElementById('mapEnable').addEventListener('click', () => setCookies('accepted'));
+if (cookieChoice === 'accepted'){ loadMap(); loadGoogleReviews(); setTimeout(showWelcome, 900); }
+else if (cookieChoice === 'rejected'){ setTimeout(showWelcome, 900); }
+else { setTimeout(() => cookieBar.classList.add('show'), 500); }   // primera visita: pedir cookies
+
+// ---------- CARRUSELES CARTA (3 visibles · centro más grande · loop infinito) ----------
+const carRecalcs = [];
+const reduceMo = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.querySelectorAll('[data-carousel]').forEach(initCarousel);
+function initCarousel(car){
+  const track = car.querySelector('.carousel-track');
+  const baseHTML = track.innerHTML;     // contenido original (una vuelta)
+  // con menos de 3 productos no tiene sentido el scroll: se muestran centrados y fijos
+  if (track.querySelectorAll('.m-card').length < 3){
+    car.classList.add('static');
+    track.querySelectorAll('.m-card').forEach(c => { c.style.transform = 'none'; c.classList.remove('is-center'); });
+    return;
+  }
+  const speed = reduceMo ? 0 : 0.5;     // px por frame
+  let P = 0, meta = [], built = false;
+  let paused = false, pauseTimer;
+  const pauseAwhile = ms => { paused = true; clearTimeout(pauseTimer); pauseTimer = setTimeout(() => { paused = false; }, ms || 1800); };
+
+  // construir cuando el panel es visible
+  function build(){
+    if (!car.offsetParent || !car.clientWidth) return false;
+    // medir el periodo exacto de una vuelta con 2 repeticiones
+    track.innerHTML = baseHTML + baseHTML;
+    let cards = track.querySelectorAll('.m-card');
+    const baseCount = cards.length / 2;
+    P = cards[baseCount].offsetLeft - cards[0].offsetLeft;
+    if (!P) return false;
+    // repetir lo justo para cubrir pantalla + margen a ambos lados (sin huecos)
+    const reps = Math.max(4, Math.ceil(car.clientWidth / P) + 3);
+    track.innerHTML = baseHTML.repeat(reps);
+    // cachear el centro de cada tarjeta (no se lee el layout en cada frame)
+    meta = [...track.querySelectorAll('.m-card')].map(c => ({ el:c, center:c.offsetLeft + c.offsetWidth / 2 }));
+    car.scrollLeft = P * 1.5;     // centro de la banda [P, 2P]
+    built = true;
+    return true;
+  }
+
+  // la tarjeta más cercana al centro se ve más grande
+  function updateScale(){
+    const viewCenter = car.scrollLeft + car.clientWidth / 2;
+    const halfW = car.clientWidth / 2;
+    for (const m of meta){
+      const t = Math.max(0, 1 - Math.abs(m.center - viewCenter) / halfW);   // 1 centro → 0 extremos
+      m.el.style.transform = 'scale(' + (0.8 + 0.32 * t).toFixed(3) + ')';
+      m.el.classList.toggle('is-center', t > 0.86);
+    }
+  }
+  function loop(){
+    if (car.offsetParent && car.clientWidth){
+      if (!built) build();
+      if (built){
+        if (!paused) car.scrollLeft += speed;
+        // mantener el scroll en la banda [P, 2P] → loop perfecto, sin topes ni saltos
+        if (car.scrollLeft >= P * 2) car.scrollLeft -= P;
+        else if (car.scrollLeft < P) car.scrollLeft += P;
+        updateScale();
+      }
+    }
+    requestAnimationFrame(loop);
+  }
+  // pausas al interactuar
+  car.addEventListener('mouseenter', () => paused = true);
+  car.addEventListener('mouseleave', () => paused = false);
+  car.addEventListener('wheel', () => pauseAwhile(), {passive:true});
+  car.addEventListener('touchstart', () => paused = true, {passive:true});
+  car.addEventListener('touchend', () => pauseAwhile(), {passive:true});
+  // arrastrar con el ratón (incremental: el loop envuelve en ambos sentidos)
+  let down = false, lastX = 0;
+  car.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse') return; down = true; lastX = e.clientX; paused = true; car.classList.add('dragging'); });
+  window.addEventListener('pointerup', () => { if (down){ down = false; car.classList.remove('dragging'); pauseAwhile(); } });
+  car.addEventListener('pointermove', e => { if (!down) return; car.scrollLeft -= (e.clientX - lastX); lastX = e.clientX; });
+  // reconstruir si cambian tamaño / fuentes / pestaña
+  const rebuild = () => { built = false; };
+  window.addEventListener('load', rebuild);
+  window.addEventListener('resize', rebuild);
+  carRecalcs.push(rebuild);
+  loop();
+}
 
 // reveal on scroll
 const io = new IntersectionObserver((entries) => {
