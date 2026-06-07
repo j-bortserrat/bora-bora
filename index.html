@@ -165,7 +165,7 @@ nav.scrolled .burger span{background:var(--ocean)}
 
 /* ---------- HERO ---------- */
 .hero{height:100vh;height:100svh;min-height:600px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
-.hero-bg{position:absolute;inset:-10% 0;background:url('assets/hero.jpg') center/cover no-repeat;will-change:transform;z-index:0}
+.hero-bg{position:absolute;inset:-10% 0;background:linear-gradient(160deg,var(--ocean),var(--ocean-deep));will-change:transform;z-index:0}
 video.hero-bg{width:100%;height:120%;object-fit:cover;object-position:center}
 .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,58,71,.45) 0%,rgba(15,58,71,.15) 45%,rgba(15,58,71,.55) 100%);z-index:1}
 .hero-content{position:relative;z-index:2;color:#fff;padding:0 24px;max-width:880px}
@@ -731,7 +731,7 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
 
 <!-- BARRA DE COOKIES -->
 <div class="cookie-bar" id="cookieBar" role="dialog" aria-label="Cookies">
-  <p data-en="We use our own cookies and Google Maps cookies to show the map. You can accept or reject them.">Usamos cookies propias y de Google Maps para mostrar el mapa. Puedes aceptarlas o rechazarlas.</p>
+  <p data-en="We use our own cookies and Google Maps cookies to show the map. You can accept or reject them. <a href='cookies.html'>More info</a>">Usamos cookies propias y de Google Maps para mostrar el mapa. Puedes aceptarlas o rechazarlas. <a href="cookies.html">Más información</a></p>
   <div class="cookie-btns">
     <button type="button" class="ck-reject" id="ckReject" data-en="Reject">Rechazar</button>
     <button type="button" class="ck-accept" id="ckAccept" data-en="Accept">Aceptar</button>
@@ -759,7 +759,7 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
 
 <!-- HERO -->
 <header class="hero" id="inicio" data-page="inicio">
-  <video class="hero-bg" id="heroBg" autoplay muted loop playsinline preload="auto" poster="assets/hero.jpg">
+  <video class="hero-bg" id="heroBg" autoplay muted loop playsinline preload="auto">
     <source src="assets/hero.mp4" type="video/mp4">
   </video>
   <div class="hero-content">
@@ -1123,7 +1123,7 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
         <div class="arrive-card">
           <span class="ac-ic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="12" rx="2.5"/><path d="M4 11h16"/><circle cx="8" cy="19" r="1.5"/><circle cx="16" cy="19" r="1.5"/><path d="M7 16v2M17 16v2"/></svg></span>
           <b>Bus EMT</b>
-          <p data-en="Several lines along Gran Via Marqués del Túria and Russafa">Varias líneas por Gran Via Marqués del Túria y Russafa</p>
+          <p data-en="Lines 6, 8, 10, 13, 14, 19, 28, 35, 40, 71, 81, 92, 93, C1 &amp; C2 within 15 min">Líneas 6, 8, 10, 13, 14, 19, 28, 35, 40, 71, 81, 92, 93, C1 y C2 a menos de 15 min</p>
         </div>
         <div class="arrive-card">
           <span class="ac-ic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9.5 16V8H13a2.5 2.5 0 0 1 0 5H9.5"/></svg></span>
@@ -1171,6 +1171,7 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
     </div>
     <p>Carrer d'Isabel la Catòlica, 26 · L'Eixample · 46004 València · 672 92 15 65</p>
     <div class="footer-bottom">
+      <p><a href="aviso-legal.html" data-en="Legal notice">Aviso legal</a> · <a href="privacidad.html" data-en="Privacy">Privacidad</a> · <a href="cookies.html" data-en="Cookies">Cookies</a></p>
       <p>© <span id="year"></span> Bora Bora Açaí · <span data-en="All rights reserved">Todos los derechos reservados</span> · <a href="#inicio" data-en="Back to top ↑">Volver arriba ↑</a></p>
     </div>
   </div>
