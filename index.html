@@ -452,8 +452,8 @@ footer{background:var(--ocean-deep);color:#fff;padding:60px 0 28px;text-align:ce
   border:0;border-radius:30px;padding:11px 24px;font-weight:600;cursor:pointer;
   font-family:'Poppins',sans-serif;font-size:.9rem;transition:.25s;
 }
-.ck-accept{background:var(--coral);color:#fff;box-shadow:0 8px 20px -8px var(--coral-deep)}
-.ck-accept:hover{background:var(--coral-deep);transform:translateY(-2px)}
+.ck-accept{background:var(--acai-teal);color:#fff;box-shadow:0 8px 20px -8px var(--ocean)}
+.ck-accept:hover{background:var(--ocean);transform:translateY(-2px)}
 .ck-reject{background:rgba(255,255,255,.12);color:#fff}
 .ck-reject:hover{background:rgba(255,255,255,.22)}
 .map-block{
@@ -548,7 +548,8 @@ footer{background:var(--ocean-deep);color:#fff;padding:60px 0 28px;text-align:ce
   .burger.open span:nth-child(2){opacity:0}
   .burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
   /* secciones más compactas */
-  .about,.menu,.gallery,.contact{padding-top:78px;padding-bottom:68px}
+  .about{padding-top:78px;padding-bottom:68px}
+  .menu,.gallery,.contact{padding-top:108px;padding-bottom:68px}
   .menu .head,.gallery .head,.contact .head{margin-bottom:28px}
   /* galería en 2 columnas y compacta para no alargar tanto el scroll */
   .grid-masonry{columns:2;column-gap:10px}
@@ -567,7 +568,8 @@ footer{background:var(--ocean-deep);color:#fff;padding:60px 0 28px;text-align:ce
 }
 @media(max-width:480px){
   .wrap{padding:0 16px}
-  .about,.menu,.gallery,.contact{padding-top:58px;padding-bottom:54px}
+  .about{padding-top:58px;padding-bottom:54px}
+  .menu,.gallery,.contact{padding-top:96px;padding-bottom:54px}
   .menu .head,.gallery .head,.contact .head{margin-bottom:24px}
   .sec-tag{font-size:1.1rem}
   .hero-content h1{font-size:2.5rem}
@@ -1319,12 +1321,6 @@ document.querySelectorAll('[data-carousel]').forEach(initCarousel);
 function initCarousel(car){
   const track = car.querySelector('.carousel-track');
   const baseHTML = track.innerHTML;     // contenido original (una vuelta)
-  // con menos de 3 productos no tiene sentido el scroll: se muestran centrados y fijos
-  if (track.querySelectorAll('.m-card').length < 3){
-    car.classList.add('static');
-    track.querySelectorAll('.m-card').forEach(c => { c.style.transform = 'none'; c.classList.remove('is-center'); });
-    return;
-  }
   const speed = reduceMo ? 0 : 0.5;     // px por frame
   let P = 0, meta = [], built = false;
   let paused = false, pauseTimer;
