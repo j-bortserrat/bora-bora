@@ -1436,6 +1436,19 @@ const PAGES = ['inicio','acai','carta','galeria','resenas','contacto'];
 const pageEls = document.querySelectorAll('[data-page]');
 const heroVideo = document.getElementById('heroBg');
 
+// arrancar el vídeo del hero lo antes posible, sin depender de aceptar cookies
+if (heroVideo){
+  heroVideo.muted = true;                       // requisito para autoplay sin gesto
+  const tryPlayHero = () => { const p = heroVideo.play(); if (p && p.catch) p.catch(() => {}); };
+  heroVideo.addEventListener('loadeddata', tryPlayHero);
+  heroVideo.addEventListener('canplay', tryPlayHero);
+  // fallback: al primer gesto del usuario en cualquier parte de la página
+  const kickHero = () => { tryPlayHero(); document.removeEventListener('pointerdown', kickHero); document.removeEventListener('touchstart', kickHero); };
+  document.addEventListener('pointerdown', kickHero, {passive:true});
+  document.addEventListener('touchstart', kickHero, {passive:true});
+  tryPlayHero();
+}
+
 function showPage(id, push){
   if (!PAGES.includes(id)) id = 'inicio';
   document.body.dataset.page = id;
