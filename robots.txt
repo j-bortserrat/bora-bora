@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://j-bortserrat.github.io/bora-bora/sitemap.xml

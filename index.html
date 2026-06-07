@@ -5,6 +5,64 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bora Bora Açaí · live the slow life · València</title>
 <meta name="description" content="Bora Bora Açaí — açaí bowls premium, tostas, pancakes, smoothies y matcha en pleno Eixample de València. Live the slow life.">
+<link rel="canonical" href="https://j-bortserrat.github.io/bora-bora/">
+<meta name="theme-color" content="#60969c">
+
+<!-- Open Graph (compartir en WhatsApp, redes, etc.) -->
+<meta property="og:type" content="restaurant">
+<meta property="og:site_name" content="Bora Bora Açaí">
+<meta property="og:title" content="Bora Bora Açaí · live the slow life · València">
+<meta property="og:description" content="Açaí bowls premium, tostas, pancakes, smoothies y matcha en pleno Eixample de València.">
+<meta property="og:url" content="https://j-bortserrat.github.io/bora-bora/">
+<meta property="og:image" content="https://j-bortserrat.github.io/bora-bora/assets/hero.jpg">
+<meta property="og:locale" content="es_ES">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bora Bora Açaí · live the slow life · València">
+<meta name="twitter:description" content="Açaí bowls premium, tostas, pancakes, smoothies y matcha en pleno Eixample de València.">
+<meta name="twitter:image" content="https://j-bortserrat.github.io/bora-bora/assets/hero.jpg">
+
+<!-- Schema LocalBusiness / Restaurant (rich results + SEO local) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Bora Bora Açaí",
+  "description": "Açaí bowls premium, tostas, pancakes, smoothies y matcha en pleno Eixample de València. Live the slow life.",
+  "image": "https://j-bortserrat.github.io/bora-bora/assets/hero.jpg",
+  "logo": "https://j-bortserrat.github.io/bora-bora/assets/logo-bora.png",
+  "url": "https://j-bortserrat.github.io/bora-bora/",
+  "telephone": "+34672921565",
+  "priceRange": "€€",
+  "servesCuisine": ["Açaí", "Brunch", "Smoothies", "Healthy"],
+  "menu": "https://j-bortserrat.github.io/bora-bora/Carta_BoraBora.pdf",
+  "acceptsReservations": false,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Carrer d'Isabel la Catòlica, 26",
+    "addressLocality": "València",
+    "addressRegion": "València",
+    "postalCode": "46004",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 39.4655,
+    "longitude": -0.3745
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "09:30",
+      "closes": "20:30"
+    }
+  ],
+  "sameAs": ["https://www.instagram.com/boraboracaies/"]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Cormorant+Garamond:wght@500;600&family=Dancing+Script:wght@600;700&family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -75,7 +133,11 @@ nav.scrolled .brand .logo-dark{display:block}
 .brand-txt b{font-family:'Bagel Fat One',cursive;font-size:1.05rem;letter-spacing:.5px}
 .brand-txt span{font-family:'Pacifico',cursive;font-size:.8rem;opacity:.85}
 .brand-sep{font-style:normal;font-weight:300;opacity:.45;font-size:.95rem}
-@media(max-width:560px){.brand-sep,.brand-txt span{display:none}}
+@media(max-width:560px){
+  .brand-txt{flex-direction:column;align-items:flex-start;gap:1px}
+  .brand-sep{display:none}
+  .brand-txt span{font-size:.72rem}
+}
 .nav-links{display:flex;align-items:center;gap:26px;list-style:none}
 .nav-links a{
   text-decoration:none;color:#fff;font-weight:500;font-size:.95rem;
