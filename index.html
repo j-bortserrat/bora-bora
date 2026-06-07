@@ -7,7 +7,7 @@
 <meta name="description" content="Bora Bora Açaí — açaí bowls premium, tostas, pancakes, smoothies y matcha en pleno Eixample de València. Live the slow life.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Cormorant+Garamond:wght@500;600&family=Dancing+Script:wght@600;700&family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --ocean:#0f3a47;
@@ -24,6 +24,13 @@
   --coral-deep:#e26a5c;
   --ink:#1d2b30;
   --shadow:0 18px 50px -18px rgba(15,58,71,.45);
+  /* paleta extraída de las slides del açaí */
+  --acai-beige:#e8e6dc;
+  --acai-sand:#d8ccb4;
+  --acai-cream:#e4d8c0;
+  --acai-brown:#6c483c;
+  --acai-tan:#d8b49c;
+  --acai-teal:#60969c;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:78px;overflow-x:hidden}
@@ -148,26 +155,26 @@ video.hero-bg{width:100%;height:120%;object-fit:cover;object-position:center}
 .quote-content p{font-size:clamp(1.1rem,2.4vw,1.5rem);font-weight:300}
 
 /* ---------- CARTA ---------- */
-.menu{background:linear-gradient(180deg,var(--water-soft),var(--cream));padding:110px 0 100px}
+.menu{background:var(--acai-beige);padding:110px 0 100px}
 .menu .head{text-align:center;margin-bottom:42px}
-.menu h2{font-size:clamp(2.2rem,6vw,3.8rem);color:var(--ocean)}
-.menu .head p{color:var(--sea);max-width:560px;margin:14px auto 0}
+.menu h2{font-size:clamp(2.2rem,6vw,3.8rem);color:var(--acai-brown)}
+.menu .head p{color:var(--acai-teal);max-width:560px;margin:14px auto 0}
 .tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:46px}
 .tab{
-  background:#fff;border:2px solid var(--sand-deep);color:var(--ocean);font-weight:600;
+  background:#fff;border:2px solid var(--acai-tan);color:var(--acai-brown);font-weight:600;
   padding:11px 22px;border-radius:40px;cursor:pointer;font-size:.95rem;transition:.25s;font-family:'Poppins',sans-serif;
 }
-.tab:hover{border-color:var(--coral);color:var(--coral-deep)}
-.tab.active{background:var(--coral);border-color:var(--coral);color:#fff;box-shadow:0 10px 22px -10px var(--coral-deep)}
+.tab:hover{border-color:var(--acai-teal);color:var(--acai-teal)}
+.tab.active{background:var(--acai-teal);border-color:var(--acai-teal);color:#fff;box-shadow:0 10px 22px -10px rgba(96,150,156,.7)}
 .panel{display:none;animation:fadePanel .5s ease}
 .panel.active{display:block}
 @keyframes fadePanel{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 
 .sizebar{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:38px}
 .size-pill{background:#fff;border-radius:18px;padding:16px 26px;text-align:center;box-shadow:var(--shadow);border:1px solid var(--sand-deep);min-width:110px}
-.size-pill b{display:block;font-family:'Bagel Fat One',cursive;color:var(--acai);font-size:1.5rem;line-height:1}
-.size-pill span{display:block;font-size:.74rem;color:var(--sea);font-weight:600;margin:4px 0}
-.size-pill .pr{font-family:'Bagel Fat One',cursive;color:var(--coral);font-size:1.15rem}
+.size-pill b{display:block;font-family:'Bagel Fat One',cursive;color:var(--acai-brown);font-size:1.5rem;line-height:1}
+.size-pill span{display:block;font-size:.74rem;color:var(--acai-teal);font-weight:600;margin:4px 0}
+.size-pill .pr{font-family:'Bagel Fat One',cursive;color:var(--acai-teal);font-size:1.15rem}
 
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:24px}
 .card{
@@ -182,14 +189,14 @@ video.hero-bg{width:100%;height:120%;object-fit:cover;object-position:center}
 
 .pricelist{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px 40px;max-width:880px;margin:0 auto}
 .price-row{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:12px 4px;border-bottom:1px dashed var(--sand-deep)}
-.price-row .nm{font-weight:600;color:var(--ocean)}
+.price-row .nm{font-weight:600;color:var(--acai-brown)}
 .price-row .dots{flex:1;border-bottom:2px dotted #cdd9dc;margin:0 8px;transform:translateY(-4px)}
-.price-row .pr{font-family:'Bagel Fat One',cursive;color:var(--coral);font-size:1.05rem;white-space:nowrap}
+.price-row .pr{font-family:'Bagel Fat One',cursive;color:var(--acai-teal);font-size:1.05rem;white-space:nowrap}
 .note{text-align:center;color:var(--sea);font-size:.88rem;margin-top:26px;font-style:italic}
 
 .builder{background:#fff;border-radius:24px;padding:34px;box-shadow:var(--shadow);border:1px solid var(--sand-deep);margin-top:14px}
-.builder h3{font-family:'Bagel Fat One',cursive;color:var(--acai);font-size:1.7rem;text-align:center;margin-bottom:6px}
-.builder .sub{text-align:center;color:var(--sea);margin-bottom:24px}
+.builder h3{font-family:'Bagel Fat One',cursive;color:var(--acai-brown);font-size:1.7rem;text-align:center;margin-bottom:6px}
+.builder .sub{text-align:center;color:var(--acai-teal);margin-bottom:24px}
 .topcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px 24px;max-width:760px;margin:0 auto}
 .topcols span{padding:7px 4px;border-bottom:1px dashed var(--sand-deep);color:#54646a;font-size:.92rem}
 
@@ -223,9 +230,9 @@ video.hero-bg{width:100%;height:120%;object-fit:cover;object-position:center}
 .m-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .m-photo-ph{font-size:2.2rem;opacity:.55;user-select:none}
 .m-body{padding:20px 22px 24px}
-.m-body h3{font-family:'Bagel Fat One',cursive;color:var(--coral-deep);font-size:1.35rem;margin-bottom:8px}
+.m-body h3{font-family:'Bagel Fat One',cursive;color:var(--acai-brown);font-size:1.35rem;margin-bottom:8px}
 .m-body p{color:#54646a;font-size:.92rem;line-height:1.5}
-.m-body .tag{display:inline-block;margin-top:12px;background:var(--water-soft);color:var(--sea);font-size:.7rem;font-weight:700;padding:5px 12px;border-radius:20px;letter-spacing:.4px;text-transform:uppercase}
+.m-body .tag{display:inline-block;margin-top:12px;background:var(--acai-cream);color:var(--acai-teal);font-size:.7rem;font-weight:700;padding:5px 12px;border-radius:20px;letter-spacing:.4px;text-transform:uppercase}
 @media(max-width:480px){
   .carousel{margin:0 -16px;padding:38px 0 32px}
   .carousel-track{padding:0 16px;gap:14px}
@@ -253,11 +260,11 @@ video.hero-bg{width:100%;height:120%;object-fit:cover;object-position:center}
 }
 
 /* ---------- GALERIA ---------- */
-.gallery{background:var(--ocean);padding:110px 0 100px}
-.gallery h2{color:#fff;text-align:center;font-size:clamp(2.2rem,6vw,3.6rem)}
+.gallery{background:var(--acai-beige);padding:110px 0 100px}
+.gallery h2{color:var(--acai-brown);text-align:center;font-size:clamp(2.2rem,6vw,3.6rem)}
 .gallery .sec-tag{color:var(--water)}
 .gallery .head{text-align:center;margin-bottom:44px}
-.gallery .head p{color:var(--water);opacity:.85;max-width:520px;margin:12px auto 0}
+.gallery .head p{color:var(--acai-teal);opacity:.95;max-width:520px;margin:12px auto 0}
 .grid-masonry{columns:3;column-gap:18px}
 .grid-masonry figure{break-inside:avoid;margin:0 0 18px;border-radius:18px;overflow:hidden;position:relative;cursor:pointer;box-shadow:0 20px 40px -22px rgba(0,0,0,.6)}
 .grid-masonry img{width:100%;transition:.6s ease;display:block}
@@ -266,7 +273,7 @@ video.hero-bg{width:100%;height:120%;object-fit:cover;object-position:center}
 .grid-masonry figure:hover::after{opacity:1}
 
 /* ---------- RESEÑAS ---------- */
-.reviews{background:linear-gradient(180deg,var(--cream),var(--water-soft));padding:110px 0 100px}
+.reviews{background:var(--acai-beige);padding:110px 0 100px}
 .reviews .head{text-align:center;margin-bottom:46px}
 .reviews .head h2{font-size:clamp(2.2rem,6vw,3.6rem);color:var(--ocean)}
 .reviews .head p{color:var(--sea);max-width:560px;margin:14px auto 0}
@@ -290,14 +297,14 @@ video.hero-bg{width:100%;height:120%;object-fit:cover;object-position:center}
 }
 
 /* ---------- CONTACTO ---------- */
-.contact{background:var(--cream);padding:110px 0 60px}
+.contact{background:var(--acai-beige);padding:110px 0 60px}
 .contact .head{text-align:center;margin-bottom:50px}
 .contact h2{font-size:clamp(2.2rem,6vw,3.6rem);color:var(--ocean)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
 .info-card{background:#fff;border-radius:24px;padding:34px;box-shadow:var(--shadow);border:1px solid var(--sand-deep)}
 .info-item{display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--sand-deep)}
 .info-item:last-child{border-bottom:0}
-.info-item .ic{width:46px;height:46px;flex:none;border-radius:14px;background:var(--water-soft);display:flex;align-items:center;justify-content:center;color:var(--sea)}
+.info-item .ic{width:46px;height:46px;flex:none;border-radius:50%;background:var(--acai-cream);display:flex;align-items:center;justify-content:center;color:var(--acai-brown)}
 .info-item .ic svg{width:22px;height:22px}
 .info-item h4{font-family:'Poppins',sans-serif;font-weight:700;color:var(--ocean);font-size:1rem;margin-bottom:3px}
 .info-item a,.info-item p{color:#54646a;text-decoration:none;font-size:.96rem}
@@ -315,16 +322,49 @@ video.hero-bg{width:100%;height:120%;object-fit:cover;object-position:center}
 .btn-acai{background:var(--acai);color:#fff}
 .btn-acai:hover{background:var(--acai-soft);transform:translateY(-3px)}
 
-/* ---------- EL AÇAÍ (historia) ---------- */
-.story{background:linear-gradient(180deg,var(--water-soft),var(--cream));padding:110px 0 100px}
-.story .head{text-align:center;margin-bottom:44px}
-.story .head h2{font-size:clamp(2.2rem,6vw,3.6rem);color:var(--ocean)}
-.story .head p{color:var(--sea);max-width:560px;margin:14px auto 0}
-.story-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.story-card{width:100%;border-radius:18px;box-shadow:var(--shadow);border:1px solid var(--sand-deep);transition:.3s}
-.story-card:hover{transform:translateY(-6px);box-shadow:0 26px 50px -20px rgba(90,45,130,.4)}
-@media(max-width:860px){.story-grid{grid-template-columns:repeat(2,1fr);gap:14px}}
-@media(max-width:480px){.story-grid{grid-template-columns:1fr;max-width:360px;margin:0 auto}}
+/* ---------- EL AÇAÍ (página única) ---------- */
+.story{background:var(--acai-beige);padding:104px 0 100px;position:relative;overflow:hidden}
+.acai-deco{position:absolute;z-index:0;pointer-events:none}
+.acai-deco.b-brown{background:var(--acai-brown);opacity:.8}
+.acai-deco.b-teal{background:var(--acai-teal);opacity:.42}
+.acai-deco.leaf{opacity:.5;fill:var(--acai-teal)}
+@media(max-width:1100px){.acai-deco{display:none}}
+.acai-page{position:relative;z-index:1;max-width:680px;margin:0 auto;text-align:center}
+.acai-eyebrow{font-family:'Cormorant Garamond',serif;font-weight:600;letter-spacing:6px;text-transform:uppercase;color:var(--acai-brown);font-size:clamp(1rem,2.4vw,1.3rem)}
+.acai-title{font-family:'Dancing Script',cursive;font-weight:700;color:var(--acai-brown);font-size:clamp(3.4rem,11vw,5.8rem);line-height:.95;margin:0}
+.acai-sprig{display:block;color:var(--acai-teal);width:78px;height:22px;margin:12px auto 20px;opacity:.85}
+.acai-lead{max-width:600px;margin:0 auto;color:#6f6155;font-size:clamp(1rem,2.2vw,1.12rem);line-height:1.75}
+.acai-lead strong,.acai-block p strong,.acai-li strong{color:var(--acai-teal);font-weight:700}
+.acai-block{margin-top:62px}
+.acai-block h3{font-family:'Cormorant Garamond',serif;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--acai-brown);font-size:clamp(1.4rem,4vw,2rem);line-height:1.2;margin-bottom:14px}
+.acai-block h3 .scr{font-family:'Dancing Script',cursive;font-weight:700;color:var(--acai-brown);text-transform:none;letter-spacing:0;font-size:1.45em;vertical-align:-2px}
+.acai-block>p{max-width:600px;margin:0 auto;color:#6f6155;font-size:clamp(1rem,2.2vw,1.08rem);line-height:1.8}
+.acai-benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.benefit{background:rgba(255,255,255,.4);border:1px solid rgba(108,72,60,.14);border-radius:18px;padding:24px 18px;transition:.3s}
+.benefit:hover{transform:translateY(-5px);background:rgba(255,255,255,.7)}
+.benefit b{display:block;color:var(--acai-brown);font-family:'Poppins',sans-serif;font-size:1.02rem;margin:10px 0 5px}
+.benefit p{font-size:.92rem;line-height:1.5;color:#6f6155;margin:0}
+.acai-list{display:flex;flex-direction:column;gap:15px;max-width:540px;margin:28px auto 0;text-align:left}
+.acai-li{display:flex;align-items:center;gap:15px;color:#6f6155;font-size:1rem;line-height:1.45}
+.acai-list .ic,.benefit .ic{flex:none}
+.benefit .ic{margin:0 auto}
+.ic{width:50px;height:50px;border-radius:50%;background:var(--acai-cream);display:flex;align-items:center;justify-content:center}
+.ic svg{width:24px;height:24px;fill:none;stroke:var(--acai-brown);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.acai-closing{margin-top:44px;font-family:'Dancing Script',cursive;font-weight:700;color:var(--acai-brown);font-size:clamp(1.7rem,5vw,2.4rem)}
+@media(max-width:680px){.acai-benefits{grid-template-columns:1fr;max-width:360px;margin-left:auto;margin-right:auto}}
+
+/* ---------- TIPOGRAFÍA AÇAÍ EN OTRAS SECCIONES + POP-UP ---------- */
+.menu h2,.gallery h2,.reviews .head h2,.contact .head h2{
+  font-family:'Cormorant Garamond',serif;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--acai-brown)}
+.menu h2 .scr,.gallery h2 .scr,.reviews .head h2 .scr,.contact .head h2 .scr{
+  font-family:'Dancing Script',cursive;font-weight:700;text-transform:none;letter-spacing:0;font-size:1.4em;vertical-align:-3px}
+.welcome-box{background:var(--acai-beige)}
+.welcome-box .sec-tag{font-family:'Cormorant Garamond',serif;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--acai-brown);font-size:1rem}
+.welcome-box h3{font-family:'Cormorant Garamond',serif;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--acai-brown);font-size:clamp(1.4rem,4vw,1.9rem);line-height:1.25}
+/* decoración botánica El açaí */
+.acai-deco.leaf.brown{fill:var(--acai-brown);opacity:.3}
+.acai-deco.berry{opacity:.55}
+.inline-heart{width:1.05em;height:1.05em;vertical-align:-2px;fill:none;stroke:var(--acai-brown);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;display:inline-block}
 
 /* ---------- CÓMO LLEGAR + A UN PASEO ---------- */
 .arrive,.walk{margin-top:40px}
@@ -332,7 +372,8 @@ video.hero-bg{width:100%;height:120%;object-fit:cover;object-position:center}
 .arrive-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .arrive-card{background:#fff;border:1px solid var(--sand-deep);border-radius:18px;padding:24px 18px;text-align:center;box-shadow:var(--shadow);transition:.3s}
 .arrive-card:hover{transform:translateY(-6px);box-shadow:0 26px 50px -22px rgba(90,45,130,.4)}
-.arrive-card .ac-ic{font-size:2rem;display:block;margin-bottom:10px}
+.arrive-card .ac-ic{width:54px;height:54px;border-radius:50%;background:var(--acai-cream);display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
+.arrive-card .ac-ic svg{width:26px;height:26px;fill:none;stroke:var(--acai-brown);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .arrive-card b{display:block;color:var(--coral-deep);font-family:'Poppins',sans-serif;font-size:1rem;margin-bottom:6px}
 .arrive-card p{color:#54646a;font-size:.86rem;line-height:1.45}
 .walk-grid{display:flex;flex-wrap:wrap;gap:11px;justify-content:center}
@@ -630,8 +671,8 @@ nav.scrolled .nav-links a.active{color:var(--coral-deep)}
 <!-- NAV -->
 <nav id="nav">
   <a href="#inicio" class="brand">
-    <img class="logo logo-light" src="assets/logo-light.png" alt="Bora Bora Açaí" width="44" height="44">
-    <img class="logo logo-dark" src="assets/logo-dark.png" alt="Bora Bora Açaí" width="44" height="44">
+    <img class="logo logo-light" src="assets/logo-bora.png" alt="Bora Bora Açaí" width="44" height="44">
+    <img class="logo logo-dark" src="assets/logo-bora.png" alt="Bora Bora Açaí" width="44" height="44">
     <span class="brand-txt"><b>Bora Bora Açaí</b><i class="brand-sep">|</i><span>live the slow life</span></span>
   </a>
   <ul class="nav-links" id="navLinks">
@@ -699,16 +740,43 @@ nav.scrolled .nav-links a.active{color:var(--coral-deep)}
 
 <!-- EL AÇAÍ -->
 <section class="story" id="acai" data-page="acai">
-  <div class="wrap">
-    <div class="head reveal">
-      <h2 data-en="The açaí story">La historia del açaí</h2>
-      <p data-en="From the Amazon rainforest to your bowl.">De la selva amazónica hasta tu bowl.</p>
+  <svg class="acai-deco leaf" style="top:5%;left:2%;width:150px;transform:rotate(-28deg)" viewBox="0 0 100 100"><path d="M50 3 C46 26 38 44 16 62 C33 49 42 37 45 25 C31 44 20 54 2 62 C25 47 37 31 45 15 C34 26 22 32 8 34 C31 23 42 13 50 3 Z"/></svg>
+  <svg class="acai-deco leaf brown" style="top:9%;right:1.5%;width:168px;transform:rotate(24deg)" viewBox="0 0 100 100"><path d="M50 3 C46 26 38 44 16 62 C33 49 42 37 45 25 C31 44 20 54 2 62 C25 47 37 31 45 15 C34 26 22 32 8 34 C31 23 42 13 50 3 Z"/></svg>
+  <svg class="acai-deco berry" style="top:33%;left:1.5%;width:120px" viewBox="0 0 100 124"><g><path d="M50 30 C40 16 22 13 11 19 C24 24 36 32 47 41 Z" fill="#7aa6a0"/><path d="M50 30 C60 16 78 13 89 19 C76 24 64 32 53 41 Z" fill="#7aa6a0"/><circle cx="41" cy="56" r="13" fill="#5a2d82"/><circle cx="62" cy="58" r="13" fill="#4a2569"/><circle cx="52" cy="74" r="14" fill="#5a2d82"/><circle cx="35" cy="76" r="11" fill="#4a2569"/><circle cx="69" cy="78" r="11" fill="#6a3d92"/><circle cx="50" cy="93" r="12" fill="#4a2569"/></g></svg>
+  <svg class="acai-deco leaf" style="top:53%;right:1.5%;width:178px;transform:scaleX(-1) rotate(14deg)" viewBox="0 0 100 100"><path d="M50 3 C46 26 38 44 16 62 C33 49 42 37 45 25 C31 44 20 54 2 62 C25 47 37 31 45 15 C34 26 22 32 8 34 C31 23 42 13 50 3 Z"/></svg>
+  <svg class="acai-deco leaf brown" style="top:73%;left:3%;width:150px;transform:rotate(205deg)" viewBox="0 0 100 100"><path d="M50 3 C46 26 38 44 16 62 C33 49 42 37 45 25 C31 44 20 54 2 62 C25 47 37 31 45 15 C34 26 22 32 8 34 C31 23 42 13 50 3 Z"/></svg>
+  <svg class="acai-deco berry" style="top:85%;right:3.5%;width:132px" viewBox="0 0 100 124"><g><path d="M50 30 C40 16 22 13 11 19 C24 24 36 32 47 41 Z" fill="#7aa6a0"/><path d="M50 30 C60 16 78 13 89 19 C76 24 64 32 53 41 Z" fill="#7aa6a0"/><circle cx="41" cy="56" r="13" fill="#5a2d82"/><circle cx="62" cy="58" r="13" fill="#4a2569"/><circle cx="52" cy="74" r="14" fill="#5a2d82"/><circle cx="35" cy="76" r="11" fill="#4a2569"/><circle cx="69" cy="78" r="11" fill="#6a3d92"/><circle cx="50" cy="93" r="12" fill="#4a2569"/></g></svg>
+
+  <div class="wrap acai-page reveal">
+    <p class="acai-eyebrow" data-en="THE STORY OF">LA HISTORIA DEL</p>
+    <h2 class="acai-title">açaí</h2>
+    <svg class="acai-sprig" viewBox="0 0 80 24"><g fill="currentColor"><ellipse cx="30" cy="12" rx="14" ry="4" transform="rotate(-18 30 12)"/><ellipse cx="50" cy="12" rx="14" ry="4" transform="rotate(18 50 12)"/><circle cx="40" cy="12" r="2.6"/></g></svg>
+    <p class="acai-lead" data-en="Açaí is the fruit of the açaí palm, native to the <strong>Amazon region of Brazil</strong>. For centuries it was an essential food for indigenous communities, who ate it for its <strong>energy, strength and connection</strong> with nature.">El açaí es el fruto de la palma de açaí, originaria de la <strong>región amazónica de Brasil</strong>. Durante siglos fue un alimento esencial para las comunidades indígenas, que lo consumían por su <strong>energía, fuerza y conexión</strong> con la naturaleza.</p>
+
+    <div class="acai-block">
+      <h3 data-en="A treasure of the <span class='scr'>Amazon</span>">Un tesoro de la <span class="scr">Amazonía</span></h3>
+      <p data-en="Açaí has been part of life in the Amazon for <strong>thousands of years</strong>. Indigenous communities harvested it sustainably and saw it as a <strong>sacred and medicinal</strong> food. Over time, its nutritional power crossed borders and <strong>conquered the world</strong>.">El açaí ha sido parte de la vida en la Amazonía por <strong>miles de años</strong>. Las comunidades indígenas lo recolectaban de forma sostenible y lo consideraban un alimento <strong>sagrado y medicinal</strong>. Con el tiempo, su poder nutricional cruzó fronteras y <strong>conquistó al mundo</strong>.</p>
     </div>
-    <div class="story-grid">
-      <img class="story-card reveal" src="assets/acai-1.jpg" alt="La historia del açaí" loading="lazy">
-      <img class="story-card reveal d1" src="assets/acai-2.jpg" alt="Un tesoro de la Amazonía" loading="lazy">
-      <img class="story-card reveal d2" src="assets/acai-3.jpg" alt="Energía que nutre" loading="lazy">
-      <img class="story-card reveal d3" src="assets/acai-4.jpg" alt="De la selva a tu bowl" loading="lazy">
+
+    <div class="acai-block">
+      <h3 data-en="Energy that <span class='scr'>nourishes</span>">Energía que <span class="scr">nutre</span></h3>
+      <p data-en="Açaí is known for its high content of <strong>antioxidants</strong>, <strong>healthy fats</strong> and <strong>fibre and vitamins</strong> essential for wellbeing.">El açaí es reconocido por su alto contenido de <strong>antioxidantes</strong>, <strong>grasas saludables</strong> y <strong>fibra y vitaminas</strong> esenciales para el bienestar.</p>
+      <div class="acai-benefits">
+        <div class="benefit"><span class="ic"><svg viewBox="0 0 24 24"><path d="M13 3 5 13h5l-1 8 8-11h-5z"/></svg></span><b data-en="Natural energy">Energía natural</b><p data-en="It boosts your day naturally.">Te impulsa el día de forma natural.</p></div>
+        <div class="benefit"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6z"/></svg></span><b data-en="Defences">Defensas</b><p data-en="Strengthens the immune system.">Fortalece el sistema inmunológico.</p></div>
+        <div class="benefit"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 19.5 4.8 12.3a4 4 0 0 1 5.6-5.7l1.6 1.5 1.6-1.5a4 4 0 0 1 5.6 5.7z"/></svg></span><b data-en="Wellbeing">Bienestar</b><p data-en="Supports physical and mental wellbeing.">Favorece el bienestar físico y mental.</p></div>
+      </div>
+    </div>
+
+    <div class="acai-block">
+      <h3 data-en="From the jungle to your <span class='scr'>bowl</span>">De la selva a tu <span class="scr">bowl</span></h3>
+      <p data-en="Açaí is not only a superfood: it's also a driver of <strong>sustainable development</strong> for Amazon communities.">El açaí no solo es un superalimento: también es un motor de <strong>desarrollo sostenible</strong> para las comunidades amazónicas.</p>
+      <div class="acai-list">
+        <div class="acai-li"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 20C4 11 11 4 20 4c0 9-7 16-16 16z"/><path d="M4 20C9 14 13 11 18 9"/></svg></span><span data-en="<strong>Supports local communities</strong> and their economy."><strong>Apoya a las comunidades</strong> locales y su economía.</span></div>
+        <div class="acai-li"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><span data-en="<strong>Promotes responsible practices</strong> with the environment."><strong>Promueve prácticas responsables</strong> con el medio ambiente.</span></div>
+        <div class="acai-li"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 19.5 4.8 12.3a4 4 0 0 1 5.6-5.7l1.6 1.5 1.6-1.5a4 4 0 0 1 5.6 5.7z"/></svg></span><span data-en="<strong>A more conscious future</strong> starts with small choices."><strong>Un futuro más consciente</strong> empieza con pequeñas elecciones.</span></div>
+      </div>
+      <p class="acai-closing" data-en="Choosing açaí is choosing wellbeing — for you and the planet.">Elegir açaí es elegir bienestar, para ti y para el planeta.</p>
     </div>
   </div>
 </section>
@@ -717,7 +785,7 @@ nav.scrolled .nav-links a.active{color:var(--coral-deep)}
 <section class="menu" id="carta" data-page="carta">
   <div class="wrap">
     <div class="head reveal">
-      <h2 data-en="Our Menu">Nuestra Carta</h2>
+      <h2 data-en="Our <span class='scr'>Menu</span>">Nuestra <span class="scr">Carta</span></h2>
       <p data-en="Fresh products, premium ingredients and lots of surf love in every bowl.">Productos frescos, ingredientes premium y mucho amor surfero en cada cuenco.</p>
     </div>
 
@@ -873,7 +941,7 @@ nav.scrolled .nav-links a.active{color:var(--coral-deep)}
 <section class="gallery" id="galeria" data-page="galeria">
   <div class="wrap">
     <div class="head reveal">
-      <h2 data-en="Pure Bora Bora vibes">Pura vibra Bora Bora</h2>
+      <h2 data-en="Pure <span class='scr'>Bora Bora</span> vibes">Pura vibra <span class="scr">Bora Bora</span></h2>
       <p data-en="Coconut bowls, colourful matchas and lots of sun. That's how we live summer all year round.">Cuencos de coco, matchas de colores y mucho sol. Así se vive el verano todo el año.</p>
     </div>
     <div class="grid-masonry">
@@ -897,8 +965,8 @@ nav.scrolled .nav-links a.active{color:var(--coral-deep)}
 <section class="reviews" id="resenas" data-page="resenas">
   <div class="wrap">
     <div class="head reveal">
-      <h2 data-en="What you say about us">Lo que dicen de nosotros</h2>
-      <p data-en="Our latest 5-star reviews. Thanks for the love! 🤍">Nuestras últimas reseñas de 5 estrellas. ¡Gracias por tanto cariño! 🤍</p>
+      <h2 data-en="What you say <span class='scr'>about us</span>">Lo que dicen de <span class="scr">nosotros</span></h2>
+      <p data-en="Our latest 5-star reviews. Thanks for the love! <svg class='inline-heart' viewBox='0 0 24 24'><path d='M12 19.5 4.8 12.3a4 4 0 0 1 5.6-5.7l1.6 1.5 1.6-1.5a4 4 0 0 1 5.6 5.7z'/></svg>">Nuestras últimas reseñas de 5 estrellas. ¡Gracias por tanto cariño! <svg class="inline-heart" viewBox="0 0 24 24"><path d="M12 19.5 4.8 12.3a4 4 0 0 1 5.6-5.7l1.6 1.5 1.6-1.5a4 4 0 0 1 5.6 5.7z"/></svg></p>
     </div>
     <div class="reviews-grid">
       <div class="review-card reveal">
@@ -927,7 +995,7 @@ nav.scrolled .nav-links a.active{color:var(--coral-deep)}
 <section class="contact" id="contacto" data-page="contacto">
   <div class="wrap">
     <div class="head reveal">
-      <h2 data-en="See you soon">Te esperamos</h2>
+      <h2 data-en="See you <span class='scr'>soon</span>">Te <span class="scr">esperamos</span></h2>
     </div>
     <div class="contact-grid">
       <div class="info-card reveal">
@@ -978,22 +1046,22 @@ nav.scrolled .nav-links a.active{color:var(--coral-deep)}
       <h3 class="arrive-h" data-en="Getting here">Cómo llegar</h3>
       <div class="arrive-grid">
         <div class="arrive-card">
-          <span class="ac-ic">🚇</span>
+          <span class="ac-ic"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="13" rx="3"/><path d="M5 11h14"/><circle cx="9" cy="13.5" r="1"/><circle cx="15" cy="13.5" r="1"/><path d="M8 16l-2 4M16 16l2 4"/></svg></span>
           <b>Metro</b>
           <p data-en="Xàtiva &amp; Colón (L3·L5·L7·L9) — 6–8 min walk">Xàtiva y Colón (L3·L5·L7·L9) · 6–8 min andando</p>
         </div>
         <div class="arrive-card">
-          <span class="ac-ic">🚌</span>
+          <span class="ac-ic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="12" rx="2.5"/><path d="M4 11h16"/><circle cx="8" cy="19" r="1.5"/><circle cx="16" cy="19" r="1.5"/><path d="M7 16v2M17 16v2"/></svg></span>
           <b>Bus EMT</b>
           <p data-en="Several lines along Gran Via Marqués del Túria and Russafa">Varias líneas por Gran Via Marqués del Túria y Russafa</p>
         </div>
         <div class="arrive-card">
-          <span class="ac-ic">🅿️</span>
+          <span class="ac-ic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9.5 16V8H13a2.5 2.5 0 0 1 0 5H9.5"/></svg></span>
           <b data-en="Parking">Parking</b>
           <p data-en="SABA North Station · Parking Bailén — 4–6 min">SABA Estació del Nord · Parking Bailén · 4–6 min</p>
         </div>
         <div class="arrive-card">
-          <span class="ac-ic">🚲</span>
+          <span class="ac-ic"><svg viewBox="0 0 24 24"><circle cx="6" cy="17" r="3.2"/><circle cx="18" cy="17" r="3.2"/><path d="M6 17l4.5-7H15M9 10h4l2.5 7"/></svg></span>
           <b>Valenbisi</b>
           <p data-en="Stations on Gran Via and Isabel la Catòlica">Estaciones en Gran Via e Isabel la Catòlica</p>
         </div>
@@ -1022,7 +1090,7 @@ nav.scrolled .nav-links a.active{color:var(--coral-deep)}
 <footer>
   <div class="wrap">
     <div class="footer-logo">
-      <img class="logo" src="assets/logo-light.png" alt="Bora Bora Açaí" width="62" height="62">
+      <img class="logo" src="assets/logo-bora.png" alt="Bora Bora Açaí" width="62" height="62">
       <b>Bora Bora Açaí</b>
       <span>live the slow life</span>
     </div>
