@@ -709,7 +709,7 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
       <span class="stamp free">🎁</span>
     </div>
     <!-- 🔗 Cuando tengas la URL del programa, ponla en el href de abajo (y añade target="_blank" rel="noopener") -->
-    <a href="#" class="btn btn-primary" id="welcomeCta" style="width:100%;justify-content:center" data-en="Join the club">Únete al club</a>
+    <a href="https://signup.comeback.es/5274eba2/623a02c0-d213-47a1-998a-958dcb8233e0/createCustomer" target="_blank" rel="noopener" class="btn btn-primary" id="welcomeCta" style="width:100%;justify-content:center" data-en="Join the club">Únete al club</a>
     <button class="welcome-skip" id="welcomeSkip" data-en="Maybe later">Quizá más tarde</button>
   </div>
 </div>
@@ -1300,6 +1300,7 @@ const welcomeModal = document.getElementById('welcomeModal');
 const closeWelcome = () => { welcomeModal.classList.remove('show'); welcomeModal.setAttribute('aria-hidden','true'); };
 document.getElementById('welcomeClose').addEventListener('click', closeWelcome);
 document.getElementById('welcomeSkip').addEventListener('click', closeWelcome);
+document.getElementById('welcomeCta').addEventListener('click', closeWelcome);
 welcomeModal.addEventListener('click', e => { if (e.target === welcomeModal) closeWelcome(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && welcomeModal.classList.contains('show')) closeWelcome(); });
 let welcomeShown = false;
