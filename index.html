@@ -957,7 +957,7 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
     <div class="panel" id="matcha">
       <div class="carousel" data-carousel>
         <div class="carousel-track">
-          <article class="m-card"><div class="m-photo"><span class="m-photo-ph">🍵</span></div><div class="m-body"><h3>Golden Matcha</h3><p data-en="Matcha with golden passion fruit.">Matcha con maracuyá dorado.</p></div></article>
+          <article class="m-card"><div class="m-photo"><img src="assets/carta/matcha-golden.png" alt="Golden Matcha" loading="lazy"></div><div class="m-body"><h3>Golden Matcha</h3><p data-en="Mango matcha.">Matcha de mango.</p></div></article>
           <article class="m-card"><div class="m-photo"><img src="assets/carta/matcha-coco.jpg" alt="Coco Matcha" loading="lazy"></div><div class="m-body"><h3>Coco Matcha</h3><p data-en="Matcha with coconut purée.">Matcha con puré de coco.</p></div></article>
           <article class="m-card"><div class="m-photo"><img src="assets/carta/rose.jpg" alt="Rose Matcha" loading="lazy"></div><div class="m-body"><h3>Rose Matcha</h3><p data-en="Matcha with fresh strawberry.">Matcha con fresa natural.</p></div></article>
           <article class="m-card"><div class="m-photo"><img src="assets/carta/matcha-maracuya.jpg" alt="Maracuyá Matcha" loading="lazy"></div><div class="m-body"><h3>Maracuyá Matcha</h3><p data-en="Matcha with passion fruit.">Matcha con maracuyá.</p></div></article>
@@ -1203,11 +1203,14 @@ if (todayLi) todayLi.classList.add('today');
 // ---------- LANGUAGE ES / EN ----------
 const langBtn = document.getElementById('langBtn');
 let lang = 'es';
-function applyLang(l){
-  document.querySelectorAll('[data-en]').forEach(el => {
+function applyLangTo(root, l){
+  root.querySelectorAll('[data-en]').forEach(el => {
     if (el.dataset.es === undefined) el.dataset.es = el.innerHTML;
     el.innerHTML = (l === 'en') ? el.dataset.en : el.dataset.es;
   });
+}
+function applyLang(l){
+  applyLangTo(document, l);
   document.documentElement.lang = l;
   langBtn.textContent = (l === 'en') ? 'ES' : 'EN';
   lang = l;
@@ -1387,6 +1390,8 @@ function initCarousel(car){
     // repetir lo justo para cubrir pantalla + margen a ambos lados (sin huecos)
     const reps = Math.max(4, Math.ceil(car.clientWidth / P) + 3);
     track.innerHTML = baseHTML.repeat(reps);
+    // reaplicar el idioma actual a las tarjetas recién creadas (si no, vuelven a español)
+    if (typeof lang !== 'undefined' && lang === 'en') applyLangTo(track, 'en');
     // cachear el centro de cada tarjeta (no se lee el layout en cada frame)
     meta = [...track.querySelectorAll('.m-card')].map(c => ({ el:c, center:c.offsetLeft + c.offsetWidth / 2 }));
     car.scrollLeft = P * 1.5;     // centro de la banda [P, 2P]
