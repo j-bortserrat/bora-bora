@@ -8,6 +8,12 @@
 <link rel="canonical" href="https://j-bortserrat.github.io/bora-bora/">
 <meta name="theme-color" content="#60969c">
 
+<!-- Favicon e iconos -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
 <!-- Open Graph (compartir en WhatsApp, redes, etc.) -->
 <meta property="og:type" content="restaurant">
 <meta property="og:site_name" content="Bora Bora Açaí">
@@ -187,6 +193,9 @@ video.hero-bg{width:100%;height:120%;object-fit:cover;object-position:center}
 .btn-primary:hover{background:var(--ocean);transform:translateY(-3px)}
 .btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:2px solid rgba(255,255,255,.7);backdrop-filter:blur(4px)}
 .btn-ghost:hover{background:#fff;color:var(--ocean);transform:translateY(-3px)}
+.carta-dl{text-align:center;margin:-6px 0 34px}
+.carta-dl .btn{padding:13px 28px;font-size:.98rem}
+.carta-dl .btn svg{flex:none}
 .wave-divider{position:absolute;bottom:-1px;left:0;width:100%;z-index:2;line-height:0}
 .wave-divider svg{width:100%;height:90px;display:block}
 
@@ -751,7 +760,7 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
 
 <!-- HERO -->
 <header class="hero" id="inicio" data-page="inicio">
-  <video class="hero-bg" id="heroBg" autoplay muted loop playsinline preload="auto">
+  <video class="hero-bg" id="heroBg" autoplay muted loop playsinline preload="none" poster="assets/hero.jpg">
     <source src="assets/hero.mp4" type="video/mp4">
   </video>
   <div class="hero-content">
@@ -851,6 +860,13 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
       <p data-en="Fresh products, premium ingredients and lots of surf love in every bowl.">Productos frescos, ingredientes premium y mucho amor surfero en cada cuenco.</p>
     </div>
 
+    <div class="carta-dl reveal">
+      <a href="Carta_BoraBora.pdf" class="btn btn-primary" download="Carta-BoraBora-Acai.pdf">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg>
+        <span data-en="Download the full menu (PDF)">Descargar la carta completa (PDF)</span>
+      </a>
+    </div>
+
     <div class="tabs reveal">
       <button class="tab active" data-tab="bowls">Açaí Bowls</button>
       <button class="tab" data-tab="build" data-en="Build Your Bowl">Crea tu Bowl</button>
@@ -909,11 +925,11 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
     <div class="panel" id="tostas">
       <div class="carousel" data-carousel>
         <div class="carousel-track">
-          <article class="m-card"><div class="m-photo"><img src="assets/carta/pavissima.png" alt="Tosta Pavissima" loading="lazy"></div><div class="m-body"><h3>Pavissima</h3><p data-en="Sourdough bread, hummus, turkey, avocado, tomato, mozzarella, sprout mix and olive oil.">Pan de hogaza, humus, pavo, aguacate, tomate, mozzarella, mix de brotes y aceite de oliva.</p></div></article>
+          <article class="m-card"><div class="m-photo"><img src="assets/carta/pavissima.jpg" alt="Tosta Pavissima" loading="lazy"></div><div class="m-body"><h3>Pavissima</h3><p data-en="Sourdough bread, hummus, turkey, avocado, tomato, mozzarella, sprout mix and olive oil.">Pan de hogaza, humus, pavo, aguacate, tomate, mozzarella, mix de brotes y aceite de oliva.</p></div></article>
           <article class="m-card"><div class="m-photo"><img src="assets/carta/atuna-matata.jpg" alt="Tosta Atuna Matata" loading="lazy"></div><div class="m-body"><h3>Atuna Matata</h3><p data-en="Sourdough bread, avocado, tuna, tomato, sprout mix, paprika and olive oil.">Pan de hogaza, aguacate, atún, tomate, mix de brotes, pimentón y aceite de oliva.</p></div></article>
           <article class="m-card"><div class="m-photo"><img src="assets/carta/la-vida-es-vegan.jpg" alt="Tosta La Vida es Vegan" loading="lazy"></div><div class="m-body"><h3>La Vida es Vegan</h3><p data-en="Sourdough bread, cream cheese, avocado, fresh cherry tomato, sprout mix and olive oil.">Pan de hogaza, queso crema, aguacate, tomatito natural, mix de brotes y aceite de oliva.</p><span class="tag" data-en="veggie">veggie</span></div></article>
           <article class="m-card"><div class="m-photo"><img src="assets/carta/energetic.jpg" alt="Tosta Energetic" loading="lazy"></div><div class="m-body"><h3>Energetic</h3><p data-en="Sourdough bread, banana, toasted granola, 100% peanut butter and choco drops.">Pan de hogaza, plátano, granola tostada, crema de cacahuete 100% y gotitas de choco.</p></div></article>
-          <article class="m-card"><div class="m-photo"><img src="assets/carta/salmon-passion.png" alt="Tosta Salmon Passion" loading="lazy"></div><div class="m-body"><h3>Salmon Passion</h3><p data-en="Sourdough bread, hummus, avocado, salmon cubes, sprout mix and olive oil.">Pan de hogaza, humus, aguacate, dados de salmón, mix de brotes y aceite de oliva.</p></div></article>
+          <article class="m-card"><div class="m-photo"><img src="assets/carta/salmon-passion.jpg" alt="Tosta Salmon Passion" loading="lazy"></div><div class="m-body"><h3>Salmon Passion</h3><p data-en="Sourdough bread, hummus, avocado, salmon cubes, sprout mix and olive oil.">Pan de hogaza, humus, aguacate, dados de salmón, mix de brotes y aceite de oliva.</p></div></article>
         </div>
       </div>
     </div>
@@ -957,7 +973,7 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
     <div class="panel" id="matcha">
       <div class="carousel" data-carousel>
         <div class="carousel-track">
-          <article class="m-card"><div class="m-photo"><img src="assets/carta/matcha-golden.png" alt="Golden Matcha" loading="lazy"></div><div class="m-body"><h3>Golden Matcha</h3><p data-en="Mango matcha.">Matcha de mango.</p></div></article>
+          <article class="m-card"><div class="m-photo"><img src="assets/carta/matcha-golden.jpg" alt="Golden Matcha" loading="lazy"></div><div class="m-body"><h3>Golden Matcha</h3><p data-en="Mango matcha.">Matcha de mango.</p></div></article>
           <article class="m-card"><div class="m-photo"><img src="assets/carta/matcha-coco.jpg" alt="Coco Matcha" loading="lazy"></div><div class="m-body"><h3>Coco Matcha</h3><p data-en="Matcha with coconut purée.">Matcha con puré de coco.</p></div></article>
           <article class="m-card"><div class="m-photo"><img src="assets/carta/rose.jpg" alt="Rose Matcha" loading="lazy"></div><div class="m-body"><h3>Rose Matcha</h3><p data-en="Matcha with fresh strawberry.">Matcha con fresa natural.</p></div></article>
           <article class="m-card"><div class="m-photo"><img src="assets/carta/matcha-maracuya.jpg" alt="Maracuyá Matcha" loading="lazy"></div><div class="m-body"><h3>Maracuyá Matcha</h3><p data-en="Matcha with passion fruit.">Matcha con maracuyá.</p></div></article>
@@ -1026,17 +1042,17 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
       <div class="review-card reveal">
         <div class="stars">★★★★★</div>
         <p data-en="“The açaí is so good! You can tell it has little sugar and that they really care about the quality of the toppings. Plus the attention was amazing and the service super friendly. A 10/10!!!”">«Super bueno el açaí! Se nota que no lleva mucho azúcar y que cuidan mucho la calidad de los toppings. Además, la atención increíble y el servicio super agradable. Un 10/10!!!»</p>
-        <div class="review-author"><span class="av">S</span><div><b>Silvia Tévar</b><span data-en="Local Guide · 20 hours ago">Local Guide · hace 20 horas</span></div></div>
+        <div class="review-author"><span class="av">S</span><div><b>Silvia T.</b><span data-en="Local Guide on Google">Local Guide en Google</span></div></div>
       </div>
       <div class="review-card reveal d1">
         <div class="stars">★★★★★</div>
         <p data-en="“We tried the bowls, the smoothies, the matcha with coffee and the toasts, and we loved them! Seriously delicious! The service was incredibly kind and welcoming. Excellent value for money! ♥️✌🏼”">«Probamos los bowls, los batidos, el matcha con café y las tostadas, ¡y nos encantaron! ¡En serio, estaban buenísimos! El servicio fue increíblemente amable y acogedor. ¡Excelente relación calidad-precio! ♥️✌🏼»</p>
-        <div class="review-author"><span class="av">E</span><div><b>esther geng</b><span data-en="2 days ago · Google">hace 2 días · Google</span></div></div>
+        <div class="review-author"><span class="av">E</span><div><b>Esther G.</b><span data-en="Review on Google">Reseña en Google</span></div></div>
       </div>
       <div class="review-card reveal d2">
         <div class="stars">★★★★★</div>
         <p data-en="“A small and great place, with an amazing atmosphere and friendly service. They have very good healthy options (açaí bowls and sourdough toasts with healthy ingredients). I definitely recommend it and would come back.”">«Un lugar pequeño y genial, con un ambiente increíble y un servicio amable. Tienen muy buenas opciones de comida saludable (tazones de açaí y tostadas de masa madre con ingredientes saludables). Lo recomiendo sin duda y volvería.»</p>
-        <div class="review-author"><span class="av">J</span><div><b>Justyna W</b><span data-en="4 days ago · Google">hace 4 días · Google</span></div></div>
+        <div class="review-author"><span class="av">J</span><div><b>Justyna W.</b><span data-en="Review on Google">Reseña en Google</span></div></div>
       </div>
     </div>
     <div class="reviews-cta reveal">
