@@ -17,10 +17,8 @@ body{
   font-family:'Poppins',system-ui,sans-serif;color:var(--ink);line-height:1.4;
   -webkit-print-color-adjust:exact;print-color-adjust:exact;
   padding:13mm 12mm 10mm;
-  /* fondo de agua real extraído de la imagen de la carta */
-  background:
-    linear-gradient(rgba(255,255,255,.12),rgba(255,255,255,.12)),
-    url('assets/agua-swatch.png') center/cover no-repeat;
+  /* fondo de agua en degradado (nítido a cualquier tamaño, sin pixelar) */
+  background:linear-gradient(180deg,#ecf7fc 0%,#dceef6 45%,#c7e4f0 100%);
 }
 h1,h2,h3{font-family:'Bagel Fat One',cursive;font-weight:400;line-height:1.05}
 
@@ -36,7 +34,7 @@ h1,h2,h3{font-family:'Bagel Fat One',cursive;font-weight:400;line-height:1.05}
 .page:last-of-type{break-after:auto}
 .card{
   break-inside:avoid;width:100%;display:inline-block;margin-bottom:18px;
-  background:rgba(255,255,255,.74);border:1px solid rgba(255,255,255,.9);border-radius:20px;
+  background:#ffffff;border:1px solid #e8f1f5;border-radius:20px;
   padding:18px 20px 16px;box-shadow:0 16px 32px -18px rgba(15,58,71,.5);
 }
 .card-h{display:flex;align-items:center;gap:9px;margin-bottom:13px}
@@ -71,14 +69,14 @@ h1,h2,h3{font-family:'Bagel Fat One',cursive;font-weight:400;line-height:1.05}
 .note{font-size:10px;color:var(--sea);font-style:italic;margin-top:8px}
 
 /* café destacado */
-.card.coffee{background:linear-gradient(120deg,rgba(40,22,14,.95),rgba(74,44,26,.95) 55%,rgba(90,45,130,.95));
+.card.coffee{background:linear-gradient(120deg,#281610,#4a2c1a 55%,#5a2d82);
   border:0;color:#fff}
 .card.coffee .it{font-size:8px;letter-spacing:1px;text-transform:uppercase;color:#ffd9a8;font-weight:700;margin-bottom:4px}
 .card.coffee h3{font-size:17px;margin-bottom:3px;color:#fff}
-.card.coffee p{font-size:9.7px;color:rgba(255,255,255,.9);line-height:1.4}
+.card.coffee p{font-size:9.7px;color:#f1ece6;line-height:1.4}
 
 .foot{column-span:all;text-align:center;margin-top:18px;font-size:9.5px;color:var(--ocean);
-  background:rgba(255,255,255,.55);border-radius:12px;padding:8px}
+  background:#ffffff;border-radius:12px;padding:8px}
 .foot b{color:var(--coral-deep)}
 </style>
 </head>
@@ -132,16 +130,16 @@ h1,h2,h3{font-family:'Bagel Fat One',cursive;font-weight:400;line-height:1.05}
     <div class="item"><div class="row"><span class="nm">Salmon Passion</span></div><div class="desc">Pan de hogaza, humus, aguacate, dados de salmón, mix de brotes y aceite de oliva.</div></div>
   </div>
 
+  </div>
+
+  <div class="page">
+
   <!-- PANCAKES -->
   <div class="card">
     <div class="card-h"><span class="bar"></span><h2>Pancakes</h2><span class="pi">8,90€ c/u</span></div>
     <div class="item"><div class="row"><span class="nm">Nutellisima</span></div><div class="desc">Banana, fresas, nutella y paçoca.</div></div>
     <div class="item"><div class="row"><span class="nm">Boom Boom</span></div><div class="desc">Banana, arándanos, crema de conguitos blancos y chocolate chips.</div></div>
   </div>
-
-  </div>
-
-  <div class="page">
 
   <!-- BRUNCH -->
   <div class="card">
