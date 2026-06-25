@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bora Bora Açaí · live the slow life · València</title>
 <meta name="description" content="Bora Bora Açaí — açaí bowls premium, tostas, pancakes, smoothies y matcha en pleno Eixample de València. Live the slow life.">
-<link rel="canonical" href="https://j-bortserrat.github.io/bora-bora/">
+<link rel="canonical" href="https://boraboracai.es/">
 <meta name="theme-color" content="#60969c">
 
 <!-- Favicon e iconos -->
@@ -19,15 +19,15 @@
 <meta property="og:site_name" content="Bora Bora Açaí">
 <meta property="og:title" content="Bora Bora Açaí · live the slow life · València">
 <meta property="og:description" content="Açaí bowls premium, tostas, pancakes, smoothies y matcha en pleno Eixample de València.">
-<meta property="og:url" content="https://j-bortserrat.github.io/bora-bora/">
-<meta property="og:image" content="https://j-bortserrat.github.io/bora-bora/assets/hero.jpg">
+<meta property="og:url" content="https://boraboracai.es/">
+<meta property="og:image" content="https://boraboracai.es/assets/hero.jpg">
 <meta property="og:locale" content="es_ES">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Bora Bora Açaí · live the slow life · València">
 <meta name="twitter:description" content="Açaí bowls premium, tostas, pancakes, smoothies y matcha en pleno Eixample de València.">
-<meta name="twitter:image" content="https://j-bortserrat.github.io/bora-bora/assets/hero.jpg">
+<meta name="twitter:image" content="https://boraboracai.es/assets/hero.jpg">
 
 <!-- Schema LocalBusiness / Restaurant (rich results + SEO local) -->
 <script type="application/ld+json">
@@ -36,13 +36,12 @@
   "@type": "Restaurant",
   "name": "Bora Bora Açaí",
   "description": "Açaí bowls premium, tostas, pancakes, smoothies y matcha en pleno Eixample de València. Live the slow life.",
-  "image": "https://j-bortserrat.github.io/bora-bora/assets/hero.jpg",
-  "logo": "https://j-bortserrat.github.io/bora-bora/assets/logo-bora.png",
-  "url": "https://j-bortserrat.github.io/bora-bora/",
+  "image": "https://boraboracai.es/assets/hero.jpg",
+  "logo": "https://boraboracai.es/assets/logo-bora.png",
+  "url": "https://boraboracai.es/",
   "telephone": "+34672921565",
   "priceRange": "€€",
   "servesCuisine": ["Açaí", "Brunch", "Smoothies", "Healthy"],
-  "menu": "https://j-bortserrat.github.io/bora-bora/Carta_BoraBora.pdf?v=2",
   "acceptsReservations": false,
   "address": {
     "@type": "PostalAddress",
@@ -193,9 +192,6 @@ video.hero-bg{width:100%;height:120%;object-fit:cover;object-position:center}
 .btn-primary:hover{background:var(--ocean);transform:translateY(-3px)}
 .btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:2px solid rgba(255,255,255,.7);backdrop-filter:blur(4px)}
 .btn-ghost:hover{background:#fff;color:var(--ocean);transform:translateY(-3px)}
-.carta-dl{text-align:center;margin:-6px 0 34px}
-.carta-dl .btn{padding:13px 28px;font-size:.98rem;white-space:nowrap}
-.carta-dl .btn svg{flex:none}
 .wave-divider{position:absolute;bottom:-1px;left:0;width:100%;z-index:2;line-height:0}
 .wave-divider svg{width:100%;height:90px;display:block}
 
@@ -223,7 +219,8 @@ video.hero-bg{width:100%;height:120%;object-fit:cover;object-position:center}
 .float-badge span{font-size:.66rem;letter-spacing:1px;text-transform:uppercase;margin-top:2px}
 
 /* ---------- PARALLAX QUOTE ---------- */
-.quote{height:62vh;min-height:420px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.quote{position:relative;height:62vh;min-height:420px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.wave-top{top:0;bottom:auto;transform:scaleY(-1)}
 .quote-bg{position:absolute;inset:-12% 0;background:url('assets/surf-bowl.jpg') center/cover no-repeat;z-index:0;will-change:transform}
 .quote::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(90,45,130,.6),rgba(15,58,71,.7));z-index:1}
 .quote-content{position:relative;z-index:2;color:#fff;max-width:820px;padding:0 24px}
@@ -269,6 +266,7 @@ video.hero-bg{width:100%;height:120%;object-fit:cover;object-position:center}
 .price-row .nm{font-weight:600;color:var(--acai-brown)}
 .price-row .dots{flex:1;border-bottom:2px dotted #cdd9dc;margin:0 8px;transform:translateY(-4px)}
 .price-row .pr{font-family:'Coastal Beach',cursive;font-weight:700;color:var(--acai-teal);font-size:1.1rem;white-space:nowrap}
+.menu-price{text-align:center;font-family:'Coastal Beach',cursive;font-weight:700;color:var(--acai-teal);font-size:1.55rem;margin:0 0 28px}
 .note{text-align:center;color:var(--sea);font-size:.88rem;margin-top:26px;font-style:italic}
 
 .builder{background:#fff;border-radius:24px;padding:34px;box-shadow:var(--shadow);border:1px solid var(--sand-deep);margin-top:14px}
@@ -310,6 +308,8 @@ video.hero-bg{width:100%;height:120%;object-fit:cover;object-position:center}
 .m-body h3{font-family:'Coastal Beach',cursive;font-weight:700;color:var(--acai-brown);font-size:1.35rem;margin-bottom:8px}
 .m-body p{color:#54646a;font-size:.92rem;line-height:1.5}
 .m-body .tag{display:inline-block;margin-top:12px;background:var(--acai-cream);color:var(--acai-teal);font-size:.7rem;font-weight:700;padding:5px 12px;border-radius:20px;letter-spacing:.4px;text-transform:uppercase}
+.m-price{margin-top:12px;font-family:'Coastal Beach',cursive;font-weight:700;color:var(--acai-teal);font-size:1.3rem}
+.m-body .tag + .m-price,.m-price + .tag{margin-top:8px}
 @media(max-width:480px){
   .carousel{margin:0 -16px;padding:38px 0 32px}
   .carousel-track{padding:0 16px;gap:14px}
@@ -330,6 +330,8 @@ video.hero-bg{width:100%;height:120%;object-fit:cover;object-position:center}
 .grid-masonry{columns:3;column-gap:18px}
 .grid-masonry figure{break-inside:avoid;margin:0 0 18px;border-radius:18px;overflow:hidden;position:relative;cursor:pointer;box-shadow:0 20px 40px -22px rgba(0,0,0,.6)}
 .grid-masonry img{width:100%;transition:.6s ease;display:block}
+.grid-masonry figure.feature{column-span:all;margin-bottom:18px}
+.grid-masonry figure.feature img{height:clamp(240px,34vw,440px);object-fit:cover;object-position:center}
 .grid-masonry figure::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(90,45,130,.55));opacity:0;transition:.4s}
 .grid-masonry figure:hover img{transform:scale(1.08)}
 .grid-masonry figure:hover::after{opacity:1}
@@ -377,7 +379,7 @@ video.hero-bg{width:100%;height:120%;object-fit:cover;object-position:center}
 .hours li:last-child{border-bottom:0}
 .hours li.today{background:var(--water-soft);margin:0 -12px;padding:7px 12px;border-radius:10px;border:0;font-weight:600;color:var(--ocean)}
 .hours .closed{color:var(--acai-brown);font-weight:600}
-.map-wrap{border-radius:24px;overflow:hidden;box-shadow:var(--shadow);min-height:380px;border:1px solid var(--sand-deep)}
+.map-wrap{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);min-height:380px;border:1px solid var(--sand-deep)}
 .map-wrap iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
 .contact-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
 .contact-cta .btn-primary{background:var(--acai-teal);box-shadow:0 14px 30px -12px var(--ocean)}
@@ -450,7 +452,13 @@ video.hero-bg{width:100%;height:120%;object-fit:cover;object-position:center}
 @media(max-width:430px){.arrive-grid{grid-template-columns:1fr}}
 
 /* ---------- FOOTER ---------- */
-footer{background:var(--ocean-deep);color:#fff;padding:60px 0 28px;text-align:center;position:relative}
+footer{background:var(--ocean-deep);color:#fff;padding:74px 0 28px;text-align:center;position:relative}
+footer .wrap{position:relative;z-index:1}
+/* en INICIO la sección de encima del footer es la franja oscura "take it easy": la onda va en tono oscuro */
+body[data-page="inicio"] footer .wave-top{display:none}
+.wave-ini{display:none}
+body[data-page="inicio"] .wave-ini{display:block;top:-125px;bottom:auto}
+body[data-page="inicio"] .wave-ini svg{height:165px}
 .footer-logo{display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:18px}
 .footer-logo .logo{width:62px;height:62px}
 .footer-logo b{font-family:'Coastal Beach','Bagel Fat One',cursive;font-size:1.4rem}
@@ -589,6 +597,22 @@ footer{background:var(--ocean-deep);color:#fff;padding:60px 0 28px;text-align:ce
   .club-fab{right:14px;bottom:14px;padding:9px 16px 9px 13px;font-size:.84rem}
 }
 
+/* ---------- GOOGLE RATING FAB (4,9★) · mismo tamaño que el Club ---------- */
+.google-fab{
+  position:fixed;right:20px;bottom:80px;z-index:1500;
+  display:flex;align-items:center;gap:8px;
+  background:rgba(251,247,239,.95);backdrop-filter:blur(10px);border:1px solid var(--sand-deep);
+  border-radius:40px;padding:11px 20px 11px 16px;
+  font-family:'Poppins',sans-serif;font-weight:700;font-size:.92rem;color:var(--acai-brown);
+  text-decoration:none;box-shadow:0 16px 38px -14px rgba(15,58,71,.6);transition:.3s;
+}
+.google-fab:hover{transform:translateY(-3px);box-shadow:0 22px 46px -16px rgba(15,58,71,.65)}
+.google-fab .trophy{font-size:1.15rem;line-height:1}
+.google-fab i{font-style:normal;color:#ffb400}
+@media(max-width:480px){
+  .google-fab{right:14px;bottom:62px;padding:9px 16px 9px 13px;font-size:.84rem}
+}
+
 /* ---------- RESPONSIVE ---------- */
 @media(max-width:900px){
   .about-grid{grid-template-columns:1fr;gap:50px}
@@ -685,6 +709,11 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
   <span class="txt"><b class="st-title"></b><small class="st-sub"></small></span>
 </a>
 
+<!-- BOTÓN FLOTANTE · 4,9 ESTRELLAS EN GOOGLE -->
+<a href="https://www.google.com/maps/search/?api=1&query=Bora+Bora+Aça%C3%AD+Carrer+d'Isabel+la+Cat%C3%B2lica+26+Val%C3%A8ncia" target="_blank" rel="noopener" class="google-fab" aria-label="4,9 estrellas en Google Maps">
+  <span class="trophy">🏆</span><span>4,9 <i>★</i></span>
+</a>
+
 <!-- BOTÓN FLOTANTE CLUB BORA BORA -->
 <button type="button" class="club-fab" id="clubFab" aria-label="Hazte amigo de Bora Bora Açaí">
   <span class="gift">🎁</span><span data-en="Club">Club</span>
@@ -760,7 +789,7 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
 
 <!-- HERO -->
 <header class="hero" id="inicio" data-page="inicio">
-  <video class="hero-bg" id="heroBg" autoplay muted loop playsinline preload="none" poster="assets/hero.jpg">
+  <video class="hero-bg" id="heroBg" autoplay muted loop playsinline preload="auto" poster="assets/hero.jpg">
     <source src="assets/hero.mp4" type="video/mp4">
   </video>
   <div class="hero-content">
@@ -802,6 +831,9 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
 <!-- PARALLAX QUOTE -->
 <section class="quote" data-page="inicio">
   <div class="quote-bg" id="quoteBg"></div>
+  <div class="wave-divider wave-top">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#fbf7ef" d="M0,40 C240,90 480,0 720,30 C960,60 1200,90 1440,45 L1440,90 L0,90 Z"></path></svg>
+  </div>
   <div class="quote-content reveal">
     <p class="script">take it easy</p>
     <p data-en="The good life tastes of açaí, coconut and sea salt. Take your time — there's no rush here.">La buena vida sabe a açaí, a coco y a sal de mar. Tómate tu tiempo, aquí no hay prisa.</p>
@@ -860,13 +892,6 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
       <p data-en="Fresh products, premium ingredients and lots of surf love in every bowl.">Productos frescos, ingredientes premium y mucho amor surfero en cada cuenco.</p>
     </div>
 
-    <div class="carta-dl reveal">
-      <a href="Carta_BoraBora.pdf?v=2" class="btn btn-primary" download="Carta-BoraBora-Acai.pdf">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg>
-        <span data-en="Download menu (PDF)">Descargar carta (PDF)</span>
-      </a>
-    </div>
-
     <div class="tabs reveal">
       <button class="tab active" data-tab="bowls">Açaí Bowls</button>
       <button class="tab" data-tab="build" data-en="Build Your Bowl">Crea tu Bowl</button>
@@ -883,18 +908,18 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
          por  <div class="m-photo"><img src="assets/TU-FOTO.jpg" alt="Nombre"></div>  -->
     <div class="panel active" id="bowls">
       <div class="sizebar">
-        <div class="size-pill"><b>S</b><span data-en="size">tamaño</span></div>
-        <div class="size-pill"><b>M</b><span data-en="size">tamaño</span></div>
-        <div class="size-pill"><b>L</b><span data-en="size">tamaño</span></div>
-        <div class="size-pill"><b>XL</b><span data-en="size">tamaño</span></div>
+        <div class="size-pill"><b>S</b><span data-en="size">tamaño</span><span class="pr">7,90€</span></div>
+        <div class="size-pill"><b>M</b><span data-en="size">tamaño</span><span class="pr">9,90€</span></div>
+        <div class="size-pill"><b>L</b><span data-en="size">tamaño</span><span class="pr">11,90€</span></div>
+        <div class="size-pill"><b>XL</b><span data-en="size">tamaño</span><span class="pr">14,90€</span></div>
       </div>
       <div class="carousel" data-carousel>
         <div class="carousel-track">
           <article class="m-card"><div class="m-photo"><img src="assets/carta/bowl-1.jpg" alt="Açaí bowl Big Boss" loading="lazy"></div><div class="m-body"><h3>Big Boss</h3><p data-en="Premium açaí, banana, strawberries, blueberries, toasted granola, 100% peanut butter and paçoca.">Açaí premium, plátano, fresas, arándanos, granola tostada, crema de cacahuete 100% y paçoca.</p></div></article>
-          <article class="m-card"><div class="m-photo"><img src="assets/carta/bowl-2.jpg" alt="Açaí bowl Bora Bora" loading="lazy"></div><div class="m-body"><h3>Bora Bora</h3><p data-en="Premium açaí, banana, strawberries, toasted granola, pistachio cream, paçoca and choco drops.">Açaí premium, plátano, fresas, granola tostada, crema de pistacho, paçoca y gotas de choco.</p><span class="tag" data-en="the favourite">el favorito</span></div></article>
-          <article class="m-card"><div class="m-photo"><img src="assets/carta/bowl-3.jpg" alt="Açaí bowl Gymbro" loading="lazy"></div><div class="m-body"><h3>Gymbro</h3><p data-en="Premium açaí, banana, yogurt, toasted granola, milk powder and 100% cashew butter.">Açaí premium, plátano, yogurt, granola tostada, leche en polvo y crema de anacardos 100%.</p></div></article>
-          <article class="m-card"><div class="m-photo"><img src="assets/carta/bowl-4.jpg" alt="Açaí bowl Nuteboom" loading="lazy"></div><div class="m-body"><h3>Nuteboom</h3><p data-en="Premium açaí, mango, strawberries, toasted granola, Nutella and Maria biscuit.">Açaí premium, mango, fresas, granola tostada, nutella y galleta maría.</p></div></article>
-          <article class="m-card"><div class="m-photo"><img src="assets/carta/bowl-5.jpg" alt="Açaí bowl Tropicana" loading="lazy"></div><div class="m-body"><h3>Tropicana</h3><p data-en="Premium açaí, mango, pineapple, yogurt, toasted granola, white choco-peanut cream and coconut flakes.">Açaí premium, mango, piña, yogurt, granola tostada, crema de conguitos blancos y coco laminado.</p></div></article>
+          <article class="m-card"><div class="m-photo"><img src="assets/carta/bora-bora.jpg" alt="Açaí bowl Bora Bora" loading="lazy"></div><div class="m-body"><h3>Bora Bora</h3><p data-en="Premium açaí, banana, strawberries, toasted granola, pistachio cream, paçoca and choco drops.">Açaí premium, plátano, fresas, granola tostada, crema de pistacho, paçoca y gotas de choco.</p></div></article>
+          <article class="m-card"><div class="m-photo"><img src="assets/carta/gymbro.jpg" alt="Açaí bowl Gymbro" loading="lazy"></div><div class="m-body"><h3>Gymbro</h3><p data-en="Premium açaí, banana, yogurt, toasted granola, milk powder and 100% cashew butter.">Açaí premium, plátano, yogurt, granola tostada, leche en polvo y crema de anacardos 100%.</p></div></article>
+          <article class="m-card"><div class="m-photo"><img src="assets/carta/nuteboom.jpg" alt="Açaí bowl Nuteboom" loading="lazy"></div><div class="m-body"><h3>Nuteboom</h3><p data-en="Premium açaí, mango, strawberries, toasted granola, Nutella and Maria biscuit.">Açaí premium, mango, fresas, granola tostada, nutella y galleta maría.</p></div></article>
+          <article class="m-card"><div class="m-photo"><img src="assets/carta/tropicana.jpg" alt="Açaí bowl Tropicana" loading="lazy"></div><div class="m-body"><h3>Tropicana</h3><p data-en="Premium açaí, mango, pineapple, yogurt, toasted granola, white choco-peanut cream and coconut flakes.">Açaí premium, mango, piña, yogurt, granola tostada, crema de conguitos blancos y coco laminado.</p></div></article>
         </div>
       </div>
     </div>
@@ -902,10 +927,10 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
     <!-- BUILD YOUR BOWL -->
     <div class="panel" id="build">
       <div class="sizebar">
-        <div class="size-pill"><b>S</b><span data-en="1 topping">1 topping</span></div>
-        <div class="size-pill"><b>M</b><span data-en="2 toppings">2 toppings</span></div>
-        <div class="size-pill"><b>L</b><span data-en="3 toppings">3 toppings</span></div>
-        <div class="size-pill"><b>XL</b><span data-en="4 toppings">4 toppings</span></div>
+        <div class="size-pill"><b>S</b><span data-en="1 topping">1 topping</span><span class="pr">6,90€</span></div>
+        <div class="size-pill"><b>M</b><span data-en="2 toppings">2 toppings</span><span class="pr">8,90€</span></div>
+        <div class="size-pill"><b>L</b><span data-en="3 toppings">3 toppings</span><span class="pr">11,90€</span></div>
+        <div class="size-pill"><b>XL</b><span data-en="4 toppings">4 toppings</span><span class="pr">14,90€</span></div>
       </div>
       <div class="builder reveal">
         <h3 data-en="Build Your Bowl">Crea tu Bowl</h3>
@@ -918,6 +943,7 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
           <span data-en="Banana">Plátano</span><span data-en="Choco chips">Choco chips</span><span data-en="Cashew butter">Crema de anacardos</span>
           <span data-en="Coconut chips">Coco chips</span><span data-en="Milk powder">Leche en polvo</span><span data-en="Condensed milk">Leche condensada</span>
         </div>
+        <p class="note" style="text-align:center;margin-top:18px" data-en="Extra topping: 0,90€">Topping extra: 0,90€</p>
       </div>
     </div>
 
@@ -925,17 +951,19 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
     <div class="panel" id="tostas">
       <div class="carousel" data-carousel>
         <div class="carousel-track">
-          <article class="m-card"><div class="m-photo"><img src="assets/carta/pavissima.jpg" alt="Tosta Pavissima" loading="lazy"></div><div class="m-body"><h3>Pavissima</h3><p data-en="Sourdough bread, hummus, turkey, avocado, tomato, mozzarella, sprout mix and olive oil.">Pan de hogaza, humus, pavo, aguacate, tomate, mozzarella, mix de brotes y aceite de oliva.</p></div></article>
-          <article class="m-card"><div class="m-photo"><img src="assets/carta/atuna-matata.jpg" alt="Tosta Atuna Matata" loading="lazy"></div><div class="m-body"><h3>Atuna Matata</h3><p data-en="Sourdough bread, avocado, tuna, tomato, sprout mix, paprika and olive oil.">Pan de hogaza, aguacate, atún, tomate, mix de brotes, pimentón y aceite de oliva.</p></div></article>
-          <article class="m-card"><div class="m-photo"><img src="assets/carta/la-vida-es-vegan.jpg" alt="Tosta La Vida es Vegan" loading="lazy"></div><div class="m-body"><h3>La Vida es Vegan</h3><p data-en="Sourdough bread, cream cheese, avocado, fresh cherry tomato, sprout mix and olive oil.">Pan de hogaza, queso crema, aguacate, tomatito natural, mix de brotes y aceite de oliva.</p><span class="tag" data-en="veggie">veggie</span></div></article>
-          <article class="m-card"><div class="m-photo"><img src="assets/carta/energetic.jpg" alt="Tosta Energetic" loading="lazy"></div><div class="m-body"><h3>Energetic</h3><p data-en="Sourdough bread, banana, toasted granola, 100% peanut butter and choco drops.">Pan de hogaza, plátano, granola tostada, crema de cacahuete 100% y gotitas de choco.</p></div></article>
-          <article class="m-card"><div class="m-photo"><img src="assets/carta/salmon-passion.jpg" alt="Tosta Salmon Passion" loading="lazy"></div><div class="m-body"><h3>Salmon Passion</h3><p data-en="Sourdough bread, hummus, avocado, salmon cubes, sprout mix and olive oil.">Pan de hogaza, humus, aguacate, dados de salmón, mix de brotes y aceite de oliva.</p></div></article>
+          <article class="m-card"><div class="m-photo"><img src="assets/carta/pavissima.jpg" alt="Tosta Pavissima" loading="lazy"></div><div class="m-body"><h3>Pavissima</h3><p data-en="Sourdough bread, hummus, turkey, avocado, tomato, mozzarella, sprout mix and olive oil.">Pan de hogaza, humus, pavo, aguacate, tomate, mozzarella, mix de brotes y aceite de oliva.</p><p class="m-price">8,90€</p></div></article>
+          <article class="m-card"><div class="m-photo"><img src="assets/carta/atuna-matata.jpg" alt="Tosta Atuna Matata" loading="lazy"></div><div class="m-body"><h3>Atuna Matata</h3><p data-en="Sourdough bread, avocado, tuna, tomato, sprout mix, paprika and olive oil.">Pan de hogaza, aguacate, atún, tomate, mix de brotes, pimentón y aceite de oliva.</p><p class="m-price">9,90€</p></div></article>
+          <article class="m-card"><div class="m-photo"><img src="assets/carta/la-vida-es-vegan.jpg" alt="Tosta La Vida es Vegan" loading="lazy"></div><div class="m-body"><h3>La Vida es Vegan</h3><p data-en="Sourdough bread, cream cheese, avocado, fresh cherry tomato, sprout mix and olive oil.">Pan de hogaza, queso crema, aguacate, tomatito natural, mix de brotes y aceite de oliva.</p><p class="m-price">8,90€</p><span class="tag" data-en="veggie">veggie</span></div></article>
+          <article class="m-card"><div class="m-photo"><img src="assets/carta/energetic.jpg" alt="Tosta Energetic" loading="lazy"></div><div class="m-body"><h3>Energetic</h3><p data-en="Sourdough bread, banana, toasted granola, 100% peanut butter and choco drops.">Pan de hogaza, plátano, granola tostada, crema de cacahuete 100% y gotitas de choco.</p><p class="m-price">7,90€</p></div></article>
+          <article class="m-card"><div class="m-photo"><img src="assets/carta/salmon-passion.jpg" alt="Tosta Salmon Passion" loading="lazy"></div><div class="m-body"><h3>Salmon Passion</h3><p data-en="Sourdough bread, hummus, avocado, salmon cubes, sprout mix and olive oil.">Pan de hogaza, humus, aguacate, dados de salmón, mix de brotes y aceite de oliva.</p><p class="m-price">10,90€</p></div></article>
+          <article class="m-card"><div class="m-photo"><div class="m-photo-ph">🍅</div></div><div class="m-body"><h3>La Tomatina</h3><p data-en="Sourdough bread, fresh grated tomato, extra virgin olive oil and salt.">Pan de hogaza, tomate natural rallado, aceite de oliva virgen extra y sal.</p><p class="m-price">4,90€</p></div></article>
         </div>
       </div>
     </div>
 
     <!-- PANCAKES -->
     <div class="panel" id="pancakes">
+      <p class="menu-price" data-en="8.90€ each">8,90€ c/u</p>
       <div class="carousel" data-carousel>
         <div class="carousel-track">
           <article class="m-card"><div class="m-photo"><img src="assets/carta/nutellisima.jpg" alt="Pancakes Nutellisima" loading="lazy"></div><div class="m-body"><h3>Nutellisima</h3><p data-en="Banana, strawberries, Nutella and paçoca.">Banana, fresas, nutella y paçoca.</p></div></article>
@@ -950,13 +978,20 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
         <div class="card reveal" style="text-align:center">
           <h3>Brunch Bora Bora</h3>
           <p data-en="Toast · Pancakes<br>Coffee · Tea<br>Smoothie of the day<br>Size S açaí">Tosta · Pancakes<br>Café · Infusión<br>Smoothie del día<br>Açaí talla S</p>
-          <span class="tag" data-en="to share">para compartir</span>
+          <p class="menu-price" style="margin:12px 0 0">19,90€</p>
+        </div>
+        <div class="card reveal" style="text-align:center">
+          <h3>Brunch Bora Bora Lite</h3>
+          <p data-en="Toast · Pancakes<br>Coffee · Tea<br>Size S açaí">Tosta · Pancakes<br>Café · Infusión<br>Açaí talla S</p>
+          <p class="menu-price" style="margin:12px 0 0">16,90€</p>
         </div>
       </div>
+      <p class="note" style="text-align:center;margin-top:18px" data-en="Matcha is a 1€ supplement.">El matcha supone un suplemento de 1€.</p>
     </div>
 
     <!-- SMOOTHIES -->
     <div class="panel" id="smoothies">
+      <p class="menu-price" data-en="5.50€ each">5,50€ c/u</p>
       <div class="carousel" data-carousel>
         <div class="carousel-track">
           <article class="m-card"><div class="m-photo"><img src="assets/carta/revita.jpg" alt="Smoothie Revita" loading="lazy"></div><div class="m-body"><h3>Revita</h3><p data-en="Carrot, pineapple and ginger.">Zanahoria, piña y jengibre.</p></div></article>
@@ -971,6 +1006,7 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
 
     <!-- MATCHA -->
     <div class="panel" id="matcha">
+      <p class="menu-price" data-en="4.90€ each">4,90€ c/u</p>
       <div class="carousel" data-carousel>
         <div class="carousel-track">
           <article class="m-card"><div class="m-photo"><img src="assets/carta/matcha-golden.jpg" alt="Golden Matcha" loading="lazy"></div><div class="m-body"><h3>Golden Matcha</h3><p data-en="Mango matcha.">Matcha de mango.</p></div></article>
@@ -986,22 +1022,23 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
     <div class="panel" id="bebidas">
       <p class="coffee-note reveal"><svg viewBox="0 0 24 24"><path d="M3 10h13v3a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5v-3z"/><path d="M16 11h2.5a2.5 2.5 0 0 1 0 5H16"/><path d="M6.5 3c-.6 1 .6 2 0 3M10 3c-.6 1 .6 2 0 3M13.5 3c-.6 1 .6 2 0 3"/></svg><span data-en="Coffee <strong>imported from Naples</strong> 🇮🇹 · freshly ground"><strong>Café importado de Nápoles</strong> 🇮🇹 · molido al momento</span></p>
       <div class="pricelist reveal">
-        <div class="price-row"><span class="nm" data-en="Espresso">Espresso</span></div>
-        <div class="price-row"><span class="nm" data-en="Cortado">Cortado</span></div>
-        <div class="price-row"><span class="nm" data-en="Americano">Americano</span></div>
-        <div class="price-row"><span class="nm" data-en="White coffee">Café con leche</span></div>
-        <div class="price-row"><span class="nm" data-en="Latte">Latte</span></div>
-        <div class="price-row"><span class="nm" data-en="Cappuccino">Capuccino</span></div>
-        <div class="price-row"><span class="nm" data-en="Green tea">Té verde</span></div>
-        <div class="price-row"><span class="nm" data-en="Red tea">Té rojo</span></div>
-        <div class="price-row"><span class="nm" data-en="Black tea">Té negro</span></div>
-        <div class="price-row"><span class="nm" data-en="Camomile">Manzanilla</span></div>
-        <div class="price-row"><span class="nm" data-en="Collagen matcha">Collagen matcha</span></div>
-        <div class="price-row"><span class="nm" data-en="Collagen matcha vanilla">Collagen matcha vainilla</span></div>
-        <div class="price-row"><span class="nm" data-en="Creamy toffee coffee">Creamy toffee coffee</span></div>
-        <div class="price-row"><span class="nm" data-en="Ice latte">Ice latte</span></div>
-        <div class="price-row"><span class="nm" data-en="Mineral water">Agua mineral</span></div>
+        <div class="price-row"><span class="nm" data-en="Espresso">Espresso</span><span class="dots"></span><span class="pr">1,80€</span></div>
+        <div class="price-row"><span class="nm" data-en="Cortado">Cortado</span><span class="dots"></span><span class="pr">2,00€</span></div>
+        <div class="price-row"><span class="nm" data-en="Americano">Americano</span><span class="dots"></span><span class="pr">2,00€</span></div>
+        <div class="price-row"><span class="nm" data-en="White coffee">Café con leche</span><span class="dots"></span><span class="pr">2,20€</span></div>
+        <div class="price-row"><span class="nm" data-en="Latte">Latte</span><span class="dots"></span><span class="pr">3,00€</span></div>
+        <div class="price-row"><span class="nm" data-en="Cappuccino">Capuccino</span><span class="dots"></span><span class="pr">3,00€</span></div>
+        <div class="price-row"><span class="nm" data-en="Green tea">Té verde</span><span class="dots"></span><span class="pr">2,00€</span></div>
+        <div class="price-row"><span class="nm" data-en="Red tea">Té rojo</span><span class="dots"></span><span class="pr">2,00€</span></div>
+        <div class="price-row"><span class="nm" data-en="Black tea">Té negro</span><span class="dots"></span><span class="pr">2,00€</span></div>
+        <div class="price-row"><span class="nm" data-en="Camomile">Manzanilla</span><span class="dots"></span><span class="pr">2,00€</span></div>
+        <div class="price-row"><span class="nm" data-en="Collagen matcha">Collagen matcha</span><span class="dots"></span><span class="pr">4,50€</span></div>
+        <div class="price-row"><span class="nm" data-en="Collagen matcha vanilla">Collagen matcha vainilla</span><span class="dots"></span><span class="pr">5,00€</span></div>
+        <div class="price-row"><span class="nm" data-en="Creamy toffee coffee">Creamy toffee coffee</span><span class="dots"></span><span class="pr">3,90€</span></div>
+        <div class="price-row"><span class="nm" data-en="Ice latte">Ice latte</span><span class="dots"></span><span class="pr">3,90€</span></div>
+        <div class="price-row"><span class="nm" data-en="Mineral water">Agua mineral</span><span class="dots"></span><span class="pr">1,50€</span></div>
       </div>
+      <p class="note" style="text-align:center;margin-top:22px" data-en="Oat milk supplement: 0,30€.">Suplemento de leche de avena: 0,30€.</p>
     </div>
 
   </div>
@@ -1011,19 +1048,15 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
 <section class="gallery" id="galeria" data-page="galeria">
   <div class="wrap">
     <div class="head reveal">
-      <h2 data-en="Pure <span class='scr'>Bora Bora</span> vibes">Pura vibra <span class="scr">Bora Bora</span></h2>
+      <h2 data-en="<span class='scr'>Bora Bora</span> Vibes"><span class="scr">Bora Bora</span> Vibes</h2>
       <p data-en="Coconut bowls, colourful matchas and lots of sun. That's how we live summer all year round.">Cuencos de coco, matchas de colores y mucho sol. Así se vive el verano todo el año.</p>
     </div>
     <div class="grid-masonry">
+      <figure class="reveal feature"><img src="assets/bowls-flatlay.jpg" alt="Variedad de açaí bowls"></figure>
       <figure class="reveal"><img src="assets/surf-bowl.jpg" alt="Açaí bowl con tabla de surf"></figure>
-      <figure class="reveal d1"><img src="assets/bowls-flatlay.jpg" alt="Variedad de açaí bowls"></figure>
-      <figure class="reveal d2"><img src="assets/matcha-layer.jpg" alt="Matcha de colores en capas"></figure>
-      <figure class="reveal"><img src="assets/toast-matcha.jpg" alt="Tosta de aguacate con matcha"></figure>
       <figure class="reveal d1"><img src="assets/pancakes-cozy.jpg" alt="Pancakes con matcha"></figure>
       <figure class="reveal d2"><img src="assets/bowl-pb.jpg" alt="Açaí bowl con crema de cacahuete"></figure>
       <figure class="reveal"><img src="assets/toast-interior.jpg" alt="Tosta de Bora Bora Açaí"></figure>
-      <figure class="reveal d1"><img src="assets/matcha-mug.jpg" alt="Matcha latte caliente"></figure>
-      <figure class="reveal d2"><img src="assets/bowl-product.jpg" alt="Açaí bowl con galleta maría"></figure>
       <figure class="reveal"><img src="assets/pancakes-blue.jpg" alt="Pancakes con arándanos"></figure>
       <figure class="reveal d1"><img src="assets/toast-salmon.jpg" alt="Tosta de salmón y aguacate"></figure>
       <figure class="reveal d2"><img src="assets/bowl-qr.jpg" alt="Açaí bowl Bora Bora"></figure>
@@ -1041,18 +1074,18 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
     <div class="reviews-grid">
       <div class="review-card reveal">
         <div class="stars">★★★★★</div>
-        <p data-en="“The açaí is so good! You can tell it has little sugar and that they really care about the quality of the toppings. Plus the attention was amazing and the service super friendly. A 10/10!!!”">«Super bueno el açaí! Se nota que no lleva mucho azúcar y que cuidan mucho la calidad de los toppings. Además, la atención increíble y el servicio super agradable. Un 10/10!!!»</p>
-        <div class="review-author"><span class="av">S</span><div><b>Silvia T.</b><span data-en="Local Guide on Google">Local Guide en Google</span></div></div>
+        <p data-en="“I really like this place, the food is great and very high quality, the Brunch is incredible, the staff super friendly and attentive. I loved it, I come whenever I can — 100% recommended.”">«Me gusta mucho el sitio, la comida está muy buena y de muy buena calidad, el Brunch está increíble, los trabajadores muy amables y atentos, me ha encantado, voy siempre que puedo, lo recomiendo 100%.»</p>
+        <div class="review-author"><span class="av">A</span><div><b>Alvaro</b><span data-en="Review on Google">Reseña en Google</span></div></div>
       </div>
       <div class="review-card reveal d1">
         <div class="stars">★★★★★</div>
-        <p data-en="“We tried the bowls, the smoothies, the matcha with coffee and the toasts, and we loved them! Seriously delicious! The service was incredibly kind and welcoming. Excellent value for money! ♥️✌🏼”">«Probamos los bowls, los batidos, el matcha con café y las tostadas, ¡y nos encantaron! ¡En serio, estaban buenísimos! El servicio fue increíblemente amable y acogedor. ¡Excelente relación calidad-precio! ♥️✌🏼»</p>
-        <div class="review-author"><span class="av">E</span><div><b>Esther G.</b><span data-en="Review on Google">Reseña en Google</span></div></div>
+        <p data-en="“Incredible place 😍 a super beautiful, warm and cosy spot. Delicious food and a really complete menu: toasts, pancakes, matchas and more. Amazing service and pet friendly — there's always a lovely, well-behaved little dog. 10/10 recommended.”">«Increíble lugar 😍 spot súper hermoso, cálido y cómodo. La comida riquísima y la carta súper completa: tostas, pancakes, matchas y más. La atención increíble y son pet friendly, siempre hay una perrita que es hermosa y se porta muy bien. Recomiendo 10/10.»</p>
+        <div class="review-author"><span class="av">V</span><div><b>Valen B.</b><span data-en="Review on Google">Reseña en Google</span></div></div>
       </div>
       <div class="review-card reveal d2">
         <div class="stars">★★★★★</div>
-        <p data-en="“A small and great place, with an amazing atmosphere and friendly service. They have very good healthy options (açaí bowls and sourdough toasts with healthy ingredients). I definitely recommend it and would come back.”">«Un lugar pequeño y genial, con un ambiente increíble y un servicio amable. Tienen muy buenas opciones de comida saludable (tazones de açaí y tostadas de masa madre con ingredientes saludables). Lo recomiendo sin duda y volvería.»</p>
-        <div class="review-author"><span class="av">J</span><div><b>Justyna W.</b><span data-en="Review on Google">Reseña en Google</span></div></div>
+        <p data-en="“Incredible experience! From the moment you walk in the service is great, they explain everything in detail and the place is wonderful. The food is exquisite! I tried the ‘Combi Completa’ açaí combo and it's amazing. I also recommend the chai tea 🙂 I'll definitely be back! 🫶🏼”">«¡Experiencia increíble! Desde que entras la atención es buenísima, te explican todo al detalle y el lugar es maravilloso. ¡La comida exquisita! Probé la combinación de Açaí “Combi Completa” y es atómica. También recomiendo el té chai 🙂 ¡Sin duda volveré! 🫶🏼»</p>
+        <div class="review-author"><span class="av">R</span><div><b>Rosario G.</b><span data-en="Review on Google">Reseña en Google</span></div></div>
       </div>
     </div>
     <div class="reviews-cta reveal">
@@ -1106,7 +1139,7 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
           data-src="https://www.google.com/maps?q=Bora%20Bora%20Aça%C3%AD%2C%20Carrer%20d'Isabel%20la%20Cat%C3%B2lica%2026%2C%2046004%20Val%C3%A8ncia&output=embed"></iframe>
         <div class="map-block" id="mapBlock">
           <p data-en="Enable Google Maps cookies to see the map here.">Activa las cookies de Google Maps para ver el mapa aquí.</p>
-          <button type="button" class="btn btn-acai" id="mapEnable" data-en="Load map">Cargar mapa</button>
+          <button type="button" class="btn btn-acai" id="mapEnable" data-en="Accept cookies">Aceptar cookies</button>
         </div>
       </div>
     </div>
@@ -1143,6 +1176,12 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
 
 <!-- FOOTER -->
 <footer>
+  <div class="wave-divider wave-top">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#e8e6dc" d="M0,40 C240,90 480,0 720,30 C960,60 1200,90 1440,45 L1440,90 L0,90 Z"></path></svg>
+  </div>
+  <div class="wave-divider wave-ini">
+    <svg viewBox="0 0 1440 200" preserveAspectRatio="none"><path fill="#0a2a34" d="M0,48 C240,112 480,-4 720,36 C960,60 1200,112 1440,46 L1440,200 L0,200 Z"></path></svg>
+  </div>
   <div class="wrap">
     <div class="footer-logo">
       <img class="logo" src="assets/logo-bora.png" alt="Bora Bora Açaí" width="62" height="62">
@@ -1156,8 +1195,8 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
     </div>
     <p>Carrer d'Isabel la Catòlica, 26 · L'Eixample · 46004 València · 672 92 15 65</p>
     <div class="footer-bottom">
-      <p><a href="aviso-legal.html" data-en="Legal notice">Aviso legal</a> · <a href="privacidad.html" data-en="Privacy">Privacidad</a> · <a href="cookies.html" data-en="Cookies">Cookies</a></p>
-      <p>© <span id="year"></span> Bora Bora Açaí · <span data-en="All rights reserved">Todos los derechos reservados</span> · <a href="#inicio" data-en="Back to top ↑">Volver arriba ↑</a></p>
+      <p><a href="aviso-legal.html" data-en="Legal notice">Aviso legal</a> · <a href="privacidad.html" data-en="Privacy">Privacidad</a> · <a href="cookies.html" data-en="Cookies">Cookies</a> · <a href="#" id="cookieConfig" data-en="Cookie settings">Configurar cookies</a></p>
+      <p>© <span id="year"></span> Bora Bora Açaí · <span data-en="Rights reserved">Derechos reservados</span> · <span data-en="Developed by">Desarrollo por</span> <a href="https://werticalstudio.com" target="_blank" rel="noopener">Wertical Studio</a></p>
     </div>
   </div>
 </footer>
@@ -1353,18 +1392,22 @@ function loadMap(){
   if (mapBlock) mapBlock.classList.add('hide');
 }
 function setCookies(v){
+  // si ya se había cargado el mapa y ahora se rechaza, recargamos para no dejar nada de terceros
+  const wasLoaded = !!(mapFrame && mapFrame.src);
   try { localStorage.setItem('bb-cookies', v); } catch(e){}
   cookieBar.classList.remove('show');
   if (v === 'accepted'){ loadMap(); loadGoogleReviews(); }
-  setTimeout(showWelcome, 500);          // el Club aparece tras decidir cookies
+  else if (v === 'rejected' && wasLoaded){ location.reload(); }
 }
 let cookieChoice = null;
 try { cookieChoice = localStorage.getItem('bb-cookies'); } catch(e){}
 document.getElementById('ckAccept').addEventListener('click', () => setCookies('accepted'));
 document.getElementById('ckReject').addEventListener('click', () => setCookies('rejected'));
 document.getElementById('mapEnable').addEventListener('click', () => setCookies('accepted'));
-if (cookieChoice === 'accepted'){ loadMap(); loadGoogleReviews(); setTimeout(showWelcome, 900); }
-else if (cookieChoice === 'rejected'){ setTimeout(showWelcome, 900); }
+const cookieConfig = document.getElementById('cookieConfig');
+if (cookieConfig) cookieConfig.addEventListener('click', (e) => { e.preventDefault(); cookieBar.classList.add('show'); });
+if (cookieChoice === 'accepted'){ loadMap(); loadGoogleReviews(); }
+else if (cookieChoice === 'rejected'){ /* sin pop-up de bienvenida */ }
 else { setTimeout(() => cookieBar.classList.add('show'), 500); }   // primera visita: pedir cookies
 
 // ---------- CARRUSELES CARTA (3 visibles · centro más grande · loop infinito) ----------
