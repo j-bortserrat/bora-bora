@@ -217,6 +217,25 @@ video.hero-bg{width:100%;height:120%;object-fit:cover;object-position:center}
 }
 .float-badge b{font-family:'Coastal Beach',cursive;font-weight:700;font-size:1.35rem}
 .float-badge span{font-size:.66rem;letter-spacing:1px;text-transform:uppercase;margin-top:2px}
+/* ---------- VÍDEO (click-to-play) ---------- */
+.video-facade{position:relative;cursor:pointer;overflow:hidden;display:block;width:100%;line-height:0}
+.video-facade>img{display:block;width:100%}
+.video-facade .vf-ov{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:linear-gradient(180deg,rgba(15,58,71,.10),rgba(15,58,71,.48));transition:background .3s;padding:16px;text-align:center}
+.video-facade:hover .vf-ov,.video-facade:focus-visible .vf-ov{background:linear-gradient(180deg,rgba(15,58,71,.20),rgba(15,58,71,.60))}
+.vf-btn{width:72px;height:72px;border-radius:50%;background:rgba(255,255,255,.94);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(0,0,0,.55);transition:transform .3s}
+.video-facade:hover .vf-btn{transform:scale(1.09)}
+.vf-btn svg{width:26px;height:26px;margin-left:5px;fill:var(--acai-teal)}
+.vf-label{color:#fff;font-family:'Coastal Beach','Poppins',sans-serif;font-weight:700;letter-spacing:1px;font-size:1.05rem;line-height:1.2;text-shadow:0 2px 12px rgba(10,42,52,.75)}
+.video-facade video{display:block;width:100%;background:#000}
+/* about: conservar el marco 3/4 de la foto */
+.about-video{border-radius:28px;box-shadow:var(--shadow)}
+.about-video>img{border-radius:28px;box-shadow:none !important}
+.about-video video{border-radius:28px;aspect-ratio:3/4;object-fit:cover}
+.about-video .vf-ov{border-radius:28px}
+/* galería: tile de vídeo */
+.grid-masonry figure.video-tile{cursor:pointer}
+.grid-masonry figure.video-tile::after{display:none}
+.grid-masonry figure.video-tile:hover img{transform:none}
 
 /* ---------- PARALLAX QUOTE ---------- */
 .quote{position:relative;height:54vh;min-height:400px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
@@ -858,7 +877,10 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
       </div>
     </div>
     <div class="about-photo reveal d2">
-      <img src="assets/surf-bowl.jpg" alt="Açaí bowl con tabla de surf de Bora Bora Açaí">
+      <div class="video-facade about-video" data-video="assets/bora-video.mp4" role="button" tabindex="0" aria-label="Ver vídeo de Bora Bora Açaí">
+        <img src="assets/surf-bowl.jpg" alt="Açaí bowl con tabla de surf de Bora Bora Açaí">
+        <span class="vf-ov"><span class="vf-btn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span><span class="vf-label" data-en="Watch the Bora Bora video">Ver vídeo Bora Bora</span></span>
+      </div>
       <div class="float-badge"><b>100%</b><span data-en="natural">natural</span></div>
     </div>
   </div>
@@ -1105,6 +1127,12 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
     </div>
     <div class="grid-masonry">
       <figure class="reveal feature"><img src="assets/bowls-flatlay.jpg" alt="Variedad de açaí bowls"></figure>
+      <figure class="reveal video-tile">
+        <div class="video-facade" data-video="assets/bora-video.mp4" role="button" tabindex="0" aria-label="Reproducir el vídeo de Bora Bora Açaí">
+          <img src="assets/bora-video-poster.jpg" alt="Vídeo de Bora Bora Açaí" loading="lazy">
+          <span class="vf-ov"><span class="vf-btn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span><span class="vf-label" data-en="Play the video">Ver vídeo</span></span>
+        </div>
+      </figure>
       <figure class="reveal"><img src="assets/bowl-spoon.jpg" alt="Açaí bowl en cuenco de coco con cuchara dorada" loading="lazy"></figure>
       <figure class="reveal d1"><img src="assets/matcha-rincon.jpg" alt="Matcha en el rincón con sillón colgante de Bora Bora Açaí" loading="lazy"></figure>
       <figure class="reveal d2"><img src="assets/bowl-closeup.jpg" alt="Açaí bowl con crema de cacahuete, plátano y yogur" loading="lazy"></figure>
@@ -1661,6 +1689,30 @@ document.addEventListener('click', e => {
 });
 window.addEventListener('popstate', () => showPage((location.hash || '#inicio').slice(1), false));
 showPage((location.hash || '#inicio').slice(1), false);
+
+// ---------- VÍDEO click-to-play (galería + nuestra esencia) ----------
+document.querySelectorAll('.video-facade[data-video]').forEach(f => {
+  const start = () => {
+    if (f.dataset.on) return;
+    f.dataset.on = '1';
+    const img = f.querySelector('img');
+    const v = document.createElement('video');
+    v.src = f.getAttribute('data-video');
+    v.controls = true; v.autoplay = true; v.playsInline = true;
+    v.setAttribute('playsinline', ''); v.setAttribute('controlslist', 'nodownload');
+    if (img) v.poster = img.getAttribute('src');
+    f.innerHTML = '';
+    f.appendChild(v);
+    f.style.cursor = 'default';
+    v.play().catch(() => {});
+  };
+  f.addEventListener('click', start);
+  f.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); start(); } });
+});
+// pausar el vídeo al cambiar de sección/página
+function pauseFacadeVideos(){ document.querySelectorAll('.video-facade video').forEach(v => v.pause()); }
+window.addEventListener('popstate', pauseFacadeVideos);
+document.addEventListener('click', e => { if (e.target.closest('a[href^="#"]')) pauseFacadeVideos(); }, true);
 </script>
 </body>
 </html>
