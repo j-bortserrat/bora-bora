@@ -209,7 +209,7 @@ video.hero-bg{width:100%;height:120%;object-fit:cover;object-position:center}
 .stat .num{font-family:'Coastal Beach',cursive;font-weight:700;font-size:2.4rem;color:var(--acai-teal);line-height:1}
 .stat .lbl{font-size:.82rem;color:var(--sea);font-weight:600;margin-top:6px;text-transform:uppercase;letter-spacing:.5px}
 .about-photo{position:relative}
-.about-photo img{border-radius:28px;box-shadow:var(--shadow);aspect-ratio:3/4;object-fit:cover;width:100%}
+.about-photo img,.about-photo video{border-radius:28px;box-shadow:var(--shadow);aspect-ratio:3/4;object-fit:cover;width:100%;display:block}
 .about-photo .float-badge{
   position:absolute;bottom:-22px;left:-22px;background:var(--acai-teal);color:#fff;
   width:120px;height:120px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -631,32 +631,32 @@ body:not([data-page="inicio"]) .club-fab{display:none !important}
 /* ---------- CLUB FAB (hazte amigo) ---------- */
 .club-fab{
   position:fixed;right:20px;bottom:20px;z-index:1500;
-  display:flex;align-items:center;gap:8px;
+  display:flex;align-items:center;justify-content:center;gap:8px;box-sizing:border-box;height:48px;
   background:var(--acai-teal);color:#fff;border:0;border-radius:40px;
-  padding:11px 20px 11px 16px;font-family:'Poppins',sans-serif;font-weight:700;font-size:.92rem;
+  padding:0 20px 0 16px;font-family:'Poppins',sans-serif;font-weight:700;font-size:.92rem;line-height:1;
   cursor:pointer;box-shadow:0 16px 38px -14px rgba(15,58,71,.6);transition:.3s;
 }
 .club-fab:hover{background:var(--ocean);transform:translateY(-3px);box-shadow:0 22px 46px -16px rgba(15,58,71,.65)}
-.club-fab .gift{font-size:1.15rem;animation:clubBob 2.6s ease-in-out infinite}
+.club-fab .gift{font-size:1.15rem;line-height:1;animation:clubBob 2.6s ease-in-out infinite}
 @keyframes clubBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
 @media(max-width:480px){
-  .club-fab{right:14px;bottom:14px;padding:9px 16px 9px 13px;font-size:.84rem}
+  .club-fab{right:14px;bottom:14px;height:40px;padding:0 16px 0 13px;font-size:.84rem}
 }
 
 /* ---------- GOOGLE RATING FAB (4,9★) · mismo tamaño que el Club ---------- */
 .google-fab{
   position:fixed;right:20px;bottom:80px;z-index:1500;
-  display:flex;align-items:center;gap:8px;
+  display:flex;align-items:center;justify-content:center;gap:8px;box-sizing:border-box;height:48px;
   background:rgba(251,247,239,.95);backdrop-filter:blur(10px);border:1px solid var(--sand-deep);
-  border-radius:40px;padding:11px 20px 11px 16px;
-  font-family:'Poppins',sans-serif;font-weight:700;font-size:.92rem;color:var(--acai-brown);
+  border-radius:40px;padding:0 20px 0 16px;
+  font-family:'Poppins',sans-serif;font-weight:700;font-size:.92rem;line-height:1;color:var(--acai-brown);
   text-decoration:none;box-shadow:0 16px 38px -14px rgba(15,58,71,.6);transition:.3s;
 }
 .google-fab:hover{transform:translateY(-3px);box-shadow:0 22px 46px -16px rgba(15,58,71,.65)}
 .google-fab .trophy{font-size:1.15rem;line-height:1}
 .google-fab i{font-style:normal;color:#ffb400}
 @media(max-width:480px){
-  .google-fab{right:14px;bottom:62px;padding:9px 16px 9px 13px;font-size:.84rem}
+  .google-fab{right:14px;bottom:62px;height:40px;padding:0 16px 0 13px;font-size:.84rem}
 }
 
 /* ---------- RESPONSIVE ---------- */
@@ -877,10 +877,7 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
       </div>
     </div>
     <div class="about-photo reveal d2">
-      <div class="video-facade about-video" data-video="assets/bora-video.mp4" role="button" tabindex="0" aria-label="Ver vídeo de Bora Bora Açaí">
-        <img src="assets/surf-bowl.jpg" alt="Açaí bowl con tabla de surf de Bora Bora Açaí">
-        <span class="vf-ov"><span class="vf-btn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span><span class="vf-label" data-en="Watch the Bora Bora video">Ver vídeo Bora Bora</span></span>
-      </div>
+      <video class="about-video" id="aboutVideo" src="assets/bora-video.mp4" poster="assets/surf-bowl.jpg" autoplay muted loop playsinline preload="auto" aria-label="Vídeo de Bora Bora Açaí"></video>
       <div class="float-badge"><b>100%</b><span data-en="natural">natural</span></div>
     </div>
   </div>
@@ -1642,6 +1639,7 @@ if (!reduce && !isMobile){
 const PAGES = ['inicio','acai','carta','galeria','resenas','contacto'];
 const pageEls = document.querySelectorAll('[data-page]');
 const heroVideo = document.getElementById('heroBg');
+const aboutVideo = document.getElementById('aboutVideo');
 
 // arrancar el vídeo del hero lo antes posible, sin depender de aceptar cookies
 if (heroVideo){
@@ -1654,6 +1652,18 @@ if (heroVideo){
   document.addEventListener('pointerdown', kickHero, {passive:true});
   document.addEventListener('touchstart', kickHero, {passive:true});
   tryPlayHero();
+}
+
+// arrancar el vídeo de "nuestra esencia" igual que el del hero
+if (aboutVideo){
+  aboutVideo.muted = true;                       // requisito para autoplay sin gesto
+  const tryPlayAbout = () => { const p = aboutVideo.play(); if (p && p.catch) p.catch(() => {}); };
+  aboutVideo.addEventListener('loadeddata', tryPlayAbout);
+  aboutVideo.addEventListener('canplay', tryPlayAbout);
+  const kickAbout = () => { tryPlayAbout(); document.removeEventListener('pointerdown', kickAbout); document.removeEventListener('touchstart', kickAbout); };
+  document.addEventListener('pointerdown', kickAbout, {passive:true});
+  document.addEventListener('touchstart', kickAbout, {passive:true});
+  tryPlayAbout();
 }
 
 function showPage(id, push){
@@ -1670,10 +1680,14 @@ function showPage(id, push){
   window.scrollTo(0, 0);
   pageEls.forEach(el => { if (el.dataset.page === id) el.querySelectorAll('.reveal').forEach(r => r.classList.add('in')); });
   if (typeof carRecalcs !== 'undefined') carRecalcs.forEach(f => f());
-  // el vídeo del hero solo corre en Inicio
+  // los vídeos autoplay solo corren en Inicio
   if (heroVideo && heroVideo.play){
     if (id === 'inicio') { const p = heroVideo.play(); if (p && p.catch) p.catch(() => {}); }
     else heroVideo.pause();
+  }
+  if (aboutVideo && aboutVideo.play){
+    if (id === 'inicio') { const p = aboutVideo.play(); if (p && p.catch) p.catch(() => {}); }
+    else aboutVideo.pause();
   }
   // cerrar menú móvil
   if (typeof burger !== 'undefined'){ burger.classList.remove('open'); navLinks.classList.remove('open'); }
