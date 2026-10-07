@@ -87,7 +87,7 @@ h1,h2,h3{font-family:'Bagel Fat One',cursive;font-weight:400;line-height:1.05}
 .allergy-table th:first-child{text-align:left;padding-left:10px}
 .allergy-table td{padding:7px 4px;text-align:center;border-bottom:1px solid rgba(15,58,71,.08)}
 .allergy-table td:first-child{text-align:left;padding-left:10px;color:var(--ocean);font-weight:500}
-.allergy-table tbody tr:nth-child(even) td{background:#eef7fa}
+.allergy-table tbody tr:nth-child(even):not(.sec) td{background:#eef7fa}
 .allergy-table tr.sec td{background:var(--sea);color:#fff;font-family:'Bagel Fat One',cursive;font-size:12px;text-align:left;padding:7px 10px;letter-spacing:.3px}
 .allergy-table .dot{color:var(--sea);font-size:14px}
 .allergy-table .q{color:var(--coral-deep);font-weight:700}
@@ -223,45 +223,25 @@ h1,h2,h3{font-family:'Bagel Fat One',cursive;font-weight:400;line-height:1.05}
 
 <div class="page allergens">
 
-  <!-- ALÉRGENOS: AÇAÍ BOWLS -->
+  <!-- ALÉRGENOS -->
   <div class="card" style="width:100%">
-    <div class="card-h"><span class="bar"></span><h2>Açaí Bowls</h2></div>
-    <div class="note" style="margin:-6px 0 12px;font-size:11px">Toppings de cada bowl</div>
-    <table class="allergy-table">
-      <thead>
-        <tr><th>Toppings</th><th>Big Boss</th><th>Bora Bora</th><th>Gymbro</th><th>Nuteboom</th><th>Tropicana</th><th>Matcha Glow</th><th>Golden Chai</th><th>Big Boss Pro</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Granola</td><td class="dot">●</td><td class="dot">●</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>Crunchy energy</td><td class="q">?</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>Galleta maría</td><td class="dot">●</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>Choco chips</td><td></td><td></td><td class="dot">●</td><td></td><td></td><td class="dot">●</td><td></td><td></td></tr>
-        <tr><td>Almendra crocanti</td><td></td><td></td><td></td><td></td><td class="dot">●</td><td></td><td></td><td></td></tr>
-        <tr><td>Paçoca</td><td></td><td></td><td class="dot">●</td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>Crema de cacahuete</td><td></td><td></td><td class="dot">●</td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>Nutella</td><td class="dot">●</td><td></td><td></td><td class="dot">●</td><td></td><td></td><td class="dot">●</td><td class="dot">●</td></tr>
-        <tr><td>Crema de pistacho</td><td></td><td></td><td></td><td class="dot">●</td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>Crema Kinder</td><td class="dot">●</td><td></td><td></td><td class="dot">●</td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>Crema matcha / chai</td><td></td><td></td><td></td><td></td><td class="dot">●</td><td></td><td></td><td></td></tr>
-        <tr><td>Yogurt, leche en polvo/condensada</td><td class="dot">●</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr class="sec"><td colspan="9">Frutas</td></tr>
-        <tr><td>Frutas</td><td colspan="8" class="none" style="text-align:center;font-size:10px">Sin alérgenos</td></tr>
-      </tbody>
-    </table>
-    <div class="note" style="margin-top:10px">● contiene &nbsp;|&nbsp; ? por confirmar</div>
-    <div class="note">Granola: gluten y lactosa. Crema de pistacho sin gluten ni lactosa.</div>
-    <div class="note">Crema Kinder sin gluten. Crema matcha y chai con lactosa.</div>
-  </div>
-
-  <!-- ALÉRGENOS: PLATOS Y BEBIDAS -->
-  <div class="card" style="width:100%;margin-top:22px">
     <div class="card-h"><span class="bar"></span><h2>Alérgenos</h2></div>
-    <div class="note" style="margin:-6px 0 12px;font-size:11px">Tostas, pancakes y bebidas</div>
+    <div class="note" style="margin:-6px 0 12px;font-size:11px">Açaís, tostas, pancakes, smoothies y matcha</div>
     <table class="allergy-table">
       <thead>
-        <tr><th>Platos</th><th>Gluten</th><th>Leche</th><th>Cacahuete</th><th>Fr. cáscara</th><th>Soja</th><th>Huevo</th><th>Pescado</th><th>Sésamo</th></tr>
+        <tr><th>Alérgenos</th><th>Gluten</th><th>Leche</th><th>Cacahuete</th><th>Fr. cáscara</th><th>Soja</th><th>Huevo</th><th>Pescado</th><th>Sésamo</th></tr>
       </thead>
       <tbody>
+        <tr class="sec"><td colspan="9">Açaís</td></tr>
+        <tr><td>Big Boss</td><td class="dot">●</td><td class="dot">●</td><td class="dot">●</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Bora Bora</td><td class="dot">●</td><td class="dot">●</td><td class="dot">●</td><td class="dot">●</td><td class="dot">●</td><td></td><td></td><td></td></tr>
+        <tr><td>Gymbro</td><td class="dot">●</td><td class="dot">●</td><td></td><td class="dot">●</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Nuteboom</td><td class="dot">●</td><td class="dot">●</td><td></td><td class="dot">●</td><td class="dot">●</td><td></td><td></td><td></td></tr>
+        <tr><td>Tropicana</td><td class="dot">●</td><td class="dot">●</td><td></td><td class="dot">●</td><td class="dot">●</td><td></td><td></td><td></td></tr>
+        <tr><td>Matcha Glow</td><td class="dot">●</td><td class="dot">●</td><td></td><td></td><td class="dot">●</td><td></td><td></td><td></td></tr>
+        <tr><td>Golden Chai</td><td class="dot">●</td><td class="dot">●</td><td></td><td class="dot">●</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Big Boss Pro</td><td class="dot">●</td><td class="dot">●</td><td class="dot">●</td><td></td><td class="dot">●</td><td></td><td></td><td></td></tr>
+
         <tr class="sec"><td colspan="9">Tostas</td></tr>
         <tr><td>Pavissima</td><td class="dot">●</td><td class="dot">●</td><td></td><td></td><td></td><td></td><td></td><td class="dot">●</td></tr>
         <tr><td>Atuna Matata</td><td class="dot">●</td><td></td><td></td><td></td><td></td><td></td><td class="dot">●</td><td></td></tr>
@@ -272,7 +252,7 @@ h1,h2,h3{font-family:'Bagel Fat One',cursive;font-weight:400;line-height:1.05}
 
         <tr class="sec"><td colspan="9">Pancakes</td></tr>
         <tr><td>Nutellísima</td><td class="dot">●</td><td class="dot">●</td><td class="dot">●</td><td class="dot">●</td><td class="dot">●</td><td class="dot">●</td><td></td><td></td></tr>
-        <tr><td>Boom Boom</td><td class="dot">●</td><td class="dot">●</td><td class="dot">●</td><td class="dot">●</td><td class="dot">●</td><td class="dot">●</td><td></td><td></td></tr>
+        <tr><td>Boom Boom</td><td class="dot">●</td><td class="dot">●</td><td></td><td class="dot">●</td><td class="dot">●</td><td class="dot">●</td><td></td><td></td></tr>
 
         <tr class="sec"><td colspan="9">Smoothies</td></tr>
         <tr><td>Revita</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="none">sin alérgenos</td><td></td></tr>
@@ -282,20 +262,20 @@ h1,h2,h3{font-family:'Bagel Fat One',cursive;font-weight:400;line-height:1.05}
         <tr><td>Pink Lady</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="none">sin alérgenos</td><td></td></tr>
 
         <tr class="sec"><td colspan="9">Matcha</td></tr>
-        <tr><td>Matchas (Golden, Coco, Rose, Maracuyá)</td><td class="q">?</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>Collagen matcha (y vainilla)</td><td class="q">?</td><td></td><td></td><td></td><td></td><td class="q">?</td><td></td><td></td></tr>
-
-        <tr class="sec"><td colspan="9">Bebidas</td></tr>
-        <tr><td>Espresso, americano, tés, agua</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="none">sin alérgenos</td><td></td></tr>
-        <tr><td>Cortado, café c/ leche, latte, capuccino</td><td></td><td class="dot">●</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>Ice latte, creamy toffee coffee</td><td></td><td class="dot">●</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>Protein lattes (vainilla / matcha)</td><td></td><td class="dot">●</td><td></td><td></td><td class="dot">●</td><td></td><td></td><td></td></tr>
-        <tr><td>Suplemento leche de avena</td><td class="dot">●</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Matchas (Golden, Coco, Rose, Maracuyá)</td><td colspan="8" class="none" style="text-align:center;font-size:10px">Sin alérgenos</td></tr>
+        <tr><td>Collagen matcha (y vainilla)</td><td colspan="8" class="none" style="text-align:center;font-size:10px">Sin alérgenos</td></tr>
       </tbody>
     </table>
-    <div class="note" style="margin-top:10px">● contiene &nbsp;|&nbsp; ? por confirmar</div>
-    <div class="note">Tostas con pan de hogaza (gluten). Pancakes: masa con gluten, huevo y leche.</div>
-    <div class="note"><b style="color:var(--coral-deep)">Brunch:</b> suma los alérgenos de sus componentes.</div>
+    <div class="note" style="margin-top:10px">● contiene</div>
+    <div class="note">Granola: gluten y lactosa.</div>
+    <div class="note">Paçoca: cacahuete, sin lácteos.</div>
+    <div class="note">Cremas de pistacho y anacardos: frutos de cáscara, sin gluten ni lactosa.</div>
+    <div class="note">Crema Kinder: leche, avellana y soja, sin gluten.</div>
+    <div class="note">Crema matcha/chai: con lactosa.</div>
+    <div class="note">Gotas de chocolate con leche: lácteos y soja.</div>
+    <div class="note">Proteína vainilla (25g): puede contener leche y soja.</div>
+    <div class="note">Tostas con pan de hogaza (gluten).</div>
+    <div class="note">Pancakes: masa con gluten, huevo y leche.</div>
   </div>
 
 </div>
