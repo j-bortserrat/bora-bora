@@ -827,11 +827,11 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
   </div>
 </div>
 
-<!-- POP-UP +25g PROTEIN DRINKS -->
-<div class="order-modal" id="proteinModal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="+25g Protein Drinks">
+<!-- POP-UP DE BIENVENIDA · PAN DE QUESITO -->
+<div class="order-modal" id="proteinModal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Pan de quesito">
   <div class="protein-pop">
     <button class="order-close" id="proteinClose" aria-label="Cerrar">&times;</button>
-    <a href="#carta" id="proteinGo"><img src="assets/protein-drinks.jpg" alt="+25g Protein Drinks — Vainilla Ice Protein Latte y Vainilla Matcha Ice Protein Latte"></a>
+    <a href="#carta" id="proteinGo"><img src="assets/pan-quesito-promo.jpg" alt="Pan de quesito — Blandito, calentito, jugosito"></a>
     <a href="#carta" class="btn btn-primary" id="proteinCta" data-en="See it on the menu">Verlo en la carta</a>
   </div>
 </div>
@@ -993,6 +993,7 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
       <button class="tab" data-tab="smoothies">Smoothies</button>
       <button class="tab" data-tab="matcha">Matcha</button>
       <button class="tab" data-tab="bebidas" data-en="Drinks">Bebidas</button>
+      <button class="tab" data-tab="extras" data-en="Extras">Extras</button>
     </div>
 
     <!-- BOWLS -->
@@ -1064,7 +1065,7 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
 
     <!-- PANCAKES -->
     <div class="panel" id="pancakes">
-      <p class="menu-price" data-en="9.90€ each">9,90€ c/u</p>
+      <p class="menu-price" data-en="9.90€">9,90€</p>
       <div class="carousel" data-carousel>
         <div class="carousel-track">
           <article class="m-card"><div class="m-photo"><img src="assets/carta/nutellisima.jpg" alt="Pancakes Nutellisima" loading="lazy"></div><div class="m-body"><h3>Nutellisima</h3><p data-en="Banana, strawberries, Nutella and paçoca.">Banana, fresas, nutella y paçoca.</p></div></article>
@@ -1121,6 +1122,22 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
 
     <!-- BEBIDAS -->
     <div class="panel" id="bebidas">
+      <div class="protein reveal" id="protein-drinks">
+        <h4 class="protein-h"><span>+25g</span> <em>protein</em> <b>DRINKS</b></h4>
+        <div class="protein-grid">
+          <div class="protein-card">
+            <h5 data-en="Vanilla Ice Protein Latte">Vainilla Ice Protein Latte</h5>
+            <p data-en="Smooth, creamy and balanced.">Suave, cremosa y equilibrada.</p>
+            <p class="protein-price">4,50€</p>
+          </div>
+          <div class="protein-card">
+            <h5 data-en="Vanilla Matcha Ice Protein Latte">Vainilla Matcha Ice Protein Latte</h5>
+            <p data-en="Fresh, light and antioxidant.">Fresca, ligera y antioxidante.</p>
+            <p class="protein-price">5,50€</p>
+          </div>
+        </div>
+        <p class="protein-feats" data-en="+25g protein · low sugar · natural energy">+25g proteína · bajo en azúcar · energía natural</p>
+      </div>
       <p class="coffee-note reveal"><svg viewBox="0 0 24 24"><path d="M3 10h13v3a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5v-3z"/><path d="M16 11h2.5a2.5 2.5 0 0 1 0 5H16"/><path d="M6.5 3c-.6 1 .6 2 0 3M10 3c-.6 1 .6 2 0 3M13.5 3c-.6 1 .6 2 0 3"/></svg><span data-en="Coffee <strong>imported from Naples</strong> 🇮🇹 · freshly ground"><strong>Café importado de Nápoles</strong> 🇮🇹 · molido al momento</span></p>
       <div class="pricelist reveal">
         <div class="price-row"><span class="nm" data-en="Espresso">Espresso</span><span class="dots"></span><span class="pr">1,80€</span></div>
@@ -1138,22 +1155,21 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
         <div class="price-row"><span class="nm" data-en="Mineral water">Agua mineral</span><span class="dots"></span><span class="pr">1,50€</span></div>
       </div>
       <p class="note" style="text-align:center;margin-top:22px" data-en="Oat milk supplement: 0,30€.">Suplemento de leche de avena: 0,30€.</p>
-      <div class="protein reveal" id="protein-drinks">
-        <h4 class="protein-h"><span>+25g</span> <em>protein</em> <b>DRINKS</b></h4>
-        <div class="protein-grid">
-          <div class="protein-card">
-            <h5 data-en="Vanilla Ice Protein Latte">Vainilla Ice Protein Latte</h5>
-            <p data-en="Smooth, creamy and balanced.">Suave, cremosa y equilibrada.</p>
-            <p class="protein-price">4,50€</p>
+    </div>
+
+    <!-- EXTRAS -->
+    <div class="panel" id="extras">
+      <div style="max-width:320px;margin:0 auto">
+        <article class="m-card">
+          <div class="m-photo"><img src="assets/carta/pan-quesito.jpg" alt="Pan de quesito" loading="lazy"></div>
+          <div class="m-body">
+            <h3>Pan de quesito</h3>
+            <p data-en="5 pieces">5 unidades</p>
+            <p class="m-price">5,90€</p>
           </div>
-          <div class="protein-card">
-            <h5 data-en="Vanilla Matcha Ice Protein Latte">Vainilla Matcha Ice Protein Latte</h5>
-            <p data-en="Fresh, light and antioxidant.">Fresca, ligera y antioxidante.</p>
-            <p class="protein-price">5,50€</p>
-          </div>
-        </div>
-        <p class="protein-feats" data-en="+25g protein · low sugar · natural energy">+25g proteína · bajo en azúcar · energía natural</p>
+        </article>
       </div>
+      <p class="note" style="text-align:center;margin-top:18px" data-en="*Baked fresh to order, 10 min wait.">*Horneado al momento, 10 min de espera.</p>
     </div>
 
     <!-- ALÉRGENOS (fijo, debajo de las categorías, plegado por defecto) -->
@@ -1595,9 +1611,9 @@ function goProtein(e){
   if (e) e.preventDefault();
   closeProtein();
   showPage('carta', true);
-  const bt = document.querySelector('.tab[data-tab="bebidas"]');
+  const bt = document.querySelector('.tab[data-tab="extras"]');
   if (bt) bt.click();
-  setTimeout(() => { const el = document.getElementById('protein-drinks'); if (el) el.scrollIntoView({behavior:'smooth',block:'center'}); }, 450);
+  setTimeout(() => { const el = document.getElementById('extras'); if (el) el.scrollIntoView({behavior:'smooth',block:'center'}); }, 450);
 }
 document.getElementById('proteinClose').addEventListener('click', closeProtein);
 document.getElementById('proteinGo').addEventListener('click', goProtein);
