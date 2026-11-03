@@ -629,39 +629,7 @@ body[data-page="carta"] footer .wave-top path{fill:var(--cream)}
 }
 .welcome-skip:hover{color:var(--ocean)}
 
-/* ---------- STATUS FAB (abierto/cerrado) ---------- */
-.status-fab{
-  position:fixed;left:20px;bottom:20px;z-index:1500;
-  display:flex;align-items:center;gap:11px;
-  background:rgba(251,247,239,.92);backdrop-filter:blur(10px);
-  border-radius:40px;padding:10px 20px 10px 15px;
-  box-shadow:0 16px 38px -14px rgba(15,58,71,.55);
-  border:1px solid var(--sand-deep);
-  text-decoration:none;color:var(--ocean);
-  transform:translateY(14px);opacity:0;transition:.45s cubic-bezier(.2,.7,.2,1);
-}
-.status-fab.ready{transform:none;opacity:1}
-.status-fab:hover{transform:translateY(-3px);box-shadow:0 22px 46px -16px rgba(15,58,71,.6)}
-.status-fab .dot{width:12px;height:12px;border-radius:50%;flex:none;position:relative}
-.status-fab .dot::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid currentColor;opacity:.5;animation:fabPulse 2.2s infinite}
-@keyframes fabPulse{0%{transform:scale(.7);opacity:.6}70%{transform:scale(1.7);opacity:0}100%{opacity:0}}
-.status-fab.open .dot{background:#2bb673;color:#2bb673}
-.status-fab.closed .dot{background:var(--coral-deep);color:var(--coral-deep)}
-.status-fab.soon .dot{background:#f0b429;color:#f0b429}
-.status-fab .txt{display:flex;flex-direction:column;line-height:1.15}
-.status-fab .txt b{font-family:'Poppins',sans-serif;font-size:.92rem;font-weight:700}
-.status-fab.open .txt b{color:#1f8f57}
-.status-fab.closed .txt b{color:var(--coral-deep)}
-.status-fab.soon .txt b{color:#c98309}
-.status-fab .txt small{font-size:.72rem;color:var(--sea);font-weight:500}
-@media(max-width:480px){
-  .status-fab{left:14px;bottom:14px;padding:8px 16px 8px 12px;gap:9px}
-  .status-fab .txt b{font-size:.84rem}
-  .status-fab .txt small{font-size:.66rem}
-}
-
-/* Botones flotantes (estado · 4,9 · club) SOLO en la página de inicio */
-body:not([data-page="inicio"]) .status-fab,
+/* Botones flotantes (4,9 · club) SOLO en la página de inicio */
 body:not([data-page="inicio"]) .google-fab,
 body:not([data-page="inicio"]) .club-fab{display:none !important}
 
@@ -785,12 +753,6 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
 </style>
 </head>
 <body>
-
-<!-- STATUS FLOTANTE ABIERTO / CERRADO -->
-<a href="#contacto" class="status-fab" id="statusFab" aria-label="Horario">
-  <span class="dot"></span>
-  <span class="txt"><b class="st-title"></b><small class="st-sub"></small></span>
-</a>
 
 <!-- BOTÓN FLOTANTE · 4,9 ESTRELLAS EN GOOGLE -->
 <a href="https://www.google.com/maps/search/?api=1&query=Bora+Bora+Aça%C3%AD+Carrer+d'Isabel+la+Cat%C3%B2lica+26+Val%C3%A8ncia" target="_blank" rel="noopener" class="google-fab" aria-label="4,9 estrellas en Google Maps">
@@ -988,8 +950,8 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
       <button class="tab active" data-tab="bowls">Açaí Bowls</button>
       <button class="tab" data-tab="build" data-en="Build Your Bowl">Crea tu Bowl</button>
       <button class="tab" data-tab="tostas" data-en="Toasts">Tostas</button>
-      <button class="tab" data-tab="pancakes">Pancakes</button>
-      <button class="tab" data-tab="brunch">Brunch</button>
+      <button class="tab" data-tab="pancakes" data-en="Dolce Vita">Dolce Vita</button>
+      <button class="tab" data-tab="brunch" data-en="Brunch/Lunch">Brunch/Lunch</button>
       <button class="tab" data-tab="smoothies">Smoothies</button>
       <button class="tab" data-tab="matcha">Matcha</button>
       <button class="tab" data-tab="bebidas" data-en="Drinks">Bebidas</button>
@@ -1063,13 +1025,15 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
       </div>
     </div>
 
-    <!-- PANCAKES -->
+    <!-- PANCAKES / DOLCE VITA -->
     <div class="panel" id="pancakes">
-      <p class="menu-price" data-en="9.90€">9,90€</p>
       <div class="carousel" data-carousel>
         <div class="carousel-track">
-          <article class="m-card"><div class="m-photo"><img src="assets/carta/nutellisima.jpg" alt="Pancakes Nutellisima" loading="lazy"></div><div class="m-body"><h3>Nutellisima</h3><p data-en="Banana, strawberries, Nutella and paçoca.">Banana, fresas, nutella y paçoca.</p></div></article>
-          <article class="m-card"><div class="m-photo"><img src="assets/carta/boomboom.jpg" alt="Pancakes Boom Boom" loading="lazy"></div><div class="m-body"><h3>Boom Boom</h3><p data-en="Banana, blueberries, Kinder cream and chocolate chips.">Banana, arándanos, crema Kinder y chocolate chips.</p></div></article>
+          <article class="m-card"><div class="m-photo"><img src="assets/carta/nutellisima.jpg" alt="Pancakes Nutellisima" loading="lazy"></div><div class="m-body"><h3>Nutellisima</h3><p data-en="Banana, strawberries, Nutella and paçoca.">Banana, fresas, nutella y paçoca.</p><p class="m-price">9,90€</p></div></article>
+          <article class="m-card"><div class="m-photo"><img src="assets/carta/boomboom.jpg" alt="Pancakes Boom Boom" loading="lazy"></div><div class="m-body"><h3>Boom Boom</h3><p data-en="Banana, blueberries, Kinder cream and chocolate chips.">Banana, arándanos, crema Kinder y chocolate chips.</p><p class="m-price">9,90€</p></div></article>
+          <article class="m-card"><div class="m-photo"><img src="assets/carta/gofre-pistachio.jpg" alt="Gofre Pistachio Match" loading="lazy"></div><div class="m-body"><h3>Gofre Pistachio Match</h3><p data-en="2 Belgian waffles topped with strawberries, blueberries, pistachio cream, Maria biscuit and condensed milk.">Base de 2 gofres belgas decorados con fresas, arándanos, crema de pistacho, galleta María y leche condensada.</p><p class="m-price">7,90€</p></div></article>
+          <article class="m-card"><div class="m-photo"><img src="assets/carta/gofre-bananutty.jpg" alt="Gofre Bananutty" loading="lazy"></div><div class="m-body"><h3>Gofre Bananutty</h3><p data-en="2 Belgian waffles topped with banana, Nutella, roasted peanut cream and paçoca.">Base de 2 gofres belgas decorados con banana, Nutella, crema de cacahuetes tostados y paçoca.</p><p class="m-price">7,90€</p></div></article>
+          <article class="m-card"><div class="m-photo"><img src="assets/carta/tarta-queso.jpg" alt="Tarta de queso" loading="lazy"></div><div class="m-body"><h3>Tarta de queso</h3><p data-en="Choose your topping: Nutella, Kinder, pistachio, dulce de leche or condensed milk.">Elige tu topping: Nutella, Kinder, pistacho, dulce de leche o leche condensada.</p><p class="m-price">4,90€</p></div></article>
         </div>
       </div>
     </div>
@@ -1086,6 +1050,11 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
           <h3>Brunch Bora Bora Lite</h3>
           <p data-en="Toast · Pancakes<br>Coffee · Tea<br>Size S açaí">Tosta · Pancakes<br>Café · Infusión<br>Açaí talla S</p>
           <p class="menu-price" style="margin:12px 0 0">16,90€</p>
+        </div>
+        <div class="card reveal" style="text-align:center">
+          <h3>Bora Bora Lunch</h3>
+          <p data-en="Bora Bora Poke · 1 drink · Size S açaí">Bora Bora Poke · 1 bebida · Açaí talla S</p>
+          <p class="menu-price" style="margin:12px 0 0">17,90€</p>
         </div>
       </div>
       <p class="note" style="text-align:center;margin-top:18px" data-en="Matcha is a 1€ supplement.">El matcha supone un suplemento de 1€.</p>
@@ -1153,29 +1122,28 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
         <div class="price-row"><span class="nm" data-en="Creamy toffee coffee">Creamy toffee coffee</span><span class="dots"></span><span class="pr">3,90€</span></div>
         <div class="price-row"><span class="nm" data-en="Ice latte">Ice latte</span><span class="dots"></span><span class="pr">3,90€</span></div>
         <div class="price-row"><span class="nm" data-en="Mineral water">Agua mineral</span><span class="dots"></span><span class="pr">1,50€</span></div>
+        <div class="price-row"><span class="nm" data-en="Chai Latte Spiced">Chai Latte Spiced</span><span class="dots"></span><span class="pr">3,50€</span></div>
+        <div class="price-row"><span class="nm" data-en="Chai Latte Vanilla">Chai Latte Vainilla</span><span class="dots"></span><span class="pr">3,50€</span></div>
+        <div class="price-row"><span class="nm" data-en="Chai Latte Choco">Chai Latte Choco</span><span class="dots"></span><span class="pr">3,50€</span></div>
+        <div class="price-row"><span class="nm" data-en="Chai Latte Coffee">Chai Latte Café</span><span class="dots"></span><span class="pr">3,50€</span></div>
       </div>
       <p class="note" style="text-align:center;margin-top:22px" data-en="Oat milk supplement: 0,30€.">Suplemento de leche de avena: 0,30€.</p>
     </div>
 
     <!-- EXTRAS -->
     <div class="panel" id="extras">
-      <div style="max-width:320px;margin:0 auto">
-        <article class="m-card">
-          <div class="m-photo"><img src="assets/carta/pan-quesito.jpg" alt="Pan de quesito" loading="lazy"></div>
-          <div class="m-body">
-            <h3>Pan de quesito</h3>
-            <p data-en="5 pieces">5 unidades</p>
-            <p class="m-price">5,90€</p>
-          </div>
-        </article>
+      <div class="carousel" data-carousel>
+        <div class="carousel-track">
+          <article class="m-card"><div class="m-photo"><img src="assets/carta/pan-quesito.jpg" alt="Pan de quesito" loading="lazy"></div><div class="m-body"><h3>Pan de quesito</h3><p data-en="5 pieces">5 unidades</p><p class="m-price">5,90€</p><p style="font-size:.78rem;color:var(--sea);font-style:italic;margin-top:10px" data-en="*Gluten free. Baked fresh to order, 10 min wait.">*Sin gluten. Horneado al momento, 10 min de espera.</p></div></article>
+          <article class="m-card"><div class="m-photo"><img src="assets/carta/poke.jpg" alt="Bora Bora Poke" loading="lazy"></div><div class="m-body"><h3>Bora Bora Poke</h3><p data-en="Sushi rice, diced salmon, sliced avocado, mango, crunchy onion, chive sprouts, seeds and ponzu sauce.">Arroz sushi, salmón en dados, aguacate laminado, mango, cebolla crunchy, brotes de cebollino, semillas y salsa ponzu.</p><p class="m-price">12,90€</p></div></article>
+        </div>
       </div>
-      <p class="note" style="text-align:center;margin-top:18px" data-en="*Gluten free. Baked fresh to order, 10 min wait.">*Sin gluten. Horneado al momento, 10 min de espera.</p>
     </div>
 
     <!-- ALÉRGENOS (fijo, debajo de las categorías, plegado por defecto) -->
     <details class="allergy-block">
       <summary class="allergy-h" data-en="Allergens">Alérgenos</summary>
-      <p class="allergy-sub" data-en="Açaí bowls, toasts, pancakes, smoothies, matcha and extras">Açaís, tostas, pancakes, smoothies, matcha y extras</p>
+      <p class="allergy-sub" data-en="Açaí bowls, toasts, Dolce Vita, smoothies, matcha and extras">Açaís, tostas, Dolce Vita, smoothies, matcha y extras</p>
       <div class="allergy-wrap">
         <table class="allergy-table">
           <thead>
@@ -1199,9 +1167,12 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
             <tr><td>Salmon Passion</td><td class="dot">●</td><td></td><td></td><td></td><td></td><td></td><td class="dot">●</td><td class="dot">●</td></tr>
             <tr><td>La Tomatina</td><td class="dot">●</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 
-            <tr class="sec"><td colspan="9">Pancakes</td></tr>
+            <tr class="sec"><td colspan="9" data-en="Dolce Vita">Dolce Vita</td></tr>
             <tr><td>Nutellísima</td><td class="dot">●</td><td class="dot">●</td><td class="dot">●</td><td class="dot">●</td><td class="dot">●</td><td class="dot">●</td><td></td><td></td></tr>
             <tr><td>Boom Boom</td><td class="dot">●</td><td class="dot">●</td><td></td><td class="dot">●</td><td class="dot">●</td><td class="dot">●</td><td></td><td></td></tr>
+            <tr><td>Gofre Pistachio Match</td><td class="dot">●</td><td class="dot">●</td><td></td><td class="dot">●</td><td class="dot">●</td><td class="dot">●</td><td></td><td></td></tr>
+            <tr><td>Gofre Bananutty</td><td class="dot">●</td><td class="dot">●</td><td class="dot">●</td><td class="dot">●</td><td class="dot">●</td><td class="dot">●</td><td></td><td></td></tr>
+            <tr><td>Tarta de queso</td><td class="dot">●</td><td class="dot">●</td><td></td><td class="dot">●</td><td class="dot">●</td><td class="dot">●</td><td></td><td></td></tr>
 
             <tr class="sec"><td colspan="9">Smoothies</td></tr>
             <tr><td>Revita</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="none" data-en="allergen-free">sin alérgenos</td><td></td></tr>
@@ -1216,6 +1187,7 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
 
             <tr class="sec"><td colspan="9" data-en="Extras">Extras</td></tr>
             <tr><td>Pan de quesito</td><td></td><td class="dot">●</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>Bora Bora Poke</td><td class="dot">●</td><td></td><td></td><td></td><td class="dot">●</td><td></td><td class="dot">●</td><td class="dot">●</td></tr>
           </tbody>
         </table>
       </div>
@@ -1228,8 +1200,10 @@ nav.scrolled .nav-links a.active{color:var(--acai-teal)}
       <p class="allergy-note" data-en="Milk chocolate drops: dairy and soy.">Gotas de chocolate con leche: lácteos y soja.</p>
       <p class="allergy-note" data-en="Vanilla protein (25g): may contain milk and soy.">Proteína vainilla (25g): puede contener leche y soja.</p>
       <p class="allergy-note" data-en="Toasts made with sourdough bread (gluten).">Tostas con pan de hogaza (gluten).</p>
-      <p class="allergy-note" data-en="Pancakes: batter with gluten, egg and milk.">Pancakes: masa con gluten, huevo y leche.</p>
+      <p class="allergy-note" data-en="Pancakes and waffles: batter with gluten, egg and milk.">Pancakes y gofres: masa con gluten, huevo y leche.</p>
+      <p class="allergy-note" data-en="Cheesecake (base): gluten, egg and milk; tree nuts and soy depending on the topping (Nutella, Kinder or pistachio).">Tarta de queso (base): gluten, huevo y leche; frutos de cáscara y soja según el topping (Nutella, Kinder o pistacho).</p>
       <p class="allergy-note" data-en="Pan de quesito: gluten free.">Pan de quesito: sin gluten.</p>
+      <p class="allergy-note" data-en="Poke: ponzu sauce with gluten and soy; crunchy onion with gluten; seed mix with sesame.">Poke: salsa ponzu con gluten y soja; cebolla crunchy con gluten; mix de semillas con sésamo.</p>
     </details>
 
   </div>
@@ -1455,63 +1429,9 @@ function applyLang(l){
   document.documentElement.lang = l;
   langBtn.textContent = (l === 'en') ? 'ES' : 'EN';
   lang = l;
-  renderStatus(l);
 }
 langBtn.addEventListener('click', () => applyLang(lang === 'es' ? 'en' : 'es'));
 
-// ---------- ESTADO ABIERTO / CERRADO ----------
-// minutos desde medianoche; [apertura, cierre] o null = cerrado
-const schedule = {
-  0:[570,1230], // Domingo  9:30–20:30
-  1:null,       // Lunes    cerrado
-  2:[570,1230], // Martes
-  3:[570,1230], // Miércoles
-  4:[570,1230], // Jueves
-  5:[570,1230], // Viernes
-  6:[570,1230]  // Sábado
-};
-const dayNames = {
-  es:['el domingo','el lunes','el martes','el miércoles','el jueves','el viernes','el sábado'],
-  en:['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
-};
-const fmtHM = m => Math.floor(m/60) + ':' + (m%60<10?'0':'') + (m%60);
-const statusFab = document.getElementById('statusFab');
-function renderStatus(l){
-  const now = new Date();
-  const day = now.getDay();
-  const mins = now.getHours()*60 + now.getMinutes();
-  const today = schedule[day];
-  const isOpen = !!today && mins >= today[0] && mins < today[1];
-  let soon = false;          // abre/cierra en menos de 1h → aviso ámbar
-  let title, sub;
-  if (isOpen){
-    soon = (today[1] - mins) <= 60;
-    title = soon ? (l === 'en' ? 'Closing soon' : 'Cierra pronto') : (l === 'en' ? 'Open now' : 'Abierto ahora');
-    sub   = (l === 'en') ? 'Closes at ' + fmtHM(today[1]) : 'Cierra a las ' + fmtHM(today[1]);
-  } else {
-    let d = day, addDays = 0, openMin = null;
-    if (today && mins < today[0]){ openMin = today[0]; }       // abre hoy más tarde
-    else {
-      for (let i = 1; i <= 7; i++){
-        const nd = (day + i) % 7;
-        if (schedule[nd]){ addDays = i; openMin = schedule[nd][0]; d = nd; break; }
-      }
-    }
-    if (addDays === 0) soon = (openMin - mins) <= 60;          // abre hoy en menos de 1h
-    title = soon ? (l === 'en' ? 'Opening soon' : 'Abre pronto') : (l === 'en' ? 'Closed now' : 'Cerrado ahora');
-    if (addDays === 0)       sub = (l === 'en') ? 'Opens today at ' + fmtHM(openMin)     : 'Abre hoy a las ' + fmtHM(openMin);
-    else if (addDays === 1)  sub = (l === 'en') ? 'Opens tomorrow at ' + fmtHM(openMin)  : 'Abre mañana a las ' + fmtHM(openMin);
-    else                     sub = (l === 'en') ? 'Opens ' + dayNames.en[d] + ' at ' + fmtHM(openMin) : 'Abre ' + dayNames.es[d] + ' a las ' + fmtHM(openMin);
-  }
-  statusFab.classList.toggle('open', isOpen && !soon);
-  statusFab.classList.toggle('closed', !isOpen && !soon);
-  statusFab.classList.toggle('soon', soon);
-  statusFab.querySelector('.st-title').textContent = title;
-  statusFab.querySelector('.st-sub').textContent = sub;
-  statusFab.classList.add('ready');
-}
-renderStatus(lang);
-setInterval(() => renderStatus(lang), 60000);
 
 // ---------- MODAL PEDIR A CASA (Glovo / Uber Eats) ----------
 const orderModal = document.getElementById('orderModal');
